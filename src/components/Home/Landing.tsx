@@ -17,7 +17,7 @@ export function Landing() {
     }
 
     return (
-        <header className={`w-full h-96 flex items-center justify-center bg-violet-800 transition-all`} style={{ backgroundColor: color }}>
+        <header className={`w-full h-96 flex items-center justify-center bg-violet-800 transition-all`} style={{ backgroundColor: color.hex }}>
             <div className='max-w-5xl w-full flex flex-col'>
                 <h1 className='text-6xl font-bold text-neutral-100' style={{ color: contrast }}>
                     Find Your Color

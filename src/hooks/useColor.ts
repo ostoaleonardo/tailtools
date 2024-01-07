@@ -6,7 +6,7 @@ export function useColor() {
 
     useEffect(() => {
         const changeColor = () => {
-            document.documentElement.style.setProperty('--color-primary', color)
+            document.documentElement.style.setProperty('--color-primary', color.hex)
             document.documentElement.style.setProperty('--color-primary-foreground', contrast)
         }
         changeColor()

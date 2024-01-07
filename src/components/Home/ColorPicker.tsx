@@ -3,11 +3,11 @@ import { useColor } from '../../hooks'
 
 export function ColorPicker({ setInput }: { setInput: (value: string) => void }) {
     const { color } = useColor()
-    const [picker, setPicker] = useState(color)
+    const [picker, setPicker] = useState(color.hex)
 
     useEffect(() => {
         if (color !== picker) {
-            setPicker(color)
+            setPicker(color.hex)
         }
     }, [color])
 

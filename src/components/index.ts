@@ -7,6 +7,7 @@ import { Landing } from './Home'
 import { ColorPalette } from './Home'
 import { ColorPicker } from './Home'
 import { ColorCard } from './Home'
+import { ExportCodeModal } from './Home'
 import { ExamplesComponents } from './Home'
 
 export {
@@ -19,5 +20,6 @@ export {
     ColorPicker,
     ColorPalette,
     ColorCard,
+    ExportCodeModal,
     ExamplesComponents
 }

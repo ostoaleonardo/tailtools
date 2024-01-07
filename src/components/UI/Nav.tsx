@@ -16,7 +16,7 @@ export function Nav() {
             isBlurred={false}
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
-            style={{ backgroundColor: color }}
+            style={{ backgroundColor: color.hex }}
             classNames={{
                 base: 'transition-all'
             }}
