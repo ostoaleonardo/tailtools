@@ -3,11 +3,11 @@ import { useColor } from '../../hooks'
 import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link } from '@nextui-org/react'
 
 export function Nav() {
-    const { color } = useColor()
+    const { color, contrast } = useColor()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const menuItems = [
-        'Home',
+        'Colors',
     ]
 
     return (
@@ -16,7 +16,7 @@ export function Nav() {
             isBlurred={false}
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
-            style={{ backgroundColor: '#' + color }}
+            style={{ backgroundColor: color }}
             classNames={{
                 base: 'transition-all'
             }}
@@ -27,17 +27,21 @@ export function Nav() {
 
             <NavbarContent className='sm:hidden pr-3' justify='center'>
                 <NavbarBrand>
-                    <p className='font-bold text-inherit'>Tailtools</p>
+                    <p className='font-bold text-inherit uppercase' style={{ color: contrast }}>
+                        Tailtools
+                    </p>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className='hidden sm:flex gap-4' justify='center'>
                 <NavbarBrand>
-                    <p className='font-bold text-inherit'>Tailtools</p>
+                    <p className='font-bold text-inherit uppercase' style={{ color: contrast }}>
+                        Tailtools
+                    </p>
                 </NavbarBrand>
                 {menuItems.map((item, index) => (
                     <NavbarItem key={index}>
-                        <Link color='foreground' href='#'>
+                        <Link href='#' style={{ color: contrast }}>
                             {item}
                         </Link>
                     </NavbarItem>

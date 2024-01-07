@@ -3,6 +3,7 @@ import { Button, Input } from '@nextui-org/react'
 import { Icons } from '../UI'
 import { useColor, useFetch } from '../../hooks'
 import { PLACEHOLDER } from '../../constants'
+import { ColorPicker } from '.'
 
 export function Landing() {
     const { color, contrast } = useColor()
@@ -16,7 +17,7 @@ export function Landing() {
     }
 
     return (
-        <header className={`w-full h-96 flex items-center justify-center bg-violet-800 transition-all`} style={{ backgroundColor: '#' + color }}>
+        <header className={`w-full h-96 flex items-center justify-center bg-violet-800 transition-all`} style={{ backgroundColor: color }}>
             <div className='max-w-5xl w-full flex flex-col'>
                 <h1 className='text-6xl font-bold text-neutral-100' style={{ color: contrast }}>
                     Find Your Color
@@ -39,6 +40,7 @@ export function Landing() {
                             ],
                         }}
                         style={{ color: contrast }}
+                        startContent={<ColorPicker setInput={setInput} />}
                     />
                     <Button
                         isIconOnly

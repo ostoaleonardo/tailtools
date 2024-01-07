@@ -17,12 +17,14 @@ export function useFetch() {
         
         const data = await res.json()
         setData(data)
-        setColor(data.hex.clean)
+        setColor(data.hex.value)
         setContrast(data.contrast.value)
     }
 
     // Generate a palette of 11 colors, from the base color
     const generatePalette = async (color: string) => {
+        color = color.replace('#', '')
+        
         const res = await fetch(
             `${SCHEME_API}${color}&mode=monochrome&count=11`
         )

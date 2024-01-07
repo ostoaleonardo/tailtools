@@ -7,3 +7,15 @@
 * {
     font-family: 'DM Sans', sans-serif;
 }
+
+@layer base {
+    .rounded-picker::-webkit-color-swatch {
+        border-radius: 50%;
+        border: var(--color-primary-foreground) 2px solid;
+    }
+
+    .rounded-picker::-moz-color-swatch {
+        border-radius: 50%;
+        border: var(--color-primary-foreground) 2px solid;
+    }
+}
