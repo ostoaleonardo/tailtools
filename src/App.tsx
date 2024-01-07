@@ -1,6 +1,13 @@
+import { Landing, Nav, ColorPalette, ExamplesComponents } from './components'
+
 function App() {
     return (
-        <h1>Tailtools</h1>
+        <>
+            <Nav />
+            <Landing />
+            <ColorPalette />
+            <ExamplesComponents />
+        </>
     )
 }
 
