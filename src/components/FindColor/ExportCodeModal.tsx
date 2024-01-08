@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Button, Modal, ModalBody, ModalContent, ModalHeader, Snippet } from '@nextui-org/react'
-import { useColor } from '../../hooks'
-import { SHADES } from '../../constants'
 import { Icons } from '..'
+import { useColor } from '../../hooks'
+import { getCodeToExport } from '../../utils'
 
 export function ExportCodeModal({ isOpen, onClose, palette }: { isOpen: boolean, onClose: () => void, palette: any[] }) {
     const [active, setActive] = useState('tailwind-hex')
@@ -11,27 +11,7 @@ export function ExportCodeModal({ isOpen, onClose, palette }: { isOpen: boolean,
 
     useEffect(() => {
         const colorName = color.name.toLowerCase().replace(' ', '-')
-        let code = ''
-
-        switch (active) {
-            case 'tailwind-hex':
-                code += '\'' + colorName + '\': {\n'
-                palette.forEach((color, index) => {
-                    code += '\t' + SHADES[index] + ': \'' + color.color + '\',\n'
-                })
-                code += '\n},'
-                break
-            case 'css-hex':
-                code += ':root {\n'
-                palette.forEach((color, index) => {
-                    code += '\t--color-primary-' + SHADES[index] + ': \'' + color.color + '\';\n'
-                })
-                code += '}'
-                break
-            default:
-                break
-        }
-
+        const code = getCodeToExport(active, colorName, palette)
         setCode(code)
     }, [active, palette])
 
@@ -66,13 +46,13 @@ export function ExportCodeModal({ isOpen, onClose, palette }: { isOpen: boolean,
                         <Snippet
                             hideSymbol
                             copyIcon={<Icons.Copy />}
-                            className='w-full h-full text-base font-medium'
+                            className='w-full h-full text-base'
                         >
                             {code.split('\n')
                                 .map((line, index) => (
                                     <span
                                         key={index}
-                                        className={`flex ${line.includes('#') && 'indent-10'}`}
+                                        className={`flex font-console ${line.includes('#') && 'indent-10'}`}
                                     >
                                         {line}
                                     </span>

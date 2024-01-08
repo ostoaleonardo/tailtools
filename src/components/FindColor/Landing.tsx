@@ -1,14 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button, Input } from '@nextui-org/react'
+import { ColorPicker } from '.'
 import { Icons } from '../UI'
 import { useColor, useFetch } from '../../hooks'
 import { PLACEHOLDER } from '../../constants'
-import { ColorPicker } from '.'
 
 export function Landing() {
-    const { color, contrast } = useColor()
+    const { color, setColor, contrast, setContrast } = useColor()
     const { fetchColor } = useFetch()
     const [input, setInput] = useState('')
+
+    useEffect(() => {
+        setColor({ name: 'Purple Heart', hex: '#5B21B6' })
+        setContrast('#FFFFFF')
+    }, [])
 
     const getColor = async () => {
         if (!input) return

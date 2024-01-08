@@ -1,25 +1,43 @@
 // UI
-import { Nav } from './UI'
-import { Icons } from './UI'
-
-// Home Page
-import { Landing } from './FindColor'
-import { ColorPalette } from './FindColor'
-import { ColorPicker } from './FindColor'
-import { ColorCard } from './FindColor'
-import { ExportCodeModal } from './FindColor'
-import { ExamplesComponents } from './FindColor'
-
-export {
-    // UI
+import {
     Nav,
-    Icons,
+    Icons
+} from './UI'
 
-    // Home Page
+// Find Color Page
+import {
     Landing,
     ColorPicker,
     ColorPalette,
     ColorCard,
     ExportCodeModal,
     ExamplesComponents
+} from './FindColor'
+
+// Create Palette Page
+import {
+    Generator,
+    GeneratorHeader,
+    ColorGenerator,
+    HoverColor
+} from './CreatePalette'
+
+export {
+    // UI
+    Nav,
+    Icons,
+
+    // Find Color Page
+    Landing,
+    ColorPicker,
+    ColorPalette,
+    ColorCard,
+    ExportCodeModal,
+    ExamplesComponents,
+
+    // Create Palette Page
+    Generator,
+    GeneratorHeader,
+    ColorGenerator,
+    HoverColor
 }

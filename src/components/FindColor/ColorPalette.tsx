@@ -6,7 +6,8 @@ import { Button } from '@nextui-org/react'
 import { Icons } from '..'
 
 interface Color {
-    color: string
+    name: string
+    hex: string
     contrast: string
 }
 

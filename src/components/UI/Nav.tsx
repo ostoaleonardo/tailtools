@@ -35,9 +35,7 @@ export function Nav() {
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
             style={{ backgroundColor: color.hex }}
-            classNames={{
-                base: 'transition-all'
-            }}
+            className='transition-all'
         >
             <NavbarContent className='sm:hidden' justify='start'>
                 <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
