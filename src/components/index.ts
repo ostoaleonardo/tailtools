@@ -3,12 +3,12 @@ import { Nav } from './UI'
 import { Icons } from './UI'
 
 // Home Page
-import { Landing } from './Home'
-import { ColorPalette } from './Home'
-import { ColorPicker } from './Home'
-import { ColorCard } from './Home'
-import { ExportCodeModal } from './Home'
-import { ExamplesComponents } from './Home'
+import { Landing } from './FindColor'
+import { ColorPalette } from './FindColor'
+import { ColorPicker } from './FindColor'
+import { ColorCard } from './FindColor'
+import { ExportCodeModal } from './FindColor'
+import { ExamplesComponents } from './FindColor'
 
 export {
     // UI

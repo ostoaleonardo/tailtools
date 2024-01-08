@@ -1,13 +1,13 @@
-import { Landing, Nav, ColorPalette, ExamplesComponents } from './components'
+import { Route, Routes } from 'react-router-dom'
+import { FindColor, CreatePalette } from './pages'
 
 function App() {
     return (
-        <>
-            <Nav />
-            <Landing />
-            <ColorPalette />
-            <ExamplesComponents />
-        </>
+        <Routes>
+            <Route path='/find' element={<FindColor />} />
+            <Route path='/create' element={<CreatePalette />} />
+            <Route path='*' element={<FindColor />} />
+        </Routes>
     )
 }
 

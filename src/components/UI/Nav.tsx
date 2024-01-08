@@ -1,14 +1,32 @@
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem } from '@nextui-org/react'
 import { useColor } from '../../hooks'
-import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link } from '@nextui-org/react'
+import { ROUTES } from '../../constants'
+
+function NavItem({ href, name }: { href: string, name: string }) {
+    const location = useLocation()
+    const { contrast } = useColor()
+    const isActive = location.pathname === href
+
+    return (
+        <NavbarItem className='relative'>
+            <Link to={href} style={{ color: contrast }}>
+                {name}
+            </Link>
+            {isActive && (
+                <div
+                    style={{ backgroundColor: contrast }}
+                    className='absolute -bottom-2 left-0 right-0 ml-auto mr-auto h-[.15rem] w-3 rounded-full transition-all'
+                />
+            )}
+        </NavbarItem>
+    )
+}
 
 export function Nav() {
     const { color, contrast } = useColor()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-    const menuItems = [
-        'Colors',
-    ]
 
     return (
         <Navbar
@@ -34,17 +52,13 @@ export function Nav() {
             </NavbarContent>
 
             <NavbarContent className='hidden sm:flex gap-4' justify='center'>
-                <NavbarBrand>
+                <NavbarBrand className='mr-10'>
                     <p className='font-bold text-inherit uppercase' style={{ color: contrast }}>
                         Tailtools
                     </p>
                 </NavbarBrand>
-                {menuItems.map((item, index) => (
-                    <NavbarItem key={index}>
-                        <Link href='#' style={{ color: contrast }}>
-                            {item}
-                        </Link>
-                    </NavbarItem>
+                {ROUTES.map((route, index) => (
+                    <NavItem key={index} href={route.path} name={route.name} />
                 ))}
             </NavbarContent>
 
@@ -52,17 +66,16 @@ export function Nav() {
             </NavbarContent>
 
             <NavbarMenu>
-                {menuItems.map((item, index) => (
-                    <NavbarMenuItem key={`${item}-${index}`}>
+                {ROUTES.map((route, index) => (
+                    <NavbarMenuItem key={`${route}-${index}`}>
                         <Link
+                            to='#'
                             className='w-full'
                             color={
-                                index === 2 ? 'warning' : index === menuItems.length - 1 ? 'danger' : 'foreground'
+                                index === 2 ? 'warning' : index === ROUTES.length - 1 ? 'danger' : 'foreground'
                             }
-                            href='#'
-                            size='lg'
                         >
-                            {item}
+                            {route.name}
                         </Link>
                     </NavbarMenuItem>
                 ))}
