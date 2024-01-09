@@ -23,4 +23,13 @@
     .font-console {
         font-family: 'DM Mono', monospace;
     }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        background-color: var(--color-primary);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--color-primary-foreground);
+    }
 }
