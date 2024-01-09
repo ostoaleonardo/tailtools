@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Button, Input } from '@nextui-org/react'
 import { ColorPicker } from '.'
 import { Icons } from '../UI'
@@ -6,17 +6,12 @@ import { useColor, useFetch } from '../../hooks'
 import { PLACEHOLDER } from '../../constants'
 
 export function Landing() {
-    const { color, setColor, contrast, setContrast } = useColor()
-    const { fetchColor } = useFetch()
     const [input, setInput] = useState('')
+    const { color, contrast } = useColor()
+    const { fetchColor } = useFetch()
 
-    useEffect(() => {
-        setColor({ name: 'Purple Heart', hex: '#5B21B6' })
-        setContrast('#FFFFFF')
-    }, [])
-
-    const getColor = async () => {
-        if (!input) return
+    const getColor = async (input: string) => {
+        if (!input || input.replace('#', '') === color.hex.replace('#', '')) return
 
         await fetchColor(input)
     }
@@ -40,7 +35,7 @@ export function Landing() {
                             onChange={(e) => setInput(e.target.value)}
                             placeholder={PLACEHOLDER[Math.floor(Math.random() * PLACEHOLDER.length)]}
                             classNames={{
-                                input: 'placeholder:text-white/60',
+                                input: 'placeholder:text-white/60 uppercase',
                                 base: 'w-2/4',
                             }}
                             style={{ color: contrast }}
@@ -49,7 +44,7 @@ export function Landing() {
                         <Button
                             isIconOnly
                             variant='bordered'
-                            onClick={() => getColor()}
+                            onClick={() => getColor(input)}
                             className='border-white ml-4'
                             style={{ color: contrast, borderColor: contrast }}
                         >

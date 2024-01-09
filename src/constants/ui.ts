@@ -1,6 +1,6 @@
 export const PLACEHOLDER = [
-    '5b21b6',
-    'rgb(255, 255, 255)',
+    '4E3870',
+    'rgb(78, 56, 112)',
 ]
 
 export const SHADES = [

@@ -1,6 +1,7 @@
 // UI
 import {
     Nav,
+    NavItem,
     Icons
 } from './UI'
 
@@ -25,6 +26,7 @@ import {
 export {
     // UI
     Nav,
+    NavItem,
     Icons,
 
     // Find Color Page

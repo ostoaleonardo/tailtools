@@ -1,16 +1,13 @@
 import { useEffect, useState } from 'react'
 import { ColorGenerator } from '.'
-import { useColor, useFetch } from '../../hooks'
+import { useFetch } from '../../hooks'
 import { getRandomColor } from '../../utils'
 
 export function Generator() {
     const { generatePalette } = useFetch()
-    const { setColor, setContrast } = useColor()
     const [palette, setPalette] = useState([])
 
     useEffect(() => {
-        setColor({ name: 'Titan White', hex: '#FAFAFF' })
-        setContrast('#000000')
         handleGenerate()
     }, [])
 
@@ -32,7 +29,7 @@ export function Generator() {
         setPalette(palette)
     }
 
-    const handleKeyDown = (event: any) => {
+    const handleKeyDown = (event: KeyboardEvent) => {
         if (event.code === 'Space') {
             handleGenerate()
         }

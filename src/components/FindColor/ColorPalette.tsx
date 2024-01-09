@@ -12,10 +12,10 @@ interface Color {
 }
 
 export function ColorPalette() {
-    const { color } = useColor()
-    const { generatePalette } = useFetch()
     const [palette, setPalette] = useState<Color[]>([])
     const [isOpen, setIsOpen] = useState(false)
+    const { generatePalette } = useFetch()
+    const { color } = useColor()
 
     useEffect(() => {
         const getPalette = async () => {
