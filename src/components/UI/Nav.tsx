@@ -9,10 +9,10 @@ export function Nav() {
     const location = useLocation()
     const { color, contrast } = useColor()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const isCreatePage = location.pathname === '/create'
     const isHomePage = location.pathname === '/'
-    const backgroundActiveColor = isCreatePage ? '#FAFAFF' : isHomePage ? '#00000080' : color.hex
-    const textActiveColor = isCreatePage ? '#000000' : contrast
+    const isFindPage = location.pathname === '/find'
+    const backgroundActiveColor = isFindPage ? color.hex : isHomePage ? '#00000080' : '#FAFAFF'
+    const textActiveColor = isFindPage ? contrast : isHomePage ? '#FAFAFF' : '#000000'
 
     return (
         <Navbar
@@ -42,7 +42,7 @@ export function Nav() {
                     </Link>
                 </NavbarBrand>
                 {ROUTES.map((route, index) => (
-                    <NavItem key={index} href={route.path} name={route.name} />
+                    <NavItem key={index} href={route.path} name={route.name} activeColor={textActiveColor} />
                 ))}
             </NavbarContent>
 

@@ -1,12 +1,9 @@
 import { Link, useLocation } from 'react-router-dom'
 import { NavbarItem } from '@nextui-org/react'
-import { useColor } from '../../hooks'
 
-export function NavItem({ href, name }: { href: string, name: string }) {
+export function NavItem({ href, name, activeColor }: { href: string, name: string, activeColor: string }) {
     const location = useLocation()
-    const { contrast } = useColor()
     const isActive = location.pathname === href
-    const activeColor = location.pathname === '/create' ? '#000000' : contrast
 
     return (
         <NavbarItem className='relative'>
