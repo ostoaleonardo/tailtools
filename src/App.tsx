@@ -1,12 +1,13 @@
 import { Route, Routes } from 'react-router-dom'
-import { FindColor, CreatePalette } from './pages'
+import { Home, FindColor, CreatePalette } from './pages'
 
 function App() {
     return (
         <Routes>
+            <Route path='/' element={<Home />} />
             <Route path='/find' element={<FindColor />} />
             <Route path='/create' element={<CreatePalette />} />
-            <Route path='*' element={<FindColor />} />
+            <Route path='*' element={<Home />} />
         </Routes>
     )
 }

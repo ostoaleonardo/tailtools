@@ -5,6 +5,14 @@ import {
     Icons
 } from './UI'
 
+// Home Page
+import {
+    HomeHeader,
+    HomeBody,
+    CircleButton,
+    CodeWindow
+} from './Home'
+
 // Find Color Page
 import {
     Landing,
@@ -28,6 +36,12 @@ export {
     Nav,
     NavItem,
     Icons,
+
+    // Home Page
+    HomeHeader,
+    HomeBody,
+    CircleButton,
+    CodeWindow,
 
     // Find Color Page
     Landing,

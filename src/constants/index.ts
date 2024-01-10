@@ -1,4 +1,4 @@
-import { PLACEHOLDER, SHADES } from './ui.ts'
+import { PLACEHOLDER, SHADES, PALETTES } from './ui.ts'
 import { ROUTES } from './routes.ts'
 
-export { PLACEHOLDER, SHADES, ROUTES }
+export { PLACEHOLDER, SHADES, PALETTES, ROUTES }

@@ -10,15 +10,17 @@ export function Nav() {
     const { color, contrast } = useColor()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const isCreatePage = location.pathname === '/create'
-    const activeColor = isCreatePage ? '#000000' : contrast
+    const isHomePage = location.pathname === '/'
+    const backgroundActiveColor = isCreatePage ? '#FAFAFF' : isHomePage ? '#00000080' : color.hex
+    const textActiveColor = isCreatePage ? '#000000' : contrast
 
     return (
         <Navbar
             maxWidth='xl'
-            isBlurred={false}
+            isBlurred={isHomePage}
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
-            style={{ backgroundColor: isCreatePage ? '#FAFAFF' : color.hex }}
+            style={{ backgroundColor: backgroundActiveColor }}
             className='transition-all'
         >
             <NavbarContent className='sm:hidden' justify='start'>
@@ -27,17 +29,17 @@ export function Nav() {
 
             <NavbarContent className='sm:hidden pr-3' justify='center'>
                 <NavbarBrand>
-                    <p className='font-bold text-inherit uppercase' style={{ color: activeColor }}>
+                    <Link to='/' className='font-bold text-inherit uppercase' style={{ color: textActiveColor }}>
                         Tailtools
-                    </p>
+                    </Link>
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className='hidden sm:flex gap-4' justify='center'>
                 <NavbarBrand className='mr-10'>
-                    <p className='font-bold text-inherit uppercase' style={{ color: activeColor }}>
+                    <Link to='/' className='font-bold text-inherit uppercase' style={{ color: textActiveColor }}>
                         Tailtools
-                    </p>
+                    </Link>
                 </NavbarBrand>
                 {ROUTES.map((route, index) => (
                     <NavItem key={index} href={route.path} name={route.name} />

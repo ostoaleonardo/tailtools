@@ -26,7 +26,7 @@
 
     ::-webkit-scrollbar {
         width: 8px;
-        background-color: var(--color-primary);
+        background-color: #18181B;
     }
     
     ::-webkit-scrollbar-thumb {
