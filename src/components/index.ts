@@ -19,6 +19,7 @@ import {
     ColorPicker,
     ColorPalette,
     ColorCard,
+    HoverCard,
     ExportCodeModal,
     ExamplesComponents
 } from './FindColor'
@@ -48,6 +49,7 @@ export {
     ColorPicker,
     ColorPalette,
     ColorCard,
+    HoverCard,
     ExportCodeModal,
     ExamplesComponents,
 

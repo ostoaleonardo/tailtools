@@ -1,3 +1,5 @@
+import { HoverCard } from '.'
+
 interface Color {
     name: string
     hex: string
@@ -6,7 +8,8 @@ interface Color {
 
 export function ColorCard({ shade, color }: { color: Color, shade: number }) {
     return (
-        <div className='h-32 col-span-1 flex items-end rounded-xl bg-violet-800 transition-all' style={{ backgroundColor: color.hex }}>
+        <div className='relative h-32 col-span-1 flex items-end rounded-xl bg-violet-800 transition-all' style={{ backgroundColor: color.hex }}>
+            <HoverCard color={color} />
             <div className='w-full flex flex-col items-center justify-center py-2'>
                 <span className='text-sm font-medium text-white' style={{ color: color.contrast }}>
                     {shade}

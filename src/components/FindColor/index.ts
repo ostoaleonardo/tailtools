@@ -2,6 +2,7 @@ import { Landing } from './Landing.tsx'
 import { ColorPicker } from './ColorPicker.tsx'
 import { ColorPalette } from './ColorPalette.tsx'
 import { ColorCard } from './ColorCard.tsx'
+import { HoverCard } from './HoverCard.tsx'
 import { ExportCodeModal } from './ExportCodeModal.tsx'
 import { ExamplesComponents } from './ExamplesComponents.tsx'
 
@@ -10,6 +11,7 @@ export {
     ColorPicker,
     ColorPalette,
     ColorCard,
+    HoverCard,
     ExportCodeModal,
     ExamplesComponents
 }
