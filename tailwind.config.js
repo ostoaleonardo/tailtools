@@ -10,6 +10,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        "titan-white": "#FAFAFF",
         primary: {
           DEFAULT: "var(--color-primary, #915CE4)",
           foreground: "var(--color-primary-foreground, #FFFFFF)",

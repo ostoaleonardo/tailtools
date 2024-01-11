@@ -5,6 +5,14 @@ export const PLACEHOLDER = [
 
 export const SHADES = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
 
+export const INIT_PALETTE = [
+    { name: 'Cornflower', hex: '#9BCCE6', contrast: '#000000' },
+    { name: 'Water Leaf', hex: '#98E5DD', contrast: '#000000' },
+    { name: 'Algae Green', hex: '#94E3B8', contrast: '#000000' },
+    { name: 'Lavender', hex: '#AE7ED6', contrast: '#000000' },
+    { name: 'Amethyst', hex: '#A270CB', contrast: '#000000' }
+]
+
 export const PALETTES = [
     {
         name: 'slate',

@@ -1,6 +1,7 @@
 import {
     PLACEHOLDER,
     SHADES,
+    INIT_PALETTE,
     PALETTES,
     TAILWIND_CLASSES,
     GRADIENT_DIRECTIONS,
@@ -12,6 +13,7 @@ import { ROUTES } from './routes.ts'
 export {
     PLACEHOLDER,
     SHADES,
+    INIT_PALETTE,
     PALETTES,
     TAILWIND_CLASSES,
     GRADIENT_DIRECTIONS,

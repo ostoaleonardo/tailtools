@@ -2,14 +2,11 @@ import { useEffect, useState } from 'react'
 import { ColorGenerator } from '.'
 import { useFetch } from '../../hooks'
 import { getRandomColor } from '../../utils'
+import { INIT_PALETTE } from '../../constants'
 
 export function Generator() {
     const { generatePalette } = useFetch()
-    const [palette, setPalette] = useState([])
-
-    useEffect(() => {
-        handleGenerate()
-    }, [])
+    const [palette, setPalette] = useState(INIT_PALETTE)
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)
@@ -19,11 +16,6 @@ export function Generator() {
         }
     }, [])
 
-    const handleGenerate = () => {
-        const color = getRandomColor()
-        getPalette(color)
-    }
-
     const getPalette = async (color: string) => {
         const palette = await generatePalette(color, 'analogic-complement', 5)
         setPalette(palette)
@@ -31,7 +23,8 @@ export function Generator() {
 
     const handleKeyDown = (event: KeyboardEvent) => {
         if (event.code === 'Space') {
-            handleGenerate()
+            const color = getRandomColor()
+            getPalette(color)
         }
     }
 

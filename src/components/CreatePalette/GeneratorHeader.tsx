@@ -3,7 +3,7 @@ import { Icons } from '..'
 
 export function GeneratorHeader() {
     return (
-        <header className='absolute top-[64px] w-full h-14 flex items-center justify-center bg-[#FAFAFF] border-x-black/5 border-y-1 transition-all z-10'>
+        <header className='absolute top-[64px] w-full h-14 flex items-center justify-center bg-titan-white border-x-black/5 border-y-1 transition-all z-10'>
             <div className='max-w-[94rem] w-full flex items-center justify-between'>
                 <h1 className='tet-base font-medium text-black'>
                     Press the spacebar to generate a new palette

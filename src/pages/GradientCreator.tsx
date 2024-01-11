@@ -26,7 +26,7 @@ export function GradientCreator() {
     }
 
     return (
-        <main className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center bg-[#FAFAFF]'>
+        <main className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center bg-titan-white'>
             <div className='max-w-7xl w-full h-full flex flex-col items-center justify-center gap-4'>
                 <GradientHeader
                     setDirection={setDirection}
