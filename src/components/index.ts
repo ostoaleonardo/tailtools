@@ -32,6 +32,15 @@ import {
     HoverColor
 } from './CreatePalette'
 
+// Gradient Creator Page
+import {
+    GradientHeader,
+    GradientVisualizer,
+    ColorSelectorTabs,
+    PaletteRow,
+    GradientCode
+} from './GradientCreator'
+
 export {
     // UI
     Nav,
@@ -57,5 +66,12 @@ export {
     Generator,
     GeneratorHeader,
     ColorGenerator,
-    HoverColor
+    HoverColor,
+
+    // Gradient Creator Page
+    GradientHeader,
+    GradientVisualizer,
+    ColorSelectorTabs,
+    PaletteRow,
+    GradientCode
 }

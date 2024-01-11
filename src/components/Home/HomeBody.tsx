@@ -41,7 +41,7 @@ export function HomeBody() {
                     The easiest way to generate your own palettes for Tailwind CSS
                 </p>
                 <div className='mt-8 flex gap-4'>
-                    {PALETTES.map((palette, index) => (
+                    {PALETTES.slice(12, 14).map((palette, index) => (
                         <CircleButton
                             key={index}
                             palette={palette}

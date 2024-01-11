@@ -24,12 +24,21 @@
         font-family: 'DM Mono', monospace;
     }
 
-    ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
         width: 8px;
         background-color: #18181B;
     }
     
     ::-webkit-scrollbar-thumb {
         background-color: var(--color-primary-foreground);
+    } */
+
+    .small-scrollbar::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    .small-scrollbar::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: #00000051
     }
 }
