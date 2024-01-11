@@ -1,12 +1,12 @@
 import { Tab, Tabs } from '@nextui-org/react'
 
 interface ColorSelectorTabsProps {
+    via: string
     selectedColor: string
     setSelectedColor: Function
-    via: string
 }
 
-export function ColorSelectorTabs({ selectedColor, setSelectedColor, via }: ColorSelectorTabsProps) {
+export function ColorSelectorTabs({ via, selectedColor, setSelectedColor }: ColorSelectorTabsProps) {
     return (
         <Tabs
             variant='light'
