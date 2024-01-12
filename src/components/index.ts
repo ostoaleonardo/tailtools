@@ -7,10 +7,12 @@ import {
 
 // Home Page
 import {
-    HomeHeader,
-    HomeBody,
+    HeroSection,
     CircleButton,
-    CodeWindow
+    CodeWindow,
+    Palette,
+    GradientPicker,
+    RandomPaletteButton
 } from './Home'
 
 // Find Color Page
@@ -48,10 +50,12 @@ export {
     Icons,
 
     // Home Page
-    HomeHeader,
-    HomeBody,
+    HeroSection,
     CircleButton,
     CodeWindow,
+    Palette,
+    GradientPicker,
+    RandomPaletteButton,
 
     // Find Color Page
     Landing,

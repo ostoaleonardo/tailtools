@@ -1,6 +1,6 @@
-export function CodeWindow({ code }: { code: string }) {
+export function CodeWindow({ code, colorTitle }: { code: string, colorTitle: string }) {
     return (
-        <div className='w-4/5 h-auto bg-zinc-900 rounded-md overflow-hidden'>
+        <div className='w-4/5 h-auto border-white/50 border-2 rounded-xl overflow-hidden backdrop-blur'>
             <div className='w-full h-8 flex items-center justify-between select-none px-2'>
                 <span className='text-white/30 text-xs'>tailwind.config.js</span>
                 <div className='flex gap-3'>
@@ -23,7 +23,7 @@ export function CodeWindow({ code }: { code: string }) {
                                     {'\'' + part + '\''}
                                 </span>
                             ) : part.match(/[A-Za-z]/) ? (
-                                <span key={partIndex} className='font-console' style={{ color: part }}>
+                                <span key={partIndex} className='font-console' style={{ color: colorTitle }}>
                                     {'\'' + part + '\''}
                                 </span>
                             ) : (

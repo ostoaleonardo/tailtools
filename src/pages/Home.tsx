@@ -1,10 +1,9 @@
-import { HomeBody, HomeHeader } from '../components'
+import { HeroSection } from '../components'
 
 export function Home() {
     return (
-        <main className='flex flex-col'>
-            <HomeHeader />
-            <HomeBody />
+        <main className='relative flex flex-col overflow-hidden'>
+            <HeroSection />
         </main>
     )
 }

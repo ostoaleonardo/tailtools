@@ -1,11 +1,15 @@
-import { HomeHeader } from './HomeHeader.tsx'
-import { HomeBody } from './HomeBody.tsx'
+import { HeroSection } from './HeroSection.tsx'
 import { CircleButton } from './CircleButton.tsx'
 import { CodeWindow } from './CodeWindow.tsx'
+import { Palette } from './Palette.tsx'
+import { GradientPicker } from './GradientPicker.tsx'
+import { RandomPaletteButton } from './RandomPaletteButton.tsx'
 
 export {
-    HomeHeader,
-    HomeBody,
+    HeroSection,
     CircleButton,
-    CodeWindow
+    CodeWindow,
+    Palette,
+    GradientPicker,
+    RandomPaletteButton
 }
