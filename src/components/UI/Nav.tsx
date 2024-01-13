@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent } from '@nextui-org/react'
-import { NavItem } from '.'
+import { ThemeButton, NavItem } from '.'
 import { useColor } from '../../hooks'
 import { ROUTES } from '../../constants'
 
@@ -11,17 +11,20 @@ export function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const isHomePage = location.pathname === '/'
     const isFindPage = location.pathname === '/find'
-    const backgroundActiveColor = isFindPage ? color.hex : isHomePage ? '#00000080' : '#FAFAFF'
-    const textActiveColor = isFindPage ? contrast : isHomePage ? '#FAFAFF' : '#000000'
+    const backgroundActiveColor = isFindPage && color.hex 
+    const textActiveColor = isFindPage && contrast
 
     return (
         <Navbar
-            maxWidth='xl'
-            isBlurred={isHomePage}
+            maxWidth='2xl'
+            isBlurred={false}
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
-            style={{ backgroundColor: backgroundActiveColor }}
-            className='transition-all'
+            className='bg-titan-white dark:bg-zinc-900 transition-all'
+            style={{
+                backgroundColor: isHomePage ? 'transparent' : backgroundActiveColor,
+                position: isHomePage ? 'absolute' : 'sticky'
+            }}
         >
             <NavbarContent className='sm:hidden' justify='start'>
                 <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
@@ -29,7 +32,7 @@ export function Nav() {
 
             <NavbarContent className='sm:hidden pr-3' justify='center'>
                 <NavbarBrand>
-                    <Link to='/' className='font-bold text-inherit uppercase' style={{ color: textActiveColor }}>
+                    <Link to='/' className='font-syne text-inherit uppercase' style={{ color: textActiveColor }}>
                         Tailtools
                     </Link>
                 </NavbarBrand>
@@ -37,7 +40,7 @@ export function Nav() {
 
             <NavbarContent className='hidden sm:flex gap-4' justify='center'>
                 <NavbarBrand className='mr-10'>
-                    <Link to='/' className='font-bold text-inherit uppercase' style={{ color: textActiveColor }}>
+                    <Link to='/' className='font-syne text-inherit uppercase' style={{ color: textActiveColor }}>
                         Tailtools
                     </Link>
                 </NavbarBrand>
@@ -47,6 +50,7 @@ export function Nav() {
             </NavbarContent>
 
             <NavbarContent justify='end'>
+                <ThemeButton />
             </NavbarContent>
 
             <NavbarMenu>

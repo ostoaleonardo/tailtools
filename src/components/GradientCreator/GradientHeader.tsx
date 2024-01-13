@@ -3,10 +3,10 @@ import { GRADIENT_DIRECTIONS, VIA_OPTIONS } from '../../constants'
 
 export function GradientHeader({ setDirection, setVia }: { setDirection: Function, setVia: Function }) {
     return (
-        <div className='w-full flex items-center justify-between bg-slate-300 rounded-2xl p-8'>
+        <div className='w-full flex items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8'>
             <div className='w-full flex flex-col'>
-                <h1 className='text-4xl font-bold text-slate-900'>Gradient Creator</h1>
-                <p className='text-xl text-slate-700'>Choose the colors and direction of your gradient.</p>
+                <h1 className='text-4xl font-bold'>Gradient Creator</h1>
+                <p className='text-lg'>Choose the colors and direction of your gradient.</p>
             </div>
             <div className='w-1/2 flex items-center justify-end gap-4'>
                 <Select

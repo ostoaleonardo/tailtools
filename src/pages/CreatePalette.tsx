@@ -2,7 +2,7 @@ import { Generator, GeneratorHeader } from '../components'
 
 export function CreatePalette() {
     return (
-        <main className='flex flex-col bg-titan-white'>
+        <main className='flex flex-col'>
             <GeneratorHeader />
             <Generator />
         </main >

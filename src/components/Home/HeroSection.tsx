@@ -12,11 +12,11 @@ export function HeroSection() {
     }, [palette])
 
     return (
-        <main className='w-full h-[calc(100vh_-_64px)] flex flex-col items-center justify-center bg-black'>
+        <main className='w-full h-screen flex flex-col items-center justify-center bg-titan-white dark:bg-zinc-950'>
             <div className='w-full max-w-7xl flex flex-col gap-6 z-10'>
                 <div className='w-[62%] flex flex-col items-center'>
                     <div className='w-full flex justify-between'>
-                        <span className='text-8xl font-bold font-syne uppercase'>
+                        <span className='text-8xl font-syne uppercase'>
                             Palettes
                         </span>
                         <Palette
@@ -28,34 +28,34 @@ export function HeroSection() {
                         />
                     </div>
                     <div className='w-full flex justify-between gap-2'>
-                        <span className='text-8xl font-bold font-syne uppercase'>
+                        <span className='text-8xl font-syne uppercase'>
                             Gra
                         </span>
                         <GradientPicker
                             colors={{
-                                from: (TAILWIND_CLASSES as any)[palette.name][100].from,
-                                to: (TAILWIND_CLASSES as any)[palette.name][800].to,
+                                from: (TAILWIND_CLASSES as any)[palette.name][50].from,
+                                to: (TAILWIND_CLASSES as any)[palette.name][500].to,
                             }}
                         />
-                        <span className='text-8xl font-bold font-syne uppercase'>
+                        <span className='text-8xl font-syne uppercase'>
                             ients
                         </span>
                     </div>
-                    <h1 className='w-full flex items-center justify-between'>
-                        <span className={`text-8xl font-bold font-syne uppercase text-transparent bg-clip-text bg-gradient-to-r ${(TAILWIND_CLASSES as any)[palette.name][50].from} ${(TAILWIND_CLASSES as any)[palette.name][700].to} transition-all`}>
+                    <div className='w-full flex items-center justify-between'>
+                        <h1 className='text-8xl font-syne uppercase transition-all' style={{ color: titleColor }}>
                             Tailtools
-                        </span>
+                        </h1>
                         <RandomPaletteButton
                             setCode={setCode}
                             setPalette={setPalette}
                         />
-                    </h1>
+                    </div>
                 </div>
-                <p className='text-slate-300 text-xl'>
+                <p className='text-zinc-500 dark:text-slate-300 text-xl'>
                     A collection of tools to help you create and design with Tailwind CSS.
                 </p>
             </div>
-            <div className='absolute right-0 w-1/3 h-full flex items-center bg-gradient-to-l from-slate-800 to-transparent z-0'>
+            <div className='absolute right-0 w-1/3 h-full flex items-center bg-gradient-to-l from-slate-300 dark:from-slate-800 to-transparent transition-all'>
                 <CodeWindow
                     code={code}
                     colorTitle={titleColor}

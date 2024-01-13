@@ -2,6 +2,7 @@
 import {
     Nav,
     NavItem,
+    ThemeButton,
     Icons
 } from './UI'
 
@@ -47,6 +48,7 @@ export {
     // UI
     Nav,
     NavItem,
+    ThemeButton,
     Icons,
 
     // Home Page
