@@ -10,7 +10,7 @@ export function GradientVisualizer({ code, selectedGradient, setSelectedGradient
     const gradientText = 'bg-clip-text text-transparent'
 
     return (
-        <div className='flex flex-col justify-between gap-4'>
+        <div className='w-full h-full flex flex-col justify-between gap-4'>
             <Tabs
                 variant='light'
                 aria-label='Colors'
@@ -21,9 +21,9 @@ export function GradientVisualizer({ code, selectedGradient, setSelectedGradient
                 <Tab key='text' title='Text' />
             </Tabs>
 
-            <div className='w-auto h-[25rem] aspect-square flex items-center justify-center border-2 border-black/10 dark:border-white/10 rounded-3xl overflow-hidden'>
+            <div className='w-full h-28 xl:h-[25rem] flex items-center justify-center border-2 border-black/10 dark:border-white/10 rounded-3xl overflow-hidden'>
                 {selectedGradient === 'background' ? <div className={`w-full h-full ${code}`} />
-                    : <h1 contentEditable spellCheck={false} className={`text-6xl font-bold break-all line-clamp-2 outline-none ${code} ${gradientText}`}>Hello World!</h1>
+                    : <h1 contentEditable spellCheck={false} className={`text-4xl lg:text-6xl font-bold break-all line-clamp-2 outline-none ${code} ${gradientText}`}>Hello World!</h1>
                 }
             </div>
         </div>

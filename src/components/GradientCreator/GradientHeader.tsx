@@ -3,18 +3,17 @@ import { GRADIENT_DIRECTIONS, VIA_OPTIONS } from '../../constants'
 
 export function GradientHeader({ setDirection, setVia }: { setDirection: Function, setVia: Function }) {
     return (
-        <div className='w-full flex items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8'>
-            <div className='w-full flex flex-col'>
+        <div className='w-full flex flex-col lg:flex-row items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
+            <div className='w-full flex flex-col gap-1'>
                 <h1 className='text-4xl font-bold'>Gradient Creator</h1>
-                <p className='text-lg'>Choose the colors and direction of your gradient.</p>
+                <p className='text-base lg:text-lg'>Choose the colors and direction of your gradient.</p>
             </div>
-            <div className='w-1/2 flex items-center justify-end gap-4'>
+            <div className='w-full lg:w-1/2 flex items-center justify-end gap-4'>
                 <Select
                     isRequired
                     variant='faded'
-                    className='max-w-xs'
                     disallowEmptySelection
-                    label='Gradient direction'
+                    label='Direction'
                     placeholder='Select a direction'
                     defaultSelectedKeys={['bg-gradient-to-t']}
                     items={GRADIENT_DIRECTIONS}
@@ -25,7 +24,6 @@ export function GradientHeader({ setDirection, setVia }: { setDirection: Functio
                 <Select
                     isRequired
                     variant='faded'
-                    className='max-w-xs'
                     label='Gradient via'
                     disallowEmptySelection
                     placeholder='Select a via'

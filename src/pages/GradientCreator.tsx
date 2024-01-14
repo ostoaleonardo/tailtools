@@ -26,13 +26,13 @@ export function GradientCreator() {
     }
 
     return (
-        <main className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center'>
+        <main className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center px-8 py-8'>
             <div className='max-w-7xl w-full h-full flex flex-col items-center justify-center gap-4'>
                 <GradientHeader
                     setDirection={setDirection}
                     setVia={setVia}
                 />
-                <div className='w-full flex items-center justify-between gap-4'>
+                <div className='w-full flex flex-col xl:flex-row items-center justify-between gap-4'>
                     <GradientVisualizer
                         code={code}
                         selectedGradient={selectedGradient}
@@ -45,7 +45,7 @@ export function GradientCreator() {
                             setSelectedColor={setSelectedColor}
                         />
                         <div className='w-full h-80 border-2 border-black/10 dark:border-white/10 rounded-2xl overflow-y-auto small-scrollbar'>
-                            <div className='w-full flex flex-col items-center justify-center gap-6 p-6'>
+                            <div className='w-full flex flex-col items-center justify-center gap-10 p-6'>
                                 {PALETTES.map((palette, index) => (
                                     <PaletteRow key={index} palette={palette} setColors={setColorsFromPalette} />
                                 ))}

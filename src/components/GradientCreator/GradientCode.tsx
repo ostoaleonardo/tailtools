@@ -9,6 +9,11 @@ export function GradientCode({ code }: { code: string }) {
                 variant='bordered'
                 copyIcon={<Icons.Copy />}
                 className='w-full h-full border-none overflow-x-auto small-scrollbar px-6'
+                classNames={{
+                    base: 'relative',
+                    pre: 'max-xl:absolute max-xl:left-16',
+                    copyButton: 'max-xl:absolute max-xl:left-4'
+                }}
             >
                 {code}
             </Snippet>
