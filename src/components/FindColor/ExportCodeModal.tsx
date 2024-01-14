@@ -4,6 +4,25 @@ import { Icons } from '..'
 import { useColor } from '../../hooks'
 import { getCodeToExport } from '../../utils'
 
+interface TechButtonProps {
+    active: string
+    setActive: (value: string) => void
+    tech: string
+    children: React.ReactNode
+}
+
+function TechButton({ active, setActive, tech, children }: TechButtonProps) {
+    return (
+        <Button
+            className='min-w-max flex-1 sm:flex-none'
+            onClick={() => setActive(tech)}
+            variant={active === tech ? 'solid' : 'light'}
+        >
+            {children}
+        </Button>
+    )
+}
+
 export function ExportCodeModal({ isOpen, onClose, palette }: { isOpen: boolean, onClose: () => void, palette: any[] }) {
     const [active, setActive] = useState('tailwind-hex')
     const [code, setCode] = useState('')
@@ -25,34 +44,34 @@ export function ExportCodeModal({ isOpen, onClose, palette }: { isOpen: boolean,
                 <ModalHeader className='flex flex-col gap-1'>
                     Export code
                 </ModalHeader>
-                <ModalBody className='flex flex-row mb-4'>
-                    <div className='flex flex-col gap-2'>
-                        <Button
-                            color='default'
-                            onClick={() => setActive('tailwind-hex')}
-                            variant={active === 'tailwind-hex' ? 'solid' : 'light'}
+                <ModalBody className='flex sm:flex-row mb-4'>
+                    <div className='flex flex-row sm:flex-col flex-wrap gap-2'>
+                        <TechButton
+                            active={active}
+                            setActive={setActive}
+                            tech='tailwind-hex'
                         >
                             Tailwind CSS (Hex)
-                        </Button>
-                        <Button
-                            color='default'
-                            onClick={() => setActive('css-hex')}
-                            variant={active === 'css-hex' ? 'solid' : 'light'}
+                        </TechButton>
+                        <TechButton
+                            active={active}
+                            setActive={setActive}
+                            tech='css-hex'
                         >
                             CSS (Hex)
-                        </Button>
+                        </TechButton>
                     </div>
                     <div className='w-full h-full flex'>
                         <Snippet
                             hideSymbol
                             copyIcon={<Icons.Copy />}
-                            className='w-full h-full text-base'
+                            className='w-full h-full text-base overflow-auto'
                         >
                             {code.split('\n')
                                 .map((line, index) => (
                                     <span
                                         key={index}
-                                        className={`flex font-console ${line.includes('#') && 'indent-10'}`}
+                                        className={`flex text-xs sm:text-sm font-console ${line.includes('#') && 'indent-10'}`}
                                     >
                                         {line}
                                     </span>

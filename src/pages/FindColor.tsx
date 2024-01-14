@@ -1,9 +1,9 @@
-import { ColorPalette, Examples, Landing } from '../components'
+import { ColorPalette, Examples, FindColorHeader } from '../components'
 
 export function FindColor() {
     return (
         <main className='flex flex-col'>
-            <Landing />
+            <FindColorHeader />
             <ColorPalette />
             <Examples />
         </main>

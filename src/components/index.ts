@@ -18,7 +18,7 @@ import {
 
 // Find Color Page
 import {
-    Landing,
+    FindColorHeader,
     ColorPicker,
     ColorPalette,
     ColorCard,
@@ -60,7 +60,7 @@ export {
     RandomPaletteButton,
 
     // Find Color Page
-    Landing,
+    FindColorHeader,
     ColorPicker,
     ColorPalette,
     ColorCard,

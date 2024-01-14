@@ -5,7 +5,7 @@ import { Icons } from '../UI'
 import { useColor, useFetch } from '../../hooks'
 import { PLACEHOLDER } from '../../constants'
 
-export function Landing() {
+export function FindColorHeader() {
     const [input, setInput] = useState('')
     const { color, contrast } = useColor()
     const { fetchColor } = useFetch()
@@ -17,13 +17,13 @@ export function Landing() {
     }
 
     return (
-        <header className='w-full h-96 flex items-center justify-center bg-violet-800 transition-all' style={{ backgroundColor: color.hex }}>
-            <div className='h-full max-w-5xl w-full flex flex-row items-center justify-center'>
+        <header className='w-full flex items-center justify-center bg-violet-800 transition-all px-8 py-8 md:py-24' style={{ backgroundColor: color.hex }}>
+            <div className='h-full max-w-5xl w-full flex flex-col md:flex-row items-center justify-center gap-8'>
                 <div className='w-full flex flex-col'>
-                    <h1 className='text-6xl font-bold text-neutral-100' style={{ color: contrast }}>
+                    <h1 className='text-4xl md:text-6xl font-bold text-neutral-100' style={{ color: contrast }}>
                         Find Your Color
                     </h1>
-                    <p className='text-xl font-light text-neutral-100' style={{ color: contrast }}>
+                    <p className='text-base md:text-xl font-light text-neutral-100' style={{ color: contrast }}>
                         Find your color and get inspired!
                     </p>
                     <div className='flex items-end mt-4'>
@@ -36,7 +36,7 @@ export function Landing() {
                             placeholder={PLACEHOLDER[Math.floor(Math.random() * PLACEHOLDER.length)]}
                             classNames={{
                                 input: 'placeholder:text-white/60 uppercase',
-                                base: 'w-2/4',
+                                base: 'w-full md:w-2/4',
                             }}
                             style={{ color: contrast }}
                             startContent={<ColorPicker setInput={setInput} />}
@@ -52,11 +52,11 @@ export function Landing() {
                         </Button>
                     </div>
                 </div>
-                <div className='h-fit flex flex-1 flex-col items-end justify-start rounded-2xl transition-all p-6' style={{ backgroundColor: `${contrast}0D` }}>
-                    <span className='text-6xl text-end font-bold text-neutral-100' style={{ color: contrast }}>
+                <div className='flex flex-1 md:flex-col items-center md:items-end rounded-2xl transition-all p-6 gap-2' style={{ backgroundColor: `${contrast}0D` }}>
+                    <span className='text-lg md:text-6xl text-end font-bold text-neutral-100' style={{ color: contrast }}>
                         {color.name}
                     </span>
-                    <span className='text-2xl font-bold text-neutral-100 opacity-60' style={{ color: contrast }}>
+                    <span className='text-sm md:text-2xl font-bold text-neutral-100 opacity-60' style={{ color: contrast }}>
                         {color.hex}
                     </span>
                 </div>
