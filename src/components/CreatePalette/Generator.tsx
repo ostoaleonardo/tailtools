@@ -29,7 +29,7 @@ export function Generator() {
     }
 
     return (
-        <section className='w-full h-[calc(100vh_-_64px)] grid grid-cols-5 bg-white'>
+        <section className='w-full h-[calc(100vh_-_120px)] grid grid-rows-5 md:grid-rows-none md:grid-cols-5'>
             {palette && palette.map((color, index) => (
                 <ColorGenerator key={index} color={color} />
             ))}

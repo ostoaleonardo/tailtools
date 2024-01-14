@@ -8,9 +8,9 @@ interface Color {
 
 export function ColorGenerator({ color }: { color: Color }) {
     return (
-        <div className='relative flex col-span-1 items-center justify-center' style={{ backgroundColor: color.hex }}>
+        <div className='relative flex items-center md:items-end md:justify-center p-8 md:p-16' style={{ backgroundColor: color.hex }}>
             <HoverColor color={color} />
-            <div className='absolute bottom-0 left-0 w-full flex flex-col items-center pb-16'>
+            <div className='flex flex-col md:items-center'>
                 <span className='text-3xl font-bold text-white' style={{ color: color.contrast }}>
                     {color.hex.replace('#', '')}
                 </span>
