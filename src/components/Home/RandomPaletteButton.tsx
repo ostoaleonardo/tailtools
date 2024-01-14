@@ -27,11 +27,11 @@ export function RandomPaletteButton({ setCode, setPalette }: RandomPaletteButton
     return (
         <button
             onClick={generateCode}
-            className='w-40 flex items-center justify-center rounded-full bg-zinc-950 dark:bg-titan-white transition-all group'
+            className='max-md:w-28 w-40 flex items-center justify-center rounded-full bg-zinc-950 dark:bg-titan-white transition-all group'
         >
-            <span className='flex items-center text-titan-white dark:text-black text-sm font-syne uppercase leading-none transition-color py-6'>
+            <span className='flex items-center max-md:text-xs text-sm text-titan-white dark:text-black font-syne uppercase leading-none transition-color max-md:py-2 py-6'>
                 Rand
-                <div className='w-3 group-hover:w-6 h-[0.6rem] border-titan-white dark:border-black border-2 rounded-2xl transition-width mb-[0.1rem]' />
+                <div className='w-3 group-hover:w-6 max-md:h-[0.5rem] h-[0.6rem] border-titan-white dark:border-black border-2 rounded-2xl transition-width ' />
                 m
             </span>
         </button>

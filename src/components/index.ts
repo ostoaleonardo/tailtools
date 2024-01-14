@@ -24,7 +24,7 @@ import {
     ColorCard,
     HoverCard,
     ExportCodeModal,
-    ExamplesComponents
+    Examples
 } from './FindColor'
 
 // Create Palette Page
@@ -66,7 +66,7 @@ export {
     ColorCard,
     HoverCard,
     ExportCodeModal,
-    ExamplesComponents,
+    Examples,
 
     // Create Palette Page
     Generator,

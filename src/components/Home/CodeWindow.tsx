@@ -1,6 +1,6 @@
 export function CodeWindow({ code, colorTitle }: { code: string, colorTitle: string }) {
     return (
-        <div className='w-4/5 h-auto border-zinc-950/50 dark:border-white/50 border-2 rounded-xl overflow-hidden backdrop-blur'>
+        <div className='w-full xl:min-w-96 border-zinc-950/50 dark:border-white/50 border-2 rounded-xl overflow-hidden backdrop-blur'>
             <div className='w-full h-8 flex items-center justify-between select-none px-2'>
                 <span className='opacity-30 text-xs'>tailwind.config.js</span>
                 <div className='flex gap-3'>

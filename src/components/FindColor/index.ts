@@ -4,7 +4,7 @@ import { ColorPalette } from './ColorPalette.tsx'
 import { ColorCard } from './ColorCard.tsx'
 import { HoverCard } from './HoverCard.tsx'
 import { ExportCodeModal } from './ExportCodeModal.tsx'
-import { ExamplesComponents } from './ExamplesComponents.tsx'
+import { Examples } from './Examples.tsx'
 
 export {
     Landing,
@@ -13,5 +13,5 @@ export {
     ColorCard,
     HoverCard,
     ExportCodeModal,
-    ExamplesComponents
+    Examples
 }
