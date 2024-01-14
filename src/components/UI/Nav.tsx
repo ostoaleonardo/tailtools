@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent } from '@nextui-org/react'
-import { ThemeButton, NavItem } from '.'
+import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarContent } from '@nextui-org/react'
+import { ThemeButton, NavItem, NavMenuItem } from '.'
 import { useColor } from '../../hooks'
 import { ROUTES } from '../../constants'
 
@@ -11,7 +11,7 @@ export function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const isHomePage = location.pathname === '/'
     const isFindPage = location.pathname === '/find'
-    const backgroundActiveColor = isFindPage && color.hex 
+    const backgroundActiveColor = isFindPage && color.hex
     const textActiveColor = isFindPage && contrast
 
     return (
@@ -26,7 +26,7 @@ export function Nav() {
                 position: isHomePage ? 'absolute' : 'sticky'
             }}
         >
-            <NavbarContent className='sm:hidden' justify='start'>
+            <NavbarContent className='sm:hidden' justify='start' style={{ color: textActiveColor }}>
                 <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
             </NavbarContent>
 
@@ -45,7 +45,12 @@ export function Nav() {
                     </Link>
                 </NavbarBrand>
                 {ROUTES.map((route, index) => (
-                    <NavItem key={index} href={route.path} name={route.name} activeColor={textActiveColor} />
+                    <NavItem
+                        key={index}
+                        href={route.path}
+                        name={route.name}
+                        activeColor={textActiveColor}
+                    />
                 ))}
             </NavbarContent>
 
@@ -53,19 +58,15 @@ export function Nav() {
                 <ThemeButton />
             </NavbarContent>
 
-            <NavbarMenu>
+            <NavbarMenu
+                className='flex items-center justify-center bg-zinc-950/80 backdrop-blur-sm gap-8'
+            >
                 {ROUTES.map((route, index) => (
-                    <NavbarMenuItem key={`${route}-${index}`}>
-                        <Link
-                            to='#'
-                            className='w-full'
-                            color={
-                                index === 2 ? 'warning' : index === ROUTES.length - 1 ? 'danger' : 'foreground'
-                            }
-                        >
-                            {route.name}
-                        </Link>
-                    </NavbarMenuItem>
+                    <NavMenuItem
+                        key={index}
+                        href={route.path}
+                        name={route.name}
+                    />
                 ))}
             </NavbarMenu>
         </Navbar>

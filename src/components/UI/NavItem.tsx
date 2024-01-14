@@ -4,16 +4,17 @@ import { NavbarItem } from '@nextui-org/react'
 export function NavItem({ href, name, activeColor }: { href: string, name: string, activeColor: string }) {
     const location = useLocation()
     const isActive = location.pathname === href
+    const isFindPage = location.pathname === '/find'
 
     return (
-        <NavbarItem className='relative'>
+        <NavbarItem className='relative flex justify-center'>
             <Link to={href} style={{ color: activeColor }}>
                 {name}
             </Link>
             {isActive && (
                 <div
-                    style={{ backgroundColor: activeColor }}
-                    className='absolute -bottom-2 left-0 right-0 ml-auto mr-auto h-[.15rem] w-3 rounded-full transition-all'
+                    style={{ backgroundColor: isFindPage ? activeColor : 'white' }}
+                    className='absolute -bottom-2 w-[10%] h-0.5 transition-all'
                 />
             )}
         </NavbarItem>
