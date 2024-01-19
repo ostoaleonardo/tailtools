@@ -5,14 +5,14 @@ import { ColorCard, ExportCodeModal } from '.'
 import { Button } from '@nextui-org/react'
 import { Icons } from '..'
 
-interface Color {
+interface Palette {
     name: string
     hex: string
     contrast: string
 }
 
 export function ColorPalette() {
-    const [palette, setPalette] = useState<Color[]>([])
+    const [palette, setPalette] = useState<Palette[]>([])
     const [isOpen, setIsOpen] = useState(false)
     const { generatePalette } = useFetch()
     const { color } = useColor()
@@ -36,13 +36,15 @@ export function ColorPalette() {
                         <h1 className='text-2xl sm:text-3xl font-bold'>
                             Color Palette
                         </h1>
-                        <Button
-                            variant='light'
-                            onClick={handleOpen}
-                            startContent={<Icons.Export />}
-                        >
-                            Export code
-                        </Button>
+                        <div className='flex items-center'>
+                            <Button
+                                variant='light'
+                                onClick={handleOpen}
+                                startContent={<Icons.Export />}
+                            >
+                                Export code
+                            </Button>
+                        </div>
                     </div>
                     <div className='w-full grid grid-cols-11 gap-2'>
                         {palette.map((color, index) => (

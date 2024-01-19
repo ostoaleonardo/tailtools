@@ -15,12 +15,6 @@ export function GeneratorHeader() {
                     >
                         Export
                     </Button>
-                    <Button
-                        variant='light'
-                        startContent={<Icons.Heart />}
-                    >
-                        Save
-                    </Button>
                 </div>
             </div>
         </header>
