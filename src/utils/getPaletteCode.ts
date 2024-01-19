@@ -1,6 +1,6 @@
 import { SHADES } from '../constants'
 
-export const getCodeToExport = (tech: string, colorName: string, palette: any[]) => {
+export const getPaletteCode = (tech: string, colorName: string, palette: any[]) => {
     let code = ''
 
     switch (tech) {

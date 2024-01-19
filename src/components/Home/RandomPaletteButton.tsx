@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { getCodeToExport } from "../../utils"
+import { getPaletteCode } from "../../utils"
 import { PALETTES } from "../../constants"
 
 interface Palette {
@@ -19,7 +19,7 @@ export function RandomPaletteButton({ setCode, setPalette }: RandomPaletteButton
 
     const generateCode = () => {
         const palette = PALETTES[Math.floor(Math.random() * PALETTES.length)]
-        const code = getCodeToExport('tailwind-hex', palette.name, palette.colors)
+        const code = getPaletteCode('tailwind-hex', palette.name, palette.colors)
         setPalette(palette)
         setCode(code)
     }

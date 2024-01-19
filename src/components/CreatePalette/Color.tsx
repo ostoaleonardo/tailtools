@@ -6,7 +6,7 @@ interface Color {
     contrast: string
 }
 
-export function ColorGenerator({ color }: { color: Color }) {
+export function Color({ color }: { color: Color }) {
     return (
         <div className='relative flex items-center md:items-end md:justify-center p-8 md:p-16' style={{ backgroundColor: color.hex }}>
             <HoverColor color={color} />

@@ -1,10 +1,7 @@
-import { Generator, GeneratorHeader } from '../components'
+import { Generator } from '../components'
 
 export function CreatePalette() {
     return (
-        <main className='flex flex-col'>
-            <GeneratorHeader />
-            <Generator />
-        </main >
+        <Generator />
     )
 }

@@ -24,7 +24,6 @@ import {
     ColorPalette,
     ColorCard,
     HoverCard,
-    ExportCodeModal,
     Examples
 } from './FindColor'
 
@@ -32,7 +31,7 @@ import {
 import {
     Generator,
     GeneratorHeader,
-    ColorGenerator,
+    Color,
     HoverColor
 } from './CreatePalette'
 
@@ -67,13 +66,12 @@ export {
     ColorPalette,
     ColorCard,
     HoverCard,
-    ExportCodeModal,
     Examples,
 
     // Create Palette Page
     Generator,
     GeneratorHeader,
-    ColorGenerator,
+    Color,
     HoverColor,
 
     // Gradient Creator Page

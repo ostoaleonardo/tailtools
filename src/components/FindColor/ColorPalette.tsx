@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
+import { Button } from '@nextui-org/react'
+import { ExportModal, ModalButton } from '../Modal'
+import { CodeToExport } from '../UI'
+import { ColorCard } from '.'
+import { Icons } from '..'
 import { useColor, useFetch } from '../../hooks'
 import { SHADES } from '../../constants'
-import { ColorCard, ExportCodeModal } from '.'
-import { Button } from '@nextui-org/react'
-import { Icons } from '..'
+import { getPaletteCode } from '../../utils'
 
 interface Palette {
     name: string
@@ -11,8 +14,21 @@ interface Palette {
     contrast: string
 }
 
+const BUTTONS = [
+    {
+        name: 'Tailwind CSS (Hex)',
+        tech: 'tailwind-hex'
+    },
+    {
+        name: 'CSS (Hex)',
+        tech: 'css-hex'
+    }
+]
+
 export function ColorPalette() {
     const [palette, setPalette] = useState<Palette[]>([])
+    const [active, setActive] = useState('tailwind-hex')
+    const [code, setCode] = useState('')
     const [isOpen, setIsOpen] = useState(false)
     const { generatePalette } = useFetch()
     const { color } = useColor()
@@ -25,6 +41,12 @@ export function ColorPalette() {
 
         getPalette()
     }, [color])
+
+    useEffect(() => {
+        const colorName = color.name.toLowerCase().replace(' ', '-')
+        const code = getPaletteCode(active, colorName, palette)
+        setCode(code)
+    }, [active, palette])
 
     const handleOpen = () => setIsOpen(!isOpen)
 
@@ -53,7 +75,25 @@ export function ColorPalette() {
                     </div>
                 </div>
             </section>
-            <ExportCodeModal isOpen={isOpen} onClose={handleOpen} palette={palette} />
+
+            <ExportModal
+                isOpen={isOpen}
+                onClose={handleOpen}
+                options={
+                    BUTTONS.map((option, index) => (
+                        <ModalButton
+                            key={index}
+                            active={active}
+                            setActive={setActive}
+                            tech={option.tech}
+                        >
+                            {option.name}
+                        </ModalButton>
+                    ))
+                }
+            >
+                <CodeToExport code={code} />
+            </ExportModal>
         </>
     )
 }
