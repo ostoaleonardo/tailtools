@@ -18,7 +18,7 @@ export function GradientCreator() {
     const [selectedGradient, setSelectedGradient] = useState('background')
 
     useEffect(() => {
-        setCode(`${direction} ${colors.from} ${via === 'true' ? colors.via : ''} ${colors.to} ${selectedGradient === 'text' ? gradientText : ''}`)
+        setCode(`${direction} ${colors.from} ${via === 'true' ? colors.via + ' ' : ''}${colors.to} ${selectedGradient === 'text' ? gradientText : ''}`)
     }, [direction, via, colors, selectedGradient])
 
     const setColorsFromPalette = (name: string, shade: number) => {
