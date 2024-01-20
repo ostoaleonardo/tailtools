@@ -4,6 +4,7 @@ import { ColorPicker } from '.'
 import { Icons } from '../UI'
 import { useColor, useFetch } from '../../hooks'
 import { PLACEHOLDER } from '../../constants'
+import { getRandomColor } from '../../utils'
 
 export function FindColorHeader() {
     const [input, setInput] = useState('')
@@ -16,15 +17,21 @@ export function FindColorHeader() {
         await getColor(input)
     }
 
+    const getRandom = () => {
+        const randomColor = getRandomColor()
+        setInput(randomColor)
+        getNewColor(randomColor)
+    }
+
     return (
-        <header className='w-full flex items-center justify-center bg-violet-800 transition-all px-8 py-8 md:py-24' style={{ backgroundColor: color.hex }}>
+        <header className='w-full h-96 flex items-center justify-center transition-all px-8' style={{ backgroundColor: color.hex }}>
             <div className='h-full max-w-5xl w-full flex flex-col md:flex-row items-center justify-center gap-8'>
                 <div className='w-full flex flex-col'>
                     <h1 className='text-4xl md:text-6xl font-bold text-neutral-100' style={{ color: contrast }}>
-                        Find Your Color
+                        Palette Generator
                     </h1>
                     <p className='text-base md:text-xl font-light text-neutral-100' style={{ color: contrast }}>
-                        Find your color and get inspired!
+                        Generate a color palette to Tailwind CSS
                     </p>
                     <div className='flex items-end mt-4'>
                         <Input
@@ -36,7 +43,7 @@ export function FindColorHeader() {
                             placeholder={PLACEHOLDER[Math.floor(Math.random() * PLACEHOLDER.length)]}
                             classNames={{
                                 input: 'placeholder:text-white/60 uppercase',
-                                base: 'w-full md:w-2/4',
+                                base: 'w-full md:w-80',
                             }}
                             style={{ color: contrast }}
                             startContent={<ColorPicker setInput={setInput} />}
@@ -50,9 +57,18 @@ export function FindColorHeader() {
                         >
                             <Icons.Search />
                         </Button>
+                        <Button
+                            isIconOnly
+                            variant='bordered'
+                            onClick={() => getRandom()}
+                            className='border-white ml-2'
+                            style={{ color: contrast, borderColor: contrast }}
+                        >
+                            <Icons.Random />
+                        </Button>
                     </div>
                 </div>
-                <div className='flex flex-1 md:flex-col items-center md:items-end rounded-2xl transition-all p-6 gap-2' style={{ backgroundColor: `${contrast}0D` }}>
+                <div className='flex md:flex-1 md:flex-col items-center md:items-end rounded-2xl transition-all p-6 gap-2' style={{ backgroundColor: `${contrast}0D` }}>
                     <span className='text-lg md:text-6xl text-end font-bold text-neutral-100' style={{ color: contrast }}>
                         {color.name}
                     </span>
