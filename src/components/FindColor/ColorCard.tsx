@@ -1,8 +1,9 @@
 import { HoverCard } from '.'
 
 interface Color {
-    name: string
+    shade: number
     hex: string
+    rgb: string
     contrast: string
 }
 

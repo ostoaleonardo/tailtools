@@ -14,13 +14,23 @@ export function useFetch() {
         )
 
         const data = await res.json()
-        
+        return data
+    }
+
+    const getColor = async (color: string) => {
+        const data = await fetchColor(color)
+
         setColor({ name: data.name.value, hex: data.hex.value })
         setContrast(data.contrast.value)
     }
 
+    const getColorName = async (color: string) => {
+        const data = await fetchColor(color)
+        return data.name.value
+    }
+
     // Generate a palette of 11 colors, from the base color
-    const generatePalette = async (color: string, mode='monochrome', count = 11) => {
+    const generatePalette = async (color: string, mode = 'monochrome', count = 11) => {
         color = color.replace('#', '')
 
         const res = await fetch(
@@ -42,7 +52,8 @@ export function useFetch() {
     }
 
     return {
-        fetchColor,
+        getColor,
+        getColorName,
         generatePalette
     }
 }

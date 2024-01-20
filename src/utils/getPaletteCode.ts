@@ -2,10 +2,11 @@ import { SHADES } from '../constants'
 
 export const getPaletteCode = (tech: string, colorName: string, palette: any[]) => {
     let code = ''
+    const name = colorName.replace(' ', '-').toLowerCase()
 
     switch (tech) {
         case 'tailwind-hex':
-            code += '\'' + colorName + '\': {\n'
+            code += '\'' + name + '\': {\n'
             palette.forEach((color, index) => {
                 code += '\t' + SHADES[index] + ': \'' + color.hex + '\',\n'
             })

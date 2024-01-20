@@ -4,13 +4,14 @@ import { ExportModal, ModalButton } from '../Modal'
 import { CodeToExport } from '../UI'
 import { ColorCard } from '.'
 import { Icons } from '..'
-import { useColor, useFetch } from '../../hooks'
+import { useColor, usePalette } from '../../hooks'
 import { SHADES } from '../../constants'
 import { getPaletteCode } from '../../utils'
 
 interface Palette {
-    name: string
+    shade: number
     hex: string
+    rgb: string
     contrast: string
 }
 
@@ -28,23 +29,18 @@ const BUTTONS = [
 export function ColorPalette() {
     const [palette, setPalette] = useState<Palette[]>([])
     const [active, setActive] = useState('tailwind-hex')
-    const [code, setCode] = useState('')
     const [isOpen, setIsOpen] = useState(false)
-    const { generatePalette } = useFetch()
+    const [code, setCode] = useState('')
     const { color } = useColor()
+    const { getPaletteFromColor } = usePalette()
 
     useEffect(() => {
-        const getPalette = async () => {
-            const palette = await generatePalette(color.hex)
-            setPalette(palette)
-        }
-
-        getPalette()
+        const palette = getPaletteFromColor(color.hex)
+        setPalette(palette)
     }, [color])
 
     useEffect(() => {
-        const colorName = color.name.toLowerCase().replace(' ', '-')
-        const code = getPaletteCode(active, colorName, palette)
+        const code = getPaletteCode(active, color.name, palette)
         setCode(code)
     }, [active, palette])
 

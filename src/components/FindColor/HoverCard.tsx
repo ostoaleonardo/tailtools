@@ -3,8 +3,9 @@ import { Button, Tooltip } from '@nextui-org/react'
 import { Icons } from '..'
 
 interface Color {
-    name: string
+    shade: number
     hex: string
+    rgb: string
     contrast: string
 }
 

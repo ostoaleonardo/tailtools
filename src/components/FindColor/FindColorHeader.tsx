@@ -8,12 +8,12 @@ import { PLACEHOLDER } from '../../constants'
 export function FindColorHeader() {
     const [input, setInput] = useState('')
     const { color, contrast } = useColor()
-    const { fetchColor } = useFetch()
+    const { getColor } = useFetch()
 
-    const getColor = async (input: string) => {
-        if (!input || input.replace('#', '') === color.hex.replace('#', '')) return
+    const getNewColor = async (input: string) => {
+        if (!input) return
 
-        await fetchColor(input)
+        await getColor(input)
     }
 
     return (
@@ -44,7 +44,7 @@ export function FindColorHeader() {
                         <Button
                             isIconOnly
                             variant='bordered'
-                            onClick={() => getColor(input)}
+                            onClick={() => getNewColor(input)}
                             className='border-white ml-4'
                             style={{ color: contrast, borderColor: contrast }}
                         >
