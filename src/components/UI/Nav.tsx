@@ -10,7 +10,7 @@ export function Nav() {
     const { color, contrast } = useColor()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const isHomePage = location.pathname === '/'
-    const isFindPage = location.pathname === '/find'
+    const isFindPage = location.pathname === ROUTES[0].path
     const backgroundActiveColor = isFindPage && color.hex
     const textActiveColor = isFindPage && contrast
 

@@ -19,25 +19,25 @@ import {
 
 // Find Color Page
 import {
-    FindColorHeader,
+    PaletteGeneratorHeader,
     ColorPicker,
     ColorPalette,
     ColorCard,
     HoverCard,
     Examples
-} from './FindColor'
+} from './PaletteGenerator'
 
 // Create Palette Page
 import {
-    Generator,
-    GeneratorHeader,
+    RandomPaletteHeader,
+    PaletteGrid,
     Color,
     HoverColor
-} from './CreatePalette'
+} from './RandomPalette'
 
 // Gradient Creator Page
 import {
-    GradientHeader,
+    GradientCreatorHeader,
     GradientVisualizer,
     ColorSelectorTabs,
     PaletteRow,
@@ -61,7 +61,7 @@ export {
     RandomPaletteButton,
 
     // Find Color Page
-    FindColorHeader,
+    PaletteGeneratorHeader,
     ColorPicker,
     ColorPalette,
     ColorCard,
@@ -69,13 +69,13 @@ export {
     Examples,
 
     // Create Palette Page
-    Generator,
-    GeneratorHeader,
+    RandomPaletteHeader,
+    PaletteGrid,
     Color,
     HoverColor,
 
     // Gradient Creator Page
-    GradientHeader,
+    GradientCreatorHeader,
     GradientVisualizer,
     ColorSelectorTabs,
     PaletteRow,

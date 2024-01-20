@@ -1,11 +1,11 @@
 export const PLACEHOLDER = [
     '4E3870',
-    'rgb(78, 56, 112)',
+    '#4E3870'
 ]
 
 export const SHADES = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
 
-export const INIT_PALETTE = [
+export const INITIAL_PALETTE = [
     { name: 'Cornflower', hex: '#9BCCE6', contrast: '#000000' },
     { name: 'Water Leaf', hex: '#98E5DD', contrast: '#000000' },
     { name: 'Algae Green', hex: '#94E3B8', contrast: '#000000' },
@@ -408,3 +408,9 @@ export const VIA_OPTIONS = [
     { label: 'Active', value: 'true' },
     { label: 'Inactive', value: 'false' },
 ]
+
+export const INITIAL_GRADIENT = {
+    from: 'from-slate-600',
+    via: 'via-slate-500',
+    to: 'to-slate-400',
+}

@@ -6,7 +6,7 @@ import { useColor, useFetch } from '../../hooks'
 import { PLACEHOLDER } from '../../constants'
 import { getRandomColor } from '../../utils'
 
-export function FindColorHeader() {
+export function PaletteGeneratorHeader() {
     const [input, setInput] = useState('')
     const { color, contrast } = useColor()
     const { getColor } = useFetch()

@@ -14,7 +14,7 @@ export const getColorsCode = (tech: string, palette: any[]) => {
             code += ':root {\n'
             palette.forEach(({ name, hex }) => {
                 name = name.replace(/ /g, '-').toLowerCase()
-                code += '\t--' + name + ': \'' + hex + '\';\n'
+                code += '\t--' + name + ': ' + hex + ';\n'
             })
             code += '}'
             break

@@ -1,17 +1,14 @@
 export const ROUTES = [
     {
-        path: '/find',
-        name: 'Find a color',
-        element: 'FindColor'
+        path: '/palette-generator',
+        name: 'Palette generator'
     },
     {
-        path: '/create',
-        name: 'Create palette',
-        element: 'CreatePalette'
+        path: '/random-palette',
+        name: 'Random palette'
     },
     {
-        path: '/gradient',
-        name: 'Gradient creator',
-        element: 'GradientCreator'
+        path: '/gradient-creator',
+        name: 'Gradient creator'
     }
 ]

@@ -1,10 +1,11 @@
 import { Link, useLocation } from 'react-router-dom'
 import { NavbarItem } from '@nextui-org/react'
+import { ROUTES } from '../../constants'
 
 export function NavItem({ href, name, activeColor }: { href: string, name: string, activeColor: string }) {
     const location = useLocation()
     const isActive = location.pathname === href
-    const isFindPage = location.pathname === '/find'
+    const isFindPage = location.pathname === ROUTES[0].path
 
     return (
         <NavbarItem className='relative flex justify-center'>

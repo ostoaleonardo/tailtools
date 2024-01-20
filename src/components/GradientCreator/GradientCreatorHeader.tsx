@@ -1,7 +1,7 @@
 import { Select, SelectItem } from '@nextui-org/react'
 import { GRADIENT_DIRECTIONS, VIA_OPTIONS } from '../../constants'
 
-export function GradientHeader({ setDirection, setVia }: { setDirection: Function, setVia: Function }) {
+export function GradientCreatorHeader({ setDirection, setVia }: { setDirection: Function, setVia: Function }) {
     return (
         <div className='w-full flex flex-col lg:flex-row items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
             <div className='w-full flex flex-col gap-1'>

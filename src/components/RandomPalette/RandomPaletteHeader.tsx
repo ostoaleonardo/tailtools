@@ -16,7 +16,7 @@ const BUTTONS = [
     }
 ]
 
-export function GeneratorHeader({ palette }: { palette: any[] }) {
+export function RandomPaletteHeader({ palette }: { palette: any[] }) {
     const [isOpen, setIsOpen] = useState(false)
     const [active, setActive] = useState('tailwind-hex')
     const [code, setCode] = useState('')

@@ -1,6 +1,6 @@
 import { Home } from './Home.tsx'
-import { FindColor } from './FindColor.tsx'
-import { CreatePalette } from './CreatePalette.tsx'
+import { PaletteGenerator } from './PaletteGenerator.tsx'
+import { RandomPalette } from './RandomPalette.tsx'
 import { GradientCreator } from './GradientCreator.tsx'
 
-export { Home, FindColor, CreatePalette, GradientCreator }
+export { Home, PaletteGenerator, RandomPalette, GradientCreator }

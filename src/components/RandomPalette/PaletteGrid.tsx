@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Color, GeneratorHeader } from '.'
+import { Color, RandomPaletteHeader } from '.'
 import { useFetch } from '../../hooks'
 import { getRandomColor } from '../../utils'
-import { INIT_PALETTE } from '../../constants'
+import { INITIAL_PALETTE } from '../../constants'
 
-export function Generator() {
+export function PaletteGrid() {
     const { generatePalette } = useFetch()
-    const [palette, setPalette] = useState(INIT_PALETTE)
+    const [palette, setPalette] = useState(INITIAL_PALETTE)
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)
@@ -30,7 +30,7 @@ export function Generator() {
 
     return (
         <main className='flex flex-col'>
-            <GeneratorHeader palette={palette} />
+            <RandomPaletteHeader palette={palette} />
             <section className='w-full h-[calc(100vh_-_120px)] grid grid-rows-5 md:grid-rows-none md:grid-cols-5'>
                 {palette && palette.map((color, index) => (
                     <Color key={index} color={color} />

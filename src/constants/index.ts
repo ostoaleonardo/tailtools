@@ -1,11 +1,12 @@
 import {
     PLACEHOLDER,
     SHADES,
-    INIT_PALETTE,
+    INITIAL_PALETTE,
     PALETTES,
     TAILWIND_CLASSES,
     GRADIENT_DIRECTIONS,
-    VIA_OPTIONS
+    VIA_OPTIONS,
+    INITIAL_GRADIENT
 } from './ui.ts'
 
 import { ROUTES } from './routes.ts'
@@ -13,9 +14,11 @@ import { ROUTES } from './routes.ts'
 export {
     PLACEHOLDER,
     SHADES,
-    INIT_PALETTE,
+    INITIAL_PALETTE,
     PALETTES,
     TAILWIND_CLASSES,
     GRADIENT_DIRECTIONS,
-    VIA_OPTIONS, ROUTES
+    VIA_OPTIONS,
+    INITIAL_GRADIENT,
+    ROUTES
 }
