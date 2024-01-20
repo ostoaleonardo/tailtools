@@ -1,12 +1,6 @@
 import Color from 'color'
 import { SHADES } from '../constants'
-
-interface Palette {
-    shade: number
-    hex: string
-    rgb: string
-    contrast: string
-}
+import { Palette } from '../types/palette'
 
 export function usePalette() {
     const getShade = (color: Color, isDark: boolean, opacity: number) => {
@@ -24,7 +18,7 @@ export function usePalette() {
             palette.push({
                 shade: SHADES[palette.length],
                 hex: color.hex(),
-                rgb: color.rgb().string(),
+                rgb: color.rgb().array(),
                 contrast: color.isDark() ? 'white' : 'black',
             })
         }
@@ -35,7 +29,7 @@ export function usePalette() {
             palette.push({
                 shade: SHADES[palette.length],
                 hex: color.hex(),
-                rgb: color.rgb().string(),
+                rgb: color.rgb().array(),
                 contrast: color.isDark() ? 'white' : 'black',
             })
         }

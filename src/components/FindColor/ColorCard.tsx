@@ -1,13 +1,7 @@
 import { HoverCard } from '.'
+import { Palette } from '../../types/palette'
 
-interface Color {
-    shade: number
-    hex: string
-    rgb: string
-    contrast: string
-}
-
-export function ColorCard({ shade, color }: { color: Color, shade: number }) {
+export function ColorCard({ shade, color }: { color: Palette, shade: number }) {
     return (
         <div className='relative lg:h-32 col-span-full lg:col-span-1 flex items-end rounded-xl bg-violet-800 transition-all' style={{ backgroundColor: color.hex }}>
             <HoverCard color={color} />

@@ -19,6 +19,13 @@ export const getPaletteCode = (tech: string, colorName: string, palette: any[]) 
             })
             code += '}'
             break
+        case 'css-rgb':
+            code += ':root {\n'
+            palette.forEach((color, index) => {
+                code += '\t--' + name + '-' + SHADES[index] + ': ' + color.rgb.join(', ') + ';\n'
+            })
+            code += '}'
+            break
         default:
             break
     }

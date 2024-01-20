@@ -1,15 +1,9 @@
 import { useState } from 'react'
 import { Button, Tooltip } from '@nextui-org/react'
 import { Icons } from '..'
+import { Palette } from '../../types/palette'
 
-interface Color {
-    shade: number
-    hex: string
-    rgb: string
-    contrast: string
-}
-
-export function HoverCard({ color }: { color: Color }) {
+export function HoverCard({ color }: { color: Palette }) {
     const [isCopied, setIsCopied] = useState(false)
 
     const handleCopy = () => {

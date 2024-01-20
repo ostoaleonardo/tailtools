@@ -7,13 +7,7 @@ import { Icons } from '..'
 import { useColor, usePalette } from '../../hooks'
 import { SHADES } from '../../constants'
 import { getPaletteCode } from '../../utils'
-
-interface Palette {
-    shade: number
-    hex: string
-    rgb: string
-    contrast: string
-}
+import { Palette } from '../../types/palette'
 
 const BUTTONS = [
     {
@@ -23,6 +17,10 @@ const BUTTONS = [
     {
         name: 'CSS (Hex)',
         tech: 'css-hex'
+    },
+    {
+        name: 'CSS (RGB)',
+        tech: 'css-rgb'
     }
 ]
 
