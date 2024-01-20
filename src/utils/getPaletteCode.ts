@@ -15,7 +15,7 @@ export const getPaletteCode = (tech: string, colorName: string, palette: any[]) 
         case 'css-hex':
             code += ':root {\n'
             palette.forEach((color, index) => {
-                code += '\t--color-primary-' + SHADES[index] + ': \'' + color.hex + '\';\n'
+                code += '\t--' + name + '-' + SHADES[index] + ': ' + color.hex + ';\n'
             })
             code += '}'
             break
