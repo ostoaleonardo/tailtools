@@ -1,18 +1,18 @@
 import { Tab, Tabs } from '@nextui-org/react'
 
-interface ColorSelectorTabsProps {
+interface ColorStopsTabsProps {
     via: string
-    selectedColor: string
-    setSelectedColor: Function
+    colorStop: string
+    setColorStop: Function
 }
 
-export function ColorSelectorTabs({ via, selectedColor, setSelectedColor }: ColorSelectorTabsProps) {
+export function ColorStopsTabs({ via, colorStop, setColorStop }: ColorStopsTabsProps) {
     return (
         <Tabs
             variant='light'
             aria-label='Colors'
-            selectedKey={selectedColor}
-            onSelectionChange={setSelectedColor as any}
+            selectedKey={colorStop}
+            onSelectionChange={setColorStop as any}
             className='w-full flex justify-end'
         >
             <Tab key='from' title='From' />

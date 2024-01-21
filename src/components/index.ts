@@ -39,8 +39,10 @@ import {
 import {
     GradientCreatorHeader,
     GradientVisualizer,
-    ColorSelectorTabs,
+    ColorStopsTabs,
     PaletteRow,
+    OtherColorsRow,
+    ColorItem,
     GradientCode
 } from './GradientCreator'
 
@@ -77,7 +79,9 @@ export {
     // Gradient Creator Page
     GradientCreatorHeader,
     GradientVisualizer,
-    ColorSelectorTabs,
+    ColorStopsTabs,
     PaletteRow,
+    OtherColorsRow,
+    ColorItem,
     GradientCode
 }

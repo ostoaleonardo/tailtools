@@ -1,13 +1,17 @@
 import { GradientCreatorHeader } from './GradientCreatorHeader.tsx'
 import { GradientVisualizer } from './GradientVisualizer.tsx'
-import { ColorSelectorTabs } from './ColorSelectorTabs.tsx'
+import { ColorStopsTabs } from './ColorStopsTabs.tsx'
 import { PaletteRow } from './PaletteRow.tsx'
+import { OtherColorsRow } from './OtherColorsRow.tsx'
+import { ColorItem } from './ColorItem.tsx'
 import { GradientCode } from './GradientCode.tsx'
 
 export {
     GradientCreatorHeader,
     GradientVisualizer,
-    ColorSelectorTabs,
+    ColorStopsTabs,
     PaletteRow,
+    OtherColorsRow,
+    ColorItem,
     GradientCode,
 }

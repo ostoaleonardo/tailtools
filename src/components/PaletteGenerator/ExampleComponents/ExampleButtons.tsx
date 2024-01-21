@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react"
+import { Button } from '@nextui-org/react'
 
 export function ExampleButtons() {
     const variants = ['solid', 'faded', 'bordered', 'light', 'flat', 'ghost', 'shadow'] as const

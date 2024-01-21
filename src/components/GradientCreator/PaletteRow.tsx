@@ -1,3 +1,4 @@
+import { ColorItem } from '.'
 import { SHADES } from '../../constants'
 
 interface Palette {
@@ -7,7 +8,7 @@ interface Palette {
 
 interface PaletteRowProps {
     palette: Palette
-    setColors: (name: string, shade: number) => void
+    setColors: (name: string, shade?: number) => void
 }
 
 export function PaletteRow({ palette, setColors }: PaletteRowProps) {
@@ -16,14 +17,13 @@ export function PaletteRow({ palette, setColors }: PaletteRowProps) {
             <p className='text-sm font-bold uppercase opacity-60'>{palette.name}</p>
             <div className='flex flex-wrap md:flex-nowrap items-center md:justify-between gap-4'>
                 {palette.colors.map((color, index) => (
-                    <div
+                    <ColorItem
                         key={index}
-                        onClick={() => { setColors(palette.name, SHADES[index]) }}
-                        className='flex flex-col items-center justify-center cursor-pointer gap-2'
+                        onPress={() => { setColors(palette.name, SHADES[index]) }}
+                        backgroundColor={color.hex}
                     >
-                        <div key={index} className='w-auto h-10 md:h-12 border-dark/10 dark:border-white/10 border-2 rounded-lg aspect-square' style={{ backgroundColor: color.hex }} />
-                        <span className='text-sm font-semibold opacity-50'>{SHADES[index]}</span>
-                    </div>
+                        {SHADES[index]}
+                    </ColorItem>
                 ))}
             </div>
         </div >

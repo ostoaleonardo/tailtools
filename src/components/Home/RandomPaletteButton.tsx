@@ -1,6 +1,6 @@
-import { useEffect } from "react"
-import { getPaletteCode } from "../../utils"
-import { PALETTES } from "../../constants"
+import { useEffect } from 'react'
+import { getPaletteCode } from '../../utils'
+import { PALETTES } from '../../constants'
 
 interface Palette {
     name: string

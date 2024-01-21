@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { CodeWindow, GradientPicker, Palette, RandomPaletteButton } from '.'
-import { PALETTES, TAILWIND_CLASSES } from '../../constants'
+import { PALETTES, GRADIENT_CLASSES } from '../../constants'
 
 export function HeroSection() {
     const [code, setCode] = useState('')
@@ -34,8 +34,8 @@ export function HeroSection() {
                             </span>
                             <GradientPicker
                                 colors={{
-                                    from: (TAILWIND_CLASSES as any)[palette.name][50].from,
-                                    to: (TAILWIND_CLASSES as any)[palette.name][500].to,
+                                    from: (GRADIENT_CLASSES as any)[palette.name][50].from,
+                                    to: (GRADIENT_CLASSES as any)[palette.name][500].to,
                                 }}
                             />
                             <span className='font-syne'>

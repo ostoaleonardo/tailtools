@@ -1,22 +1,28 @@
 import { useEffect, useState } from 'react'
-import { ColorSelectorTabs, GradientCode, GradientCreatorHeader, GradientVisualizer, PaletteRow } from '../components'
-import { INITIAL_GRADIENT, PALETTES, TAILWIND_CLASSES } from '../constants'
+import { ColorStopsTabs, GradientCode, GradientCreatorHeader, GradientVisualizer, OtherColorsRow, PaletteRow } from '../components'
+import { INITIAL_GRADIENT, PALETTES, GRADIENT_CLASSES } from '../constants'
 
 export function GradientCreator() {
     const [code, setCode] = useState('bg-gradient-to-tr from-slate-600 to-slate-400')
-    const gradientText = 'bg-clip-text text-transparent'
     const [direction, setDirection] = useState('bg-gradient-to-t')
     const [via, setVia] = useState('false')
     const [colors, setColors] = useState(INITIAL_GRADIENT)
-    const [selectedColor, setSelectedColor] = useState('from')
+    const [colorStop, setColorStop] = useState('from')
     const [selectedGradient, setSelectedGradient] = useState('background')
+    const gradientText = 'bg-clip-text text-transparent'
 
     useEffect(() => {
-        setCode(`${direction} ${colors.from} ${via === 'true' ? colors.via + ' ' : ''}${colors.to} ${selectedGradient === 'text' ? gradientText : ''}`)
+        const gradient = `${direction} ${colors.from} ${via === 'true' ? colors.via : ''} ${colors.to} ${selectedGradient === 'text' ? gradientText : ''}`
+        setCode(gradient.replace(/\s+/g, ' '))
     }, [direction, via, colors, selectedGradient])
 
-    const setColorsFromPalette = (name: string, shade: number) => {
-        setColors({ ...colors, [selectedColor]: (TAILWIND_CLASSES as any)[name][shade][selectedColor] })
+    const setGradientValues = (name: string, shade?: number) => {
+        if (shade) {
+            setColors({ ...colors, [colorStop]: (GRADIENT_CLASSES as any)[name][shade][colorStop] })
+        } else {
+            if (colorStop === 'from' && name === 'transparent') return
+            setColors({ ...colors, [colorStop]: (GRADIENT_CLASSES as any)[name][colorStop] })
+        }
     }
 
     return (
@@ -33,16 +39,17 @@ export function GradientCreator() {
                         setSelectedGradient={setSelectedGradient}
                     />
                     <div className='w-full flex flex-col items-center justify-center gap-4'>
-                        <ColorSelectorTabs
+                        <ColorStopsTabs
                             via={via}
-                            selectedColor={selectedColor}
-                            setSelectedColor={setSelectedColor}
+                            colorStop={colorStop}
+                            setColorStop={setColorStop}
                         />
                         <div className='w-full h-80 border-2 border-black/10 dark:border-white/10 rounded-2xl overflow-y-auto small-scrollbar'>
                             <div className='w-full flex flex-col items-center justify-center gap-10 p-6'>
                                 {PALETTES.map((palette, index) => (
-                                    <PaletteRow key={index} palette={palette} setColors={setColorsFromPalette} />
+                                    <PaletteRow key={index} palette={palette} setColors={setGradientValues} />
                                 ))}
+                                <OtherColorsRow colorStop={colorStop} setColors={setGradientValues} />
                             </div>
                         </div>
                         <GradientCode code={code} />

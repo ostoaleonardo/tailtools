@@ -104,7 +104,7 @@ export const PALETTES = [
     }
 ]
 
-export const TAILWIND_CLASSES = {
+export const GRADIENT_CLASSES = {
     'slate': {
         50: { from: 'from-slate-50', via: 'via-slate-50', to: 'to-slate-50' },
         100: { from: 'from-slate-100', via: 'via-slate-100', to: 'to-slate-100' },
@@ -390,6 +390,15 @@ export const TAILWIND_CLASSES = {
         800: { from: 'from-rose-800', via: 'via-rose-800', to: 'to-rose-800' },
         900: { from: 'from-rose-900', via: 'via-rose-900', to: 'to-rose-900' },
         950: { from: 'from-rose-950', via: 'via-rose-950', to: 'to-rose-950' },
+    },
+    'black': {
+        from: 'from-black', via: 'via-black', to: 'to-black',
+    },
+    'white': {
+        from: 'from-white', via: 'via-white', to: 'to-white',
+    },
+    'transparent': {
+        from: '', via: 'via-transparent', to: '',
     },
 }
 
