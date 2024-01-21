@@ -46,6 +46,12 @@ import {
     GradientCode
 } from './GradientCreator'
 
+// Grid Generator Page
+import {
+    GridGeneratorHeader,
+    GridCode
+} from './GridGenerator'
+
 export {
     // UI
     Nav,
@@ -83,5 +89,9 @@ export {
     PaletteRow,
     OtherColorsRow,
     ColorItem,
-    GradientCode
+    GradientCode,
+
+    // Grid Generator Page
+    GridGeneratorHeader,
+    GridCode
 }

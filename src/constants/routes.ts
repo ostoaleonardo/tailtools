@@ -10,5 +10,9 @@ export const ROUTES = [
     {
         path: '/gradient-creator',
         name: 'Gradient creator'
+    },
+    {
+        path: '/grid-generator',
+        name: 'Grid generator'
     }
 ]

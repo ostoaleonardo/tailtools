@@ -6,7 +6,8 @@ import {
     GRADIENT_CLASSES,
     GRADIENT_DIRECTIONS,
     VIA_OPTIONS,
-    INITIAL_GRADIENT
+    INITIAL_GRADIENT,
+    GRID_CLASSES
 } from './ui.ts'
 
 import { ROUTES } from './routes.ts'
@@ -20,5 +21,6 @@ export {
     GRADIENT_DIRECTIONS,
     VIA_OPTIONS,
     INITIAL_GRADIENT,
+    GRID_CLASSES,
     ROUTES
 }
