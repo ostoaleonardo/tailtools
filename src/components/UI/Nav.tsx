@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarContent } from '@nextui-org/react'
-import { ThemeButton, NavItem, NavMenuItem } from '.'
+import { ThemeButton, NavItem, NavMenuItem, LogoNav } from '.'
 import { useColor } from '../../hooks'
 import { ROUTES } from '../../constants'
 
@@ -32,17 +32,13 @@ export function Nav() {
 
             <NavbarContent className='sm:hidden pr-3' justify='center'>
                 <NavbarBrand>
-                    <Link to='/' className='font-syne text-inherit uppercase' style={{ color: textActiveColor }}>
-                        Tailtools
-                    </Link>
+                    <LogoNav textActiveColor={textActiveColor} />
                 </NavbarBrand>
             </NavbarContent>
 
             <NavbarContent className='hidden sm:flex gap-4' justify='center'>
                 <NavbarBrand className='mr-10'>
-                    <Link to='/' className='font-syne text-inherit uppercase' style={{ color: textActiveColor }}>
-                        Tailtools
-                    </Link>
+                    <LogoNav textActiveColor={textActiveColor} />
                 </NavbarBrand>
                 {ROUTES.map((route, index) => (
                     <NavItem
