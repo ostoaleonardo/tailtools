@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { GridCode, GridGeneratorHeader } from '../components'
+import { GridCode, GridGeneratorHeader, GridElementInactive } from '../components'
 import { GRID_CLASSES } from '../constants'
 
 export function GridGenerator() {
@@ -10,7 +10,7 @@ export function GridGenerator() {
     const [code, setCode] = useState('')
 
     useEffect(() => {
-        const code = `grid ${GRID_CLASSES.columns[columns]} ${GRID_CLASSES.rows[rows]} ${flow} ${gap === '0' ? '' : `gap-${gap}`}`
+        const code = `grid ${GRID_CLASSES.columns[columns]} ${GRID_CLASSES.rows[rows]} ${flow} ${GRID_CLASSES.gaps[gap]}`
         setCode(code)
     }, [columns, rows, gap, flow])
 
@@ -28,17 +28,9 @@ export function GridGenerator() {
             <div className='w-full h-96 py-8'>
                 <div className={'w-full h-full ' + code}>
                     {Array.from({ length: Number(columns) * Number(rows) }).map((_, index) => (
-                        <div
+                        <GridElementInactive
                             key={index}
-                            className='bg-slate-200 dark:bg-zinc-700 border-black/10 dark:border-white/10 border-2 rounded-lg'
-                        >
-                            <div className='w-full h-full flex items-center justify-center'>
-                                {index === 0
-                                    ? <p className='text-slate-900/70 dark:text-zinc-100/70'>{index + 1}</p>
-                                    : <p className='text-slate-900/30 dark:text-zinc-100/30'>+</p>
-                                }
-                            </div>
-                        </div>
+                        />
                     ))}
                 </div>
             </div>

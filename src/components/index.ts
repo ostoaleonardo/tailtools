@@ -49,6 +49,8 @@ import {
 // Grid Generator Page
 import {
     GridGeneratorHeader,
+    GridElementActive,
+    GridElementInactive,
     GridCode
 } from './GridGenerator'
 
@@ -93,5 +95,7 @@ export {
 
     // Grid Generator Page
     GridGeneratorHeader,
+    GridElementActive,
+    GridElementInactive,
     GridCode
 }
