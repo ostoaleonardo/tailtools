@@ -5,12 +5,12 @@ export const PLACEHOLDER = [
 
 export const SHADES = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
 
-export const INITIAL_PALETTE = [
-    { name: 'Cornflower', hex: '#9BCCE6', contrast: '#000000' },
-    { name: 'Water Leaf', hex: '#98E5DD', contrast: '#000000' },
-    { name: 'Algae Green', hex: '#94E3B8', contrast: '#000000' },
-    { name: 'Lavender', hex: '#AE7ED6', contrast: '#000000' },
-    { name: 'Amethyst', hex: '#A270CB', contrast: '#000000' }
+export const INITIAL_RANDOM_PALETTE = [
+    { name: 'Cornflower', hex: '#9BCCE6', rgb: [155, 204, 230], contrast: '#000000' },
+    { name: 'Water Leaf', hex: '#98E5DD', rgb: [152, 229, 221], contrast: '#000000' },
+    { name: 'Algae Green', hex: '#94E3B8', rgb: [148, 227, 184], contrast: '#000000' },
+    { name: 'Lavender', hex: '#AE7ED6', rgb: [174, 126, 214], contrast: '#000000' },
+    { name: 'Amethyst', hex: '#A270CB', rgb: [162, 112, 203], contrast: '#000000' }
 ]
 
 export const PALETTES = [

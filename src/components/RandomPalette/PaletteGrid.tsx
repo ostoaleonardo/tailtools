@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react'
 import { Color, RandomPaletteHeader } from '.'
 import { useFetch } from '../../hooks'
 import { getRandomColor } from '../../utils'
-import { INITIAL_PALETTE } from '../../constants'
+import { INITIAL_RANDOM_PALETTE } from '../../constants'
 
 export function PaletteGrid() {
     const { generatePalette } = useFetch()
-    const [palette, setPalette] = useState(INITIAL_PALETTE)
+    const [palette, setPalette] = useState(INITIAL_RANDOM_PALETTE)
 
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown)

@@ -5,7 +5,7 @@ export const getColorsCode = (tech: string, palette: any[]) => {
         case 'tailwind-hex':
             code += 'colors {\n'
             palette.forEach(({ name, hex }) => {
-                name = name.replace(/ /g, '-').toLowerCase()
+                name = name.replace(' ', '-').toLowerCase()
                 code += '\'' + name + '\'' + ': \'' + hex + '\',\n'
             })
             code += '}'
@@ -13,8 +13,16 @@ export const getColorsCode = (tech: string, palette: any[]) => {
         case 'css-hex':
             code += ':root {\n'
             palette.forEach(({ name, hex }) => {
-                name = name.replace(/ /g, '-').toLowerCase()
+                name = name.replace(' ', '-').toLowerCase()
                 code += '\t--' + name + ': ' + hex + ';\n'
+            })
+            code += '}'
+            break
+        case 'css-rgb':
+            code += ':root {\n'
+            palette.forEach(({ name, rgb }) => {
+                name = name.replace(' ', '-').toLowerCase()
+                code += '\t--' + name + ': ' + rgb.join(', ') + ';\n'
             })
             code += '}'
             break

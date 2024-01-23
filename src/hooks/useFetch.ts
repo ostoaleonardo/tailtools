@@ -29,7 +29,6 @@ export function useFetch() {
         return data.name.value
     }
 
-    // Generate a palette of 11 colors, from the base color
     const generatePalette = async (color: string, mode = 'monochrome', count = 11) => {
         color = color.replace('#', '')
 
@@ -41,9 +40,12 @@ export function useFetch() {
         const colors = data.colors
 
         const palette = colors.map((color: any) => {
+            const { rgb } = color
+
             return {
                 name: color.name.value,
                 hex: color.hex.value,
+                rgb: [rgb.r, rgb.g, rgb.b],
                 contrast: color.contrast.value
             }
         })

@@ -13,6 +13,10 @@ const BUTTONS = [
     {
         name: 'CSS (Hex)',
         tech: 'css-hex'
+    },
+    {
+        name: 'CSS (RGB)',
+        tech: 'css-rgb'
     }
 ]
 
