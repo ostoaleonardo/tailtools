@@ -100,7 +100,7 @@ export function GridGenerator() {
     }
 
     return (
-        <div className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center p-8'>
+        <div className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center p-8 overflow-hidden'>
             <GridGeneratorHeader
                 columns={columns}
                 setColumns={setColumns}
@@ -110,8 +110,8 @@ export function GridGenerator() {
                 setGap={setGap}
                 setFlow={setFlow}
             />
-            <div className='w-full h-96 py-8'>
-                <div className={'w-full h-full select-none ' + code}>
+            <div className='w-full py-8'>
+                <div className={'w-full min-h-96 select-none ' + code}>
                     {grid.map((row, rowIndex) => (
                         row.map((_, columnIndex) => (
                             busyIndexes[rowIndex][columnIndex] ? (

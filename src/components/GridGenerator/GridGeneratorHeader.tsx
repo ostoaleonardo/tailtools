@@ -26,7 +26,7 @@ const GRID_FLOWS = [
     { value: 'grid-flow-col-dense' },
 ]
 
-interface GridGeneratorHeaderProps {
+interface Props {
     columns: string
     setColumns: (value: string) => void
     rows: string
@@ -36,14 +36,14 @@ interface GridGeneratorHeaderProps {
     setFlow: (value: string) => void
 }
 
-export function GridGeneratorHeader({ columns, setColumns, rows, setRows, gap, setGap, setFlow }: GridGeneratorHeaderProps) {
+export function GridGeneratorHeader({ columns, setColumns, rows, setRows, gap, setGap, setFlow }: Props) {
     return (
-        <div className='w-full flex flex-col lg:flex-row items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
+        <div className='w-full flex flex-col xl:flex-row items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
             <div className='w-full flex flex-col gap-1'>
                 <h1 className='text-4xl font-bold'>Grid generator</h1>
                 <p className='text-base lg:text-lg'>Generate visually appealing grids with ease.</p>
             </div>
-            <div className='w-full lg:w-2/3 flex items-center justify-end gap-4'>
+            <div className='w-full flex max-md:flex-wrap items-center justify-end gap-4'>
                 {INPUTS.map((input, index) => (
                     <Input
                         key={index}
@@ -55,6 +55,7 @@ export function GridGeneratorHeader({ columns, setColumns, rows, setRows, gap, s
                         label={input.label}
                         placeholder={input.placeholder}
                         defaultValue={input.defaultValue}
+                        className='max-md:flex-1'
                         value={index === 0 ? columns : index === 1 ? rows : gap}
                         onChange={(e) => {
                             switch (index) {
@@ -71,7 +72,7 @@ export function GridGeneratorHeader({ columns, setColumns, rows, setRows, gap, s
                         }}
                     />
                 ))}
-                <Select
+                {/* <Select
                     isRequired
                     variant='faded'
                     disallowEmptySelection
@@ -79,11 +80,11 @@ export function GridGeneratorHeader({ columns, setColumns, rows, setRows, gap, s
                     placeholder='Select a flow'
                     defaultSelectedKeys={['grid-flow-row']}
                     items={GRID_FLOWS}
-                    className='min-w-52'
+                    className='xl:min-w-48'
                     onChange={(e) => { setFlow(e.target.value) }}
                 >
                     {(flow) => <SelectItem key={flow.value}>{flow.value}</SelectItem>}
-                </Select>
+                </Select> */}
             </div>
         </div>
     )
