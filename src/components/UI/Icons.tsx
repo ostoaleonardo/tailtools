@@ -4,6 +4,12 @@ const Search = (props: any) => (
     </svg>
 )
 
+export const Close = (props: any) => (
+    <svg width='1em' height='1em' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' {...props}>
+        <path fill='currentColor' fillRule='evenodd' d='m8 8.707l3.646 3.647l.708-.707L8.707 8l3.647-3.646l-.707-.708L8 7.293L4.354 3.646l-.707.708L7.293 8l-3.646 3.646l.707.708z' clipRule='evenodd'></path>
+    </svg>
+)
+
 export const Check = (props: any) => (
     <svg width='1em' height='1em' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' {...props}>
         <path fill='currentColor' d='M406.656 706.944L195.84 496.256a32 32 0 1 0-45.248 45.248l256 256l512-512a32 32 0 0 0-45.248-45.248L406.592 706.944z' />
@@ -48,6 +54,7 @@ export const Moon = (props: any) => (
 
 export default {
     Search,
+    Close,
     Check,
     Copy,
     Export,
