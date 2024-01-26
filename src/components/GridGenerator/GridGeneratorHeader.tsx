@@ -1,4 +1,4 @@
-import { Input, Select, SelectItem } from '@nextui-org/react'
+import { Input } from '@nextui-org/react'
 
 const INPUTS = [
     {
@@ -19,12 +19,12 @@ const INPUTS = [
     }
 ]
 
-const GRID_FLOWS = [
-    { value: 'grid-flow-row' },
-    { value: 'grid-flow-col' },
-    { value: 'grid-flow-row-dense' },
-    { value: 'grid-flow-col-dense' },
-]
+// const GRID_FLOWS = [
+//     { value: 'grid-flow-row' },
+//     { value: 'grid-flow-col' },
+//     { value: 'grid-flow-row-dense' },
+//     { value: 'grid-flow-col-dense' },
+// ]
 
 interface Props {
     columns: string
@@ -33,10 +33,9 @@ interface Props {
     setRows: (value: string) => void
     gap: string
     setGap: (value: string) => void
-    setFlow: (value: string) => void
 }
 
-export function GridGeneratorHeader({ columns, setColumns, rows, setRows, gap, setGap, setFlow }: Props) {
+export function GridGeneratorHeader({ columns, setColumns, rows, setRows, gap, setGap }: Props) {
     return (
         <div className='w-full flex flex-col xl:flex-row items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
             <div className='w-full flex flex-col gap-1'>

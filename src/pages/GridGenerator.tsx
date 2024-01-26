@@ -6,16 +6,16 @@ export function GridGenerator() {
     const [columns, setColumns] = useState('5')
     const [rows, setRows] = useState('3')
     const [gap, setGap] = useState('3')
-    const [flow, setFlow] = useState('grid-flow-row')
+    // const [flow, setFlow] = useState('grid-flow-row')
     const [code, setCode] = useState('')
     const [grid, setGrid] = useState<any[][]>([])
     const [busyIndexes, setBusyIndexes] = useState<any[][]>([])
     const [numberOfItems, setNumberOfItems] = useState<number[]>([])
 
     useEffect(() => {
-        const code = `grid ${GRID_CLASSES.columns[columns]} ${GRID_CLASSES.rows[rows]} ${flow} ${GRID_CLASSES.gaps[gap]}`
+        const code = `grid ${GRID_CLASSES.columns[columns]} ${GRID_CLASSES.rows[rows]} ${GRID_CLASSES.gaps[gap]}`
         setCode(code)
-    }, [columns, rows, gap, flow])
+    }, [columns, rows, gap])
 
     useEffect(() => {
         const grid = Array.from(Array(Number(rows)))
@@ -108,7 +108,6 @@ export function GridGenerator() {
                 setRows={setRows}
                 gap={gap}
                 setGap={setGap}
-                setFlow={setFlow}
             />
             <div className='w-full py-8'>
                 <div className={'w-full min-h-96 select-none ' + code}>
