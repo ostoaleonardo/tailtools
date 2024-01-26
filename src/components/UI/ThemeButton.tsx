@@ -8,7 +8,7 @@ export function ThemeButton() {
     const { theme, toggleTheme } = useTheme()
     const { contrast } = useColor()
     const location = useLocation()
-    const iconColor = location.pathname === ROUTES[0].path && contrast
+    const iconColor = location.pathname === ROUTES[0].tools[0].path && contrast
 
     return (
         <Button

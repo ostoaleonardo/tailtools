@@ -1,8 +1,11 @@
 // UI
 import {
     Nav,
+    NavBrand,
     NavItem,
     NavMenuItem,
+    NavMenuRoute,
+    NavHoverRoute,
     ThemeButton,
     Icons
 } from './UI'
@@ -57,8 +60,11 @@ import {
 export {
     // UI
     Nav,
+    NavBrand,
     NavItem,
     NavMenuItem,
+    NavMenuRoute,
+    NavHoverRoute,
     ThemeButton,
     Icons,
 

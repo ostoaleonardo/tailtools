@@ -1,18 +1,37 @@
 export const ROUTES = [
     {
-        path: '/palette-generator',
-        name: 'Palette generator'
+        name: 'Palettes',
+        tools: [
+            {
+                path: '/palette-generator',
+                name: 'Palette generator',
+                description: 'Create a palette based on a color'
+            },
+            {
+                path: '/random-palette',
+                name: 'Random palette',
+                description: 'Generate a random palette'
+            },
+        ]
     },
     {
-        path: '/random-palette',
-        name: 'Random palette'
+        name: 'Gradients',
+        tools: [
+            {
+                path: '/gradient-creator',
+                name: 'Gradient creator',
+                description: 'Gradients for backgrounds or texts'
+            },
+        ]
     },
     {
-        path: '/gradient-creator',
-        name: 'Gradient creator'
+        name: 'Grids',
+        tools: [
+            {
+                path: '/grid-generator',
+                name: 'Grid generator',
+                description: 'Create a grid for your layout'
+            },
+        ]
     },
-    {
-        path: '/grid-generator',
-        name: 'Grid generator'
-    }
 ]

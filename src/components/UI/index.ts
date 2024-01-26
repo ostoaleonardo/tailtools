@@ -1,16 +1,20 @@
-import { Nav } from './Nav.tsx'
-import { LogoNav } from './LogoNav.tsx'
-import { NavItem } from './NavItem.tsx'
-import { NavMenuItem } from './NavMenuItem.tsx'
+import { Nav } from './Navbar'
+import { NavBrand } from './Navbar'
+import { NavItem } from './Navbar'
+import { NavMenuItem } from './Navbar'
+import { NavMenuRoute } from './Navbar'
+import { NavHoverRoute } from './Navbar'
 import { ThemeButton } from './ThemeButton.tsx'
 import { CodeToExport } from './CodeToExport.tsx'
 import Icons from './Icons.tsx'
 
 export {
     Nav,
-    LogoNav,
+    NavBrand,
     NavItem,
     NavMenuItem,
+    NavMenuRoute,
+    NavHoverRoute,
     ThemeButton,
     CodeToExport,
     Icons
