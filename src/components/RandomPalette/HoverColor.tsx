@@ -10,15 +10,6 @@ interface Color {
 export function HoverColor({ color }: { color: Color }) {
     return (
         <div className='absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center opacity-0 hover:opacity-100 transition-opacity gap-2'>
-            <Tooltip content='Add to favorites' placement='left' delay={700}>
-                <Button
-                    isIconOnly
-                    variant='light'
-                    style={{ color: color.contrast }}
-                >
-                    <Icons.Heart />
-                </Button>
-            </Tooltip>
             <Tooltip content='Copy color' placement='left' delay={700}>
                 <Button
                     isIconOnly
