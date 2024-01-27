@@ -8,13 +8,16 @@ import { getRandomColor } from '../../utils'
 
 export function PaletteGeneratorHeader() {
     const [input, setInput] = useState('')
+    const [isLoading, setIsLoading] = useState(false)
     const { color, contrast } = useColor()
     const { getColor } = useFetch()
 
     const getNewColor = async (input: string) => {
         if (!input) return
 
+        setIsLoading(true)
         await getColor(input)
+        setIsLoading(false)
     }
 
     const getRandom = () => {
@@ -51,6 +54,7 @@ export function PaletteGeneratorHeader() {
                         <Button
                             isIconOnly
                             variant='bordered'
+                            isLoading={isLoading}
                             onClick={() => getNewColor(input)}
                             className='border-white ml-4'
                             style={{ color: contrast, borderColor: contrast }}
@@ -60,6 +64,7 @@ export function PaletteGeneratorHeader() {
                         <Button
                             isIconOnly
                             variant='bordered'
+                            isDisabled={isLoading}
                             onClick={() => getRandom()}
                             className='border-white ml-2'
                             style={{ color: contrast, borderColor: contrast }}
