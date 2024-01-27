@@ -23,9 +23,10 @@ const BUTTONS = [
 interface Props {
     palette: any[]
     getPalette: () => Promise<void>
+    isLoading: boolean
 }
 
-export function RandomPaletteHeader({ palette, getPalette }: Props) {
+export function RandomPaletteHeader({ palette, getPalette, isLoading }: Props) {
     const [isOpen, setIsOpen] = useState(false)
     const [active, setActive] = useState('tailwind-hex')
     const [code, setCode] = useState('')
@@ -41,12 +42,16 @@ export function RandomPaletteHeader({ palette, getPalette }: Props) {
         <>
             <header className='w-full h-14 flex items-center justify-center bg-titan-white dark:bg-zinc-900 border-y-black/5 dark:border-y-white/10 border-y-1 transition-all z-10'>
                 <div className='max-w-[95%] md:max-w-[97%] w-full flex items-center justify-between'>
-                    <h1 className='hidden sm:block text-sm md:text-base font-medium line-clamp-1'>
-                        Press the spacebar to generate a new palette
-                    </h1>
+                    <div className='hidden sm:flex flex-row items-center justify-center gap-2'>
+                        <h2 className='text-sm md:text-base font-medium line-clamp-1'>
+                            Press the spacebar to generate a new palette
+                        </h2>
+                        {isLoading && <Icons.Load className='animate-spin' />}
+                    </div>
                     <Button
                         variant='flat'
                         onClick={getPalette}
+                        isLoading={isLoading}
                         className='visible sm:hidden'
                     >
                         Generate
