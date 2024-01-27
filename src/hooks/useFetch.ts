@@ -1,31 +1,40 @@
 import { useColor } from './useColor.ts'
+import { getColorModel } from '../utils/getColorModel.ts'
 
-const COLOR_API = 'https://www.thecolorapi.com/id?hex='
+const COLOR_API = 'https://www.thecolorapi.com/id?'
 const SCHEME_API = 'https://www.thecolorapi.com/scheme?hex='
 
 export function useFetch() {
     const { setColor, setContrast } = useColor()
 
-    const fetchColor = async (color: string) => {
-        color = color.replace('#', '')
+    const fetchColor = async (color: string, model: string) => {
+        const params = new URLSearchParams({
+            [model]: color
+        })
 
         const res = await fetch(
-            `${COLOR_API}${color}`
+            `${COLOR_API}${params}`
         )
 
         const data = await res.json()
         return data
     }
 
-    const getColor = async (color: string) => {
-        const data = await fetchColor(color)
+    const getColor = async (input: string) => {
+        const { color, model } = getColorModel(input)
+        if (!model) return
+
+        const data = await fetchColor(color, model)
 
         setColor({ name: data.name.value, hex: data.hex.value })
         setContrast(data.contrast.value)
     }
 
-    const getColorName = async (color: string) => {
-        const data = await fetchColor(color)
+    const getColorName = async (input: string) => {
+        const { color, model } = getColorModel(input)
+        if (!model) return
+
+        const data = await fetchColor(color, model)
         return data.name.value
     }
 
