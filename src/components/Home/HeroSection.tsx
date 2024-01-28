@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { CodeWindow, GradientPicker, Palette, RandomPaletteButton } from '.'
 import { PALETTES, GRADIENT_CLASSES } from '../../constants'
+import { GradientBackground } from './GradientBackground'
 
 export function HeroSection() {
     const [code, setCode] = useState('')
@@ -12,12 +13,12 @@ export function HeroSection() {
     }, [palette])
 
     return (
-        <main className='w-full h-screen flex flex-col items-center justify-center bg-titan-white dark:bg-zinc-950 overflow-hidden'>
-            <div className='max-w-7xl flex flex-col lg:flex-row max-lg:mt-64 gap-16 m-16 z-10'>
-                <div className='w-full flex flex-col justify-center'>
-                    <div className='flex flex-col text-4xl sm:text-6xl md:text-7xl xl:text-8xl uppercase'>
+        <main className='w-full h-[calc(100vh_-_64px)] bg-titan-white dark:bg-zinc-950 transition-all overflow-hidden p-8 md:p-16'>
+            <div className='relative flex flex-col items-center justify-center rounded-3xl overflow-hidden gap-16 z-20'>
+                <div className='flex flex-col xl:flex-row items-center justify-between gap-16 md:gap-24 p-16'>
+                    <div className='text-5xl sm:text-7xl md:text-8xl z-10'>
                         <div className='flex justify-between'>
-                            <span className='font-syne'>
+                            <span className='font-bold'>
                                 Palettes
                             </span>
                             <Palette
@@ -28,22 +29,19 @@ export function HeroSection() {
                                 ]}
                             />
                         </div>
-                        <div className='flex justify-between max-md:gap-1 gap-2'>
-                            <span className='font-syne'>
-                                Gra
-                            </span>
+                        <div className='flex justify-between leading-none max-md:gap-1 gap-2'>
                             <GradientPicker
                                 colors={{
-                                    from: (GRADIENT_CLASSES as any)[palette.name][50].from,
-                                    to: (GRADIENT_CLASSES as any)[palette.name][500].to,
+                                    from: GRADIENT_CLASSES[palette.name][50].from,
+                                    to: GRADIENT_CLASSES[palette.name][500].to,
                                 }}
                             />
-                            <span className='font-syne'>
-                                ients
+                            <span className='font-bold'>
+                                Gradients
                             </span>
                         </div>
-                        <div className='flex items-center justify-between gap-2'>
-                            <h1 className='font-syne transition-all' style={{ color: titleColor }}>
+                        <div className='flex items-center justify-between gap-2 md:gap-10'>
+                            <h1 className='font-bold transition-all' style={{ color: titleColor }}>
                                 Tailtools
                             </h1>
                             <RandomPaletteButton
@@ -51,17 +49,19 @@ export function HeroSection() {
                                 setPalette={setPalette}
                             />
                         </div>
+                        <p className='text-sm lg:text-xl opacity-80 mt-6'>
+                            A collection of tools to generate code for Tailwind CSS.
+                        </p>
                     </div>
-                    <p className='text-sm lg:text-xl opacity-80 mt-6'>
-                        A collection of tools to help you create and design with Tailwind CSS.
-                    </p>
+                    <CodeWindow
+                        code={code}
+                        colorTitle={titleColor}
+                    />
                 </div>
-                <CodeWindow
-                    code={code}
-                    colorTitle={titleColor}
+                <GradientBackground
+                    color={GRADIENT_CLASSES[palette.name][500].from}
                 />
             </div>
-            <div className='absolute right-0 w-1/3 h-full bg-gradient-to-l from-slate-300 dark:from-slate-800 to-transparent transition-all' />
         </main>
     )
 }

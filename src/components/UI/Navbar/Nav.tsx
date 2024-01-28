@@ -9,7 +9,6 @@ export function Nav() {
     const location = useLocation()
     const { color, contrast } = useColor()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const isHomePage = location.pathname === '/'
     const isPaletteGeneratorPage = location.pathname === ROUTES[0].tools[0].path
     const backgroundActiveColor = isPaletteGeneratorPage && color.hex
     const textActiveColor = isPaletteGeneratorPage && contrast
@@ -20,10 +19,9 @@ export function Nav() {
             isBlurred={false}
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
-            className='bg-titan-white dark:bg-zinc-900 transition-all'
+            className='bg-titan-white dark:bg-zinc-950 transition-all'
             style={{
-                backgroundColor: isHomePage ? 'transparent' : backgroundActiveColor,
-                position: isHomePage ? 'absolute' : 'sticky'
+                backgroundColor: backgroundActiveColor,
             }}
         >
             <NavbarContent className='sm:hidden' justify='start' style={{ color: textActiveColor }}>

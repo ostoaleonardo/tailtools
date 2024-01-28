@@ -109,7 +109,7 @@ export const PALETTES = [
     }
 ]
 
-export const GRADIENT_CLASSES = {
+export const GRADIENT_CLASSES: any = {
     'slate': {
         50: { from: 'from-slate-50', via: 'via-slate-50', to: 'to-slate-50' },
         100: { from: 'from-slate-100', via: 'via-slate-100', to: 'to-slate-100' },
