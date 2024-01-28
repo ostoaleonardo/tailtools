@@ -9,8 +9,8 @@ interface Props {
 
 export function NavMenuItem({ name, routes }: Props) {
     return (
-        <NavbarMenuItem className='relative w-[80%] flex flex-col items-centerr justify-center bg-white/5 rounded-xl p-4 group'>
-            <div className='absolute -top-4 -left-4 text-white text-2xl font-bold'>
+        <NavbarMenuItem className='w-full flex flex-col justify-center'>
+            <div className='text-foreground/50 text-xs font-semibold uppercase'>
                 {name}
             </div>
             <div className='flex flex-col justify-center overflow-hidden transition-all pt-2 gap-2'>

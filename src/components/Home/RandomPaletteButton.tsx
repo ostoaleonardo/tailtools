@@ -29,7 +29,7 @@ export function RandomPaletteButton({ setCode, setPalette }: Props) {
             onClick={generateCode}
             className='max-md:w-28 w-40 flex items-center justify-center rounded-full hover:bg-black hover:dark:bg-white border-4 border-black dark:border-white transition-all group'
         >
-            <span className='max-md:text-xs text-sm group-hover:text-white group-hover:dark:text-black font-bold max-md:py-2 py-6'>
+            <span className='max-md:text-xs text-sm group-hover:text-white group-hover:dark:text-black font-bold max-md:py-2 py-5'>
                 Random
             </span>
         </button>

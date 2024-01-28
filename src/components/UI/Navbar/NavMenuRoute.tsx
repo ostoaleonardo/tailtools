@@ -11,10 +11,10 @@ export function NavMenuRoute({ route }: Props) {
     return (
         <a
             href={route.path}
-            className={`flex flex-col hover:bg-white/10 ${isActive && 'bg-white/5'} rounded-lg cursor-pointer transition-all px-4 py-2`}
+            className={`flex flex-col hover:bg-foreground/10 ${isActive && 'bg-foreground/5'} rounded-lg cursor-pointer transition-all px-4 py-2`}
         >
-            <h3 className='text-sm text-white font-bold capitalize'>{route.name}</h3>
-            <span className='text-xs text-white/50'>{route.description}</span>
+            <h3 className='text-sm text-foreground font-bold capitalize'>{route.name}</h3>
+            <span className='text-xs text-foreground/50'>{route.description}</span>
         </a>
     )
 }

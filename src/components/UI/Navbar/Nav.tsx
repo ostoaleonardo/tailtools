@@ -9,8 +9,10 @@ export function Nav() {
     const location = useLocation()
     const { color, contrast } = useColor()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const isHomePage = location.pathname === '/'
     const isPaletteGeneratorPage = location.pathname === ROUTES[0].tools[0].path
     const backgroundActiveColor = isPaletteGeneratorPage && color.hex
+    const backgroundMenu = isHomePage ? 'dark:bg-zinc-950' : 'dark:bg-zinc-900'
     const textActiveColor = isPaletteGeneratorPage && contrast
 
     return (
@@ -19,7 +21,7 @@ export function Nav() {
             isBlurred={false}
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
-            className='bg-titan-white dark:bg-zinc-950 transition-all'
+            className={`bg-titan-white ${backgroundMenu} transition-all`}
             style={{
                 backgroundColor: backgroundActiveColor,
             }}
@@ -53,7 +55,7 @@ export function Nav() {
             </NavbarContent>
 
             <NavbarMenu
-                className='flex items-center justify-center bg-zinc-950/90 backdrop-blur-sm gap-8'
+                className={`w-fit bg-titan-white ${backgroundMenu} border-t-1 border-r-1 border-foreground/10 overflow-y-hidden pt-8`}
             >
                 {ROUTES.map((route, index) => (
                     <NavMenuItem
