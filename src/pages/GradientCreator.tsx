@@ -44,7 +44,7 @@ export function GradientCreator() {
                             colorStop={colorStop}
                             setColorStop={setColorStop}
                         />
-                        <div className='w-full h-80 border-2 border-black/10 dark:border-white/10 rounded-2xl overflow-y-auto small-scrollbar'>
+                        <div className='w-full h-80 border-2 border-black/10 dark:border-white/10 rounded-2xl overflow-y-auto'>
                             <div className='w-full flex flex-col items-center justify-center gap-10 p-6'>
                                 {PALETTES.map((palette, index) => (
                                     <PaletteRow key={index} palette={palette} setColors={setGradientValues} />

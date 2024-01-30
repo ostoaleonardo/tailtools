@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
 
 @tailwind base;
@@ -22,24 +22,5 @@
 
     .font-console {
         font-family: 'DM Mono', monospace;
-    }
-
-    .scrollbar::-webkit-scrollbar {
-        width: 8px;
-        background-color: #18181B;
-    }
-
-    .scrollbar::-webkit-scrollbar-thumb {
-        background-color: var(--color-primary-foreground);
-    }
-
-    .small-scrollbar::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-    }
-
-    .small-scrollbar::-webkit-scrollbar-thumb {
-        border-radius: 4px;
-        background-color: #00000051
     }
 }

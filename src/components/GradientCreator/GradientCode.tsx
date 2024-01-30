@@ -8,7 +8,7 @@ export function GradientCode({ code }: { code: string }) {
                 hideSymbol
                 variant='bordered'
                 copyIcon={<Icons.Copy />}
-                className='w-full h-full border-none overflow-x-auto small-scrollbar px-6'
+                className='w-full h-full border-none overflow-x-auto px-6'
                 classNames={{
                     base: 'relative',
                     pre: 'max-xl:absolute max-xl:left-16',

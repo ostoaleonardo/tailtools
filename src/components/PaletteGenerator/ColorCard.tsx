@@ -9,7 +9,7 @@ export function ColorCard({ shade, color }: { color: Palette, shade: number }) {
                 <span className='text-sm font-medium text-white' style={{ color: color.contrast }}>
                     {shade}
                 </span>
-                <span className='text-xs font-semibold text-white' style={{ color: color.contrast }}>
+                <span className='text-xs font-medium text-white' style={{ color: color.contrast }}>
                     {color.hex}
                 </span>
             </div>
