@@ -57,6 +57,16 @@ import {
     GridCode
 } from './GridGenerator'
 
+// Shadow Generator Page
+import {
+    ShadowGeneratorHeader,
+    ShadowProperties,
+    ShadowLayers,
+    ShadowCard,
+    ShadowTailwindCode,
+    ShadowCSSCode
+} from './ShadowGenerator'
+
 export {
     // UI
     Nav,
@@ -103,5 +113,13 @@ export {
     GridGeneratorHeader,
     GridElementActive,
     GridElementInactive,
-    GridCode
+    GridCode,
+
+    // Shadow Generator Page
+    ShadowGeneratorHeader,
+    ShadowProperties,
+    ShadowLayers,
+    ShadowCard,
+    ShadowTailwindCode,
+    ShadowCSSCode
 }
