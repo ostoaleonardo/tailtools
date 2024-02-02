@@ -1,22 +1,15 @@
 import { Avatar, Button, Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
 
 interface Props {
-    shadow: {
-        x: number
-        y: number
-        blur: number
-        spread: number
-        color: string
-        inset: boolean
-    }
+    code: string
 }
 
-export function ShadowCard({ shadow }: Props) {
+export function ShadowCard({ code }: Props) {
     return (
         <Card
             className='max-w-[340px] h-fit border-foreground/10 border-2'
             shadow='none'
-            style={{ boxShadow: `${shadow.x}px ${shadow.y}px ${shadow.blur}px ${shadow.spread}px ${shadow.color}` }}
+            style={{ boxShadow: code.replace('box-shadow:', '').replace(';', '') }}
         >
             <CardHeader className='justify-between'>
                 <div className='flex gap-5'>

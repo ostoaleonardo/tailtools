@@ -2,22 +2,22 @@ import { Input, Select, SelectItem } from '@nextui-org/react'
 
 const INPUTS = [
     {
-        label: 'X',
+        label: 'x',
         min: -255,
         defaultValue: '0',
     },
     {
-        label: 'Y',
+        label: 'y',
         min: -255,
         defaultValue: '16',
     },
     {
-        label: 'Blur',
+        label: 'blur',
         min: 0,
         defaultValue: '16',
     },
     {
-        label: 'Spread',
+        label: 'spread',
         min: 0,
         defaultValue: '0',
     }
@@ -28,21 +28,27 @@ const INSET_OPTIONS = [
     { label: 'Inactive', value: 'false' },
 ]
 
-
-interface ShadowState {
-    x: number
-    y: number
-    blur: number
-    spread: number
-    color: string
-    inset: boolean
-}
-
 interface Props {
-    setShadow: (value: React.SetStateAction<ShadowState>) => void
+    shadow: any
+    setShadow: (shadow: any) => void
+    currentLayer: number
 }
 
-export function ShadowProperties({ setShadow }: Props) {
+export function ShadowProperties({ shadow, setShadow, currentLayer }: Props) {
+    const handleChanges = (e: any) => {
+        const value = e.target.value
+        const name = e.target.name
+
+        setShadow((prevShadow: any) => {
+            const newShadow = [...prevShadow]
+            newShadow[currentLayer] = {
+                ...newShadow[currentLayer],
+                [name]: value
+            }
+            return newShadow
+        })
+    }
+
     return (
         <div className='w-64 min-h-full flex flex-col items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
             <div className='w-full flex flex-col gap-1'>
@@ -59,48 +65,35 @@ export function ShadowProperties({ setShadow }: Props) {
                         type='number'
                         variant='faded'
                         label={input.label}
+                        name={input.label}
+                        value={shadow[currentLayer][input.label].toString()}
                         defaultValue={input.defaultValue}
-                        className='max-md:flex-1'
-                        onChange={(e) => {
-                            const value = e.target.value
-                            setShadow((prevShadow) => ({
-                                ...prevShadow,
-                                [input.label.toLowerCase()]: value
-                            }))
-                        }}
+                        className='max-md:flex-1 capitalize'
+                        onChange={(e) => handleChanges(e)}
                     />
                 ))}
                 <Input
                     isRequired
                     type='text'
+                    name='color'
                     label='Color'
                     variant='faded'
+                    value={shadow[currentLayer].color}
                     defaultValue='#0000004d'
                     className='max-md:flex-1'
-                    onChange={(e) => {
-                        const value = e.target.value
-                        setShadow((prevShadow) => ({
-                            ...prevShadow,
-                            color: value
-                        }))
-                    }}
+                    onChange={(e) => handleChanges(e)}
                 />
                 <Select
                     isRequired
-                    variant='faded'
                     disallowEmptySelection
+                    variant='faded'
+                    name='inset'
                     label='Inset'
                     placeholder='Select an option'
                     defaultSelectedKeys={['false']}
                     items={INSET_OPTIONS}
                     className='xl:min-w-48'
-                    onChange={(e) => {
-                        const value = e.target.value
-                        setShadow((prevShadow) => ({
-                            ...prevShadow,
-                            inset: value === 'true'
-                        }))
-                    }}
+                    onChange={(e) => handleChanges(e)}
                 >
                     {(option) => <SelectItem key={option.value}>{option.label}</SelectItem>}
                 </Select>
