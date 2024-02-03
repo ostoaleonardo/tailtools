@@ -1,4 +1,4 @@
-import { Icons } from ".."
+import { Icons } from '..'
 
 interface Props {
     item: number | string
