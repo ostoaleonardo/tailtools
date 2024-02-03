@@ -22,11 +22,11 @@ export function ShadowGenerator() {
     }, [shadow])
 
     return (
-        <main className='w-full min-h-[calc(100vh_-_64px)] grid grid-cols-5 p-8 gap-6'>
+        <main className='w-full min-h-[calc(100vh_-_64px)] grid grid-cols-1 md:grid-cols-5 p-8 gap-6'>
             <ShadowProperties shadow={shadow} setShadow={setShadow} currentLayer={currentLayer} />
-            <div className='col-span-3 flex flex-col items-center justify-between gap-6'>
+            <div className='col-span-full md:col-span-3 max-md:order-first flex flex-col items-center justify-between gap-6'>
                 <ShadowGeneratorHeader cssCode={cssCode} tailwindCode={tailwindCode} />
-                <div className='w-full h-full flex flex-col items-center justify-center bg-slate-300 dark:bg-zinc-800 rounded-2xl'>
+                <div className='w-full h-full flex flex-col items-center justify-center bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8'>
                     <ShadowCard code={cssCode} />
                 </div>
             </div>

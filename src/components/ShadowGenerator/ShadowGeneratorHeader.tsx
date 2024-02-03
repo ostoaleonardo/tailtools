@@ -30,6 +30,7 @@ export function ShadowGeneratorHeader({ cssCode, tailwindCode }: Props) {
                     <Button
                         variant='faded'
                         onClick={handleOpen}
+                        className='max-md:w-full'
                         startContent={<Icons.Export />}
                     >
                         Export code
