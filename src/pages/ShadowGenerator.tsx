@@ -9,7 +9,7 @@ export function ShadowGenerator() {
             blur: 16,
             spread: 0,
             color: '#0000004d',
-            inset: false
+            inset: 'false'
         }
     ])
     const [currentLayer, setCurrentLayer] = useState(0)
@@ -17,8 +17,8 @@ export function ShadowGenerator() {
     const [tailwindCode, setTailwindCode] = useState('')
 
     useEffect(() => {
-        setCssCode(`box-shadow: ${shadow.map(({ x, y, blur, spread, color, inset }) => `${x}px ${y}px ${blur}px ${spread}px ${color}${inset ? ' inset' : ''}`).join(', ')};`)
-        setTailwindCode(`shadow-[${shadow.map(({ x, y, blur, spread, color, inset }) => `${inset ? 'inset_' : ''}${x}px_${y}px_${blur}px_${spread}px_${color}`).join(', ')}]`)
+        setCssCode(`box-shadow: ${shadow.map(({ x, y, blur, spread, color, inset }) => `${x}px ${y}px ${blur}px ${spread}px ${color}${inset === 'true' ? ' inset' : ''}`).join(', ')};`)
+        setTailwindCode(`shadow-[${shadow.map(({ x, y, blur, spread, color, inset }) => `${inset === 'true' ? 'inset_' : ''}${x}px_${y}px_${blur}px_${spread}px_${color}`).join(', ')}]`)
     }, [shadow])
 
     return (
