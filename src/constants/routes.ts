@@ -34,4 +34,14 @@ export const ROUTES = [
             },
         ]
     },
+    {
+        name: 'Shadows',
+        tools: [
+            {
+                path: '/shadow-generator',
+                name: 'Shadow generator',
+                description: 'Create a shadow for your components'
+            },
+        ]
+    }
 ]
