@@ -14,6 +14,7 @@ export function ExportModal({ isOpen, onClose, children, options }: Props) {
             size='3xl'
             isOpen={isOpen}
             onClose={onClose}
+            className='overflow-hidden'
         >
             <ModalContent>
                 <ModalHeader className='flex flex-col gap-1'>
@@ -23,15 +24,13 @@ export function ExportModal({ isOpen, onClose, children, options }: Props) {
                     <aside className='flex flex-row sm:flex-col flex-wrap gap-2'>
                         {options}
                     </aside>
-                    <div className='w-full h-full flex'>
-                        <Snippet
-                            hideSymbol
-                            copyIcon={<Icons.Copy />}
-                            className='w-full h-full text-base overflow-auto'
-                        >
-                            {children}
-                        </Snippet>
-                    </div>
+                    <Snippet
+                        hideSymbol
+                        copyIcon={<Icons.Copy />}
+                        className='w-full max-w-full overflow-auto'
+                    >
+                        {children}
+                    </Snippet>
                 </ModalBody>
             </ModalContent>
         </Modal>

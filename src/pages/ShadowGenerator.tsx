@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ShadowCSSCode, ShadowCard, ShadowGeneratorHeader, ShadowLayers, ShadowProperties, ShadowTailwindCode } from '../components'
+import { ShadowCard, ShadowGeneratorHeader, ShadowLayers, ShadowProperties } from '../components'
 
 export function ShadowGenerator() {
     const [shadow, setShadow] = useState([
@@ -18,14 +18,14 @@ export function ShadowGenerator() {
 
     useEffect(() => {
         setCssCode(`box-shadow: ${shadow.map(({ x, y, blur, spread, color, inset }) => `${x}px ${y}px ${blur}px ${spread}px ${color}${inset === 'true' ? ' inset' : ''}`).join(', ')};`)
-        setTailwindCode(`shadow-[${shadow.map(({ x, y, blur, spread, color, inset }) => `${inset === 'true' ? 'inset_' : ''}${x}px_${y}px_${blur}px_${spread}px_${color}`).join(', ')}]`)
+        setTailwindCode(`shadow-[${shadow.map(({ x, y, blur, spread, color, inset }) => `${inset === 'true' ? 'inset_' : ''}${x}px_${y}px_${blur}px_${spread}px_${color}`).join(',')}]`)
     }, [shadow])
 
     return (
         <main className='w-full min-h-[calc(100vh_-_64px)] grid grid-cols-5 p-8 gap-6'>
             <ShadowProperties shadow={shadow} setShadow={setShadow} currentLayer={currentLayer} />
             <div className='col-span-3 flex flex-col items-center justify-between gap-6'>
-                <ShadowGeneratorHeader />
+                <ShadowGeneratorHeader cssCode={cssCode} tailwindCode={tailwindCode} />
                 <div className='w-full h-full flex flex-col items-center justify-center bg-slate-300 dark:bg-zinc-800 rounded-2xl'>
                     <ShadowCard code={cssCode} />
                 </div>

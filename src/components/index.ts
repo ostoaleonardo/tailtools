@@ -63,8 +63,7 @@ import {
     ShadowProperties,
     ShadowLayers,
     ShadowCard,
-    ShadowTailwindCode,
-    ShadowCSSCode
+    ShadowCode
 } from './ShadowGenerator'
 
 export {
@@ -120,6 +119,5 @@ export {
     ShadowProperties,
     ShadowLayers,
     ShadowCard,
-    ShadowTailwindCode,
-    ShadowCSSCode
+    ShadowCode
 }

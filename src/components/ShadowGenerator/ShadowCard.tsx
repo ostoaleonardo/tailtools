@@ -1,4 +1,4 @@
-import { Avatar, Button, Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
+import { Avatar, Button, Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react'
 
 interface Props {
     code: string
