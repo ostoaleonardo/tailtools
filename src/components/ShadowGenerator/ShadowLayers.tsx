@@ -24,11 +24,12 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
     }
 
     const handleRemoveLayer = () => {
-        setShadow([
-            ...shadow.slice(0, currentLayer),
-            ...shadow.slice(currentLayer + 1)
-        ])
-        setCurrentLayer(shadow.length - 1)
+        if (shadow.length === 1) return
+        
+        const newShadow = [...shadow]
+        newShadow.splice(currentLayer, 1)
+        setShadow(newShadow)
+        setCurrentLayer(currentLayer - 1)
     }
 
     return (
@@ -46,6 +47,7 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
                 </Button>
                 <Button
                     variant='faded'
+                    isDisabled={shadow.length === 1}
                     onClick={handleRemoveLayer}
                 >
                     Remove
