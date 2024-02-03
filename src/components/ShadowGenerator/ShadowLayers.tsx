@@ -1,4 +1,4 @@
-import { Button } from '@nextui-org/react'
+import { Button, ScrollShadow } from '@nextui-org/react'
 
 interface Props {
     shadow: any
@@ -25,7 +25,7 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
 
     const handleRemoveLayer = () => {
         if (shadow.length === 1) return
-        
+
         const newShadow = [...shadow]
         newShadow.splice(currentLayer, 1)
         setShadow(newShadow)
@@ -33,7 +33,7 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
     }
 
     return (
-        <div className='w-64 min-h-full flex flex-col items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl py-8 gap-8'>
+        <div className='flex flex-col items-center bg-slate-300 dark:bg-zinc-800 rounded-2xl py-8 gap-8'>
             <div className='w-full flex flex-col px-8 gap-1'>
                 <h2 className='text-3xl font-bold'>Layers</h2>
                 <p className='text-sm lg:text-base'>Add layers for your shadow.</p>
@@ -53,7 +53,10 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
                     Remove
                 </Button>
             </div>
-            <div className='w-full h-64 flex flex-col items-center overflow-y-auto px-8'>
+            <ScrollShadow
+                hideScrollBar
+                className='w-full h-96 overflow-y-auto px-8'
+            >
                 <div className='w-full flex flex-col items-center justify-center gap-4'>
                     {shadow.map((_: any, index: number) => (
                         <Button
@@ -66,7 +69,7 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
                         </Button>
                     ))}
                 </div>
-            </div>
+            </ScrollShadow>
         </div>
     )
 }

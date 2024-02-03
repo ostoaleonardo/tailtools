@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ShadowCSSCode, ShadowCard, ShadowLayers, ShadowProperties, ShadowTailwindCode } from '../components'
+import { ShadowCSSCode, ShadowCard, ShadowGeneratorHeader, ShadowLayers, ShadowProperties, ShadowTailwindCode } from '../components'
 
 export function ShadowGenerator() {
     const [shadow, setShadow] = useState([
@@ -22,16 +22,15 @@ export function ShadowGenerator() {
     }, [shadow])
 
     return (
-        <main className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center p-8 gap-8'>
-            <div className='w-full h-full flex flex-row items-center justify-between'>
-                <ShadowProperties shadow={shadow} setShadow={setShadow} currentLayer={currentLayer} />
-                <ShadowCard code={cssCode} />
-                <ShadowLayers shadow={shadow} setShadow={setShadow} currentLayer={currentLayer} setCurrentLayer={setCurrentLayer} />
+        <main className='w-full min-h-[calc(100vh_-_64px)] grid grid-cols-5 p-8 gap-6'>
+            <ShadowProperties shadow={shadow} setShadow={setShadow} currentLayer={currentLayer} />
+            <div className='col-span-3 flex flex-col items-center justify-between gap-6'>
+                <ShadowGeneratorHeader />
+                <div className='w-full h-full flex flex-col items-center justify-center bg-slate-300 dark:bg-zinc-800 rounded-2xl'>
+                    <ShadowCard code={cssCode} />
+                </div>
             </div>
-            <div className='w-full flex flex-row items-center justify-between gap-8'>
-                <ShadowTailwindCode code={tailwindCode} />
-                <ShadowCSSCode code={cssCode} />
-            </div>
+            <ShadowLayers shadow={shadow} setShadow={setShadow} currentLayer={currentLayer} setCurrentLayer={setCurrentLayer} />
         </main>
     )
 }

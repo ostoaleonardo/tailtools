@@ -50,7 +50,7 @@ export function ShadowProperties({ shadow, setShadow, currentLayer }: Props) {
     }
 
     return (
-        <div className='w-64 min-h-full flex flex-col items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
+        <div className='flex flex-col items-center bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
             <div className='w-full flex flex-col gap-1'>
                 <h2 className='text-3xl font-bold'>Properties</h2>
                 <p className='text-sm lg:text-base'>Set the properties for the shadow.</p>
