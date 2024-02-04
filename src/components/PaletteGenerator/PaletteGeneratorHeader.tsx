@@ -33,7 +33,7 @@ export function PaletteGeneratorHeader() {
                     <h1 className='text-4xl md:text-6xl font-bold text-neutral-100' style={{ color: contrast }}>
                         Palette Generator
                     </h1>
-                    <p className='text-base md:text-xl font-light text-neutral-100' style={{ color: contrast }}>
+                    <p className='text-base md:text-xl text-neutral-100' style={{ color: contrast }}>
                         Generate a color palette to Tailwind CSS
                     </p>
                     <div className='flex items-end mt-4'>

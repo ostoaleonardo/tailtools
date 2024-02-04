@@ -48,7 +48,6 @@ export function ShadowProperties({ shadow, setShadow, currentLayer }: Props) {
             return newShadow
         })
     }
-    console.log(shadow)
 
     return (
         <div className='flex flex-col items-center bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
