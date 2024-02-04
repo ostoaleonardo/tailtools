@@ -27,10 +27,9 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
     const handleRemoveLayer = () => {
         if (shadow.length === 1) return
 
-        const newShadow = [...shadow]
-        newShadow.splice(currentLayer, 1)
+        const newShadow = shadow.filter((_: any, index: number) => index !== currentLayer)
         setShadow(newShadow)
-        setCurrentLayer(currentLayer - 1)
+        setCurrentLayer(currentLayer === 0 ? 0 : currentLayer - 1)
     }
 
     return (
