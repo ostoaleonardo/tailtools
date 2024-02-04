@@ -18,7 +18,7 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
                 blur: 16,
                 spread: 0,
                 color: '#0000004d',
-                inset: false
+                inset: 'false'
             }
         ])
         setCurrentLayer(shadow.length)

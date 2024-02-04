@@ -48,6 +48,7 @@ export function ShadowProperties({ shadow, setShadow, currentLayer }: Props) {
             return newShadow
         })
     }
+    console.log(shadow)
 
     return (
         <div className='flex flex-col items-center bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
@@ -90,9 +91,10 @@ export function ShadowProperties({ shadow, setShadow, currentLayer }: Props) {
                     name='inset'
                     label='Inset'
                     placeholder='Select an option'
+                    selectedKeys={shadow[currentLayer].inset === 'true' ? ['true'] : ['false']}
                     defaultSelectedKeys={['false']}
                     items={INSET_OPTIONS}
-                    className='xl:min-w-48'
+                    className='max-md:flex-1'
                     onChange={(e) => handleChanges(e)}
                 >
                     {(option) => <SelectItem key={option.value}>{option.label}</SelectItem>}
