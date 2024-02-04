@@ -1,3 +1,9 @@
+export const Add = (props: any) => (
+    <svg width='1em' height='1em' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' {...props}>
+        <path fill='currentColor' d='M17 15V8h-2v7H8v2h7v7h2v-7h7v-2z' />
+    </svg>
+)
+
 const Search = (props: any) => (
     <svg width='0.89em' height='1em' viewBox='0 0 740 840' xmlns='http://www.w3.org/2000/svg' {...props}>
         <path fill='currentColor' d='M734 668q8 9 0 17l-49 49q-3 3-8 3t-8-3L519 584q-50 38-112 55t-133 6q-53-8-99-33t-83-61t-59-85T3 366q-10-79 16-150T96 95t121-76T367 3q53 7 100 30t84 59t62 82t33 100q11 69-6 131t-55 114zM325 557q48 0 90-18t74-50t50-74t18-90t-18-90t-50-74t-74-50t-90-18t-90 18t-73 50t-50 74t-18 90t18 90t50 74t73 50t90 18' />
@@ -6,13 +12,13 @@ const Search = (props: any) => (
 
 export const Load = (props: any) => (
     <svg width='1em' height='1em' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' {...props}>
-        <path fill='currentColor' d='M11 1h1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12v-1h2v1a9 9 0 1 0 9-9h-1z'></path>
+        <path fill='currentColor' d='M11 1h1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12v-1h2v1a9 9 0 1 0 9-9h-1z' />
     </svg>
 )
 
 export const Close = (props: any) => (
     <svg width='1em' height='1em' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg' {...props}>
-        <path fill='currentColor' fillRule='evenodd' d='m8 8.707l3.646 3.647l.708-.707L8.707 8l3.647-3.646l-.707-.708L8 7.293L4.354 3.646l-.707.708L7.293 8l-3.646 3.646l.707.708z' clipRule='evenodd'></path>
+        <path fill='currentColor' fillRule='evenodd' d='m8 8.707l3.646 3.647l.708-.707L8.707 8l3.647-3.646l-.707-.708L8 7.293L4.354 3.646l-.707.708L7.293 8l-3.646 3.646l.707.708z' clipRule='evenodd' />
     </svg>
 )
 
@@ -59,6 +65,7 @@ export const Moon = (props: any) => (
 )
 
 export default {
+    Add,
     Search,
     Load,
     Close,

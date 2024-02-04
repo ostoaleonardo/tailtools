@@ -1,4 +1,5 @@
 import { Button, ScrollShadow } from '@nextui-org/react'
+import { Icons } from '..'
 
 interface Props {
     shadow: any
@@ -42,6 +43,7 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
                 <Button
                     variant='faded'
                     onClick={handleAddLayer}
+                    startContent={<Icons.Add />}
                 >
                     Add
                 </Button>
@@ -49,6 +51,7 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
                     variant='faded'
                     isDisabled={shadow.length === 1}
                     onClick={handleRemoveLayer}
+                    startContent={<Icons.Close />}
                 >
                     Remove
                 </Button>
@@ -61,8 +64,8 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
                     {shadow.map((_: any, index: number) => (
                         <Button
                             key={index}
-                            variant={currentLayer === index ? 'solid' : 'faded'}
-                            className='w-full transition-all'
+                            variant='faded'
+                            className={`w-full ${currentLayer === index ? 'bg-neutral-800 dark:bg-slate-300 text-white dark:text-black' : ''} transition-all`}
                             onClick={() => setCurrentLayer(index)}
                         >
                             Layer {index + 1}
