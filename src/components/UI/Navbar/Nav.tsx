@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarContent } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarContent, NavbarItem } from '@nextui-org/react'
 import { ThemeButton, NavItem, NavBrand, NavMenuItem } from '..'
 import { useColor } from '../../../hooks'
 import { ROUTES } from '../../../constants'
@@ -27,19 +27,25 @@ export function Nav() {
             }}
         >
             <NavbarContent className='sm:hidden' justify='start' style={{ color: textActiveColor }}>
-                <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
+                <NavbarItem>
+                    <NavbarMenuToggle aria-label={isMenuOpen ? 'Close menu' : 'Open menu'} />
+                </NavbarItem>
             </NavbarContent>
 
             <NavbarContent className='sm:hidden pr-3' justify='center'>
-                <NavbarBrand>
-                    <NavBrand textActiveColor={textActiveColor} />
-                </NavbarBrand>
+                <NavbarItem>
+                    <NavbarBrand>
+                        <NavBrand textActiveColor={textActiveColor} />
+                    </NavbarBrand>
+                </NavbarItem>
             </NavbarContent>
 
             <NavbarContent className='hidden sm:flex gap-4' justify='center'>
-                <NavbarBrand className='mr-10'>
-                    <NavBrand textActiveColor={textActiveColor} />
-                </NavbarBrand>
+                <NavbarItem>
+                    <NavbarBrand className='mr-10'>
+                        <NavBrand textActiveColor={textActiveColor} />
+                    </NavbarBrand>
+                </NavbarItem>
                 {ROUTES.map((route, index) => (
                     <NavItem
                         key={index}
@@ -51,7 +57,9 @@ export function Nav() {
             </NavbarContent>
 
             <NavbarContent justify='end'>
-                <ThemeButton />
+                <NavbarItem>
+                    <ThemeButton />
+                </NavbarItem>
             </NavbarContent>
 
             <NavbarMenu

@@ -14,6 +14,6 @@ export function NavBrand({ textActiveColor }: Props) {
             >
                 Beta
             </span>
-        </Link >
+        </Link>
     )
 }
