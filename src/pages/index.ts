@@ -4,6 +4,7 @@ import { RandomPalette } from './RandomPalette.tsx'
 import { GradientCreator } from './GradientCreator.tsx'
 import { GridGenerator } from './GridGenerator.tsx'
 import { ShadowGenerator } from './ShadowGenerator.tsx'
+import { TailwindComponents } from './TailwindComponents.tsx'
 
 export {
     Home,
@@ -11,5 +12,6 @@ export {
     RandomPalette,
     GradientCreator,
     GridGenerator,
-    ShadowGenerator
+    ShadowGenerator,
+    TailwindComponents
 }

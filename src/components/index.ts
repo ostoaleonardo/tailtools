@@ -66,6 +66,15 @@ import {
     ShadowCode
 } from './ShadowGenerator'
 
+// Tailwind Components Page
+import {
+    HeroComponents,
+    ComponentPreview,
+    ComponentsSection,
+    ModalComponent,
+    CicleText
+} from './TailwindComponents'
+
 export {
     // UI
     Nav,
@@ -119,5 +128,12 @@ export {
     ShadowProperties,
     ShadowLayers,
     ShadowCard,
-    ShadowCode
+    ShadowCode,
+
+    // Tailwind Components Page
+    HeroComponents,
+    ComponentPreview,
+    ComponentsSection,
+    ModalComponent,
+    CicleText
 }
