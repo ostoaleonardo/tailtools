@@ -1,4 +1,5 @@
-import { Modal, ModalBody, ModalContent, ModalHeader, Tab, Tabs } from '@nextui-org/react'
+import { Modal, ModalBody, ModalContent, ModalHeader, Snippet, Tab, Tabs } from '@nextui-org/react'
+import { ComponentCode } from '.'
 
 interface Props {
     isOpen: boolean
@@ -6,14 +7,15 @@ interface Props {
     active: {
         title: string
         description: string
-        component: React.ReactNode
+        component: () => JSX.Element
+        code: string
     }
 }
 
 export function ModalComponent({ isOpen, handleOpen, active }: Props) {
     return (
         <Modal
-            size='3xl'
+            size='4xl'
             isOpen={isOpen}
             onClose={handleOpen}
         >
@@ -27,11 +29,20 @@ export function ModalComponent({ isOpen, handleOpen, active }: Props) {
                         aria-label='Options'
                     >
                         <Tab key='component' title='Component'>
-                            <div className='w-full min-h-96 flex items-center justify-center bg-slate-200 dark:bg-neutral-700 rounded-xl py-4'>
-                                {active.component}
+                            <div className='w-full min-h-96 flex items-center justify-center bg-slate-50 dark:bg-zinc-950/30 rounded-xl'>
+                                <active.component />
                             </div>
                         </Tab>
                         <Tab key='code' title='Code'>
+                            <Snippet
+                                hideSymbol
+                                classNames={{
+                                    base: 'relative w-full min-h-96 bg-slate-50 dark:bg-zinc-950/30 overflow-auto px-8 py-6',
+                                    copyButton: 'absolute top-4 right-4 text-white',
+                                }}
+                            >
+                                <ComponentCode code={active.code} />
+                            </Snippet>
                         </Tab>
                     </Tabs>
                 </ModalBody>

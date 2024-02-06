@@ -72,6 +72,7 @@ import {
     ComponentPreview,
     ComponentsSection,
     ModalComponent,
+    ComponentCode,
     CicleText
 } from './TailwindComponents'
 
@@ -135,5 +136,6 @@ export {
     ComponentPreview,
     ComponentsSection,
     ModalComponent,
+    ComponentCode,
     CicleText
 }

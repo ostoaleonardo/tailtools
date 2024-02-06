@@ -1,17 +1,10 @@
 import { useState } from 'react'
-import { CicleText, ComponentPreview, ComponentsSection, HeroComponents, ModalComponent } from '../components'
-
-const COMPONENTS = [
-    {
-        title: 'Cicle Text',
-        description: 'Text inside a cicle.',
-        component: <CicleText />
-    }
-]
+import { ComponentPreview, ComponentsSection, HeroComponents, ModalComponent } from '../components'
+import { TAILWIND_COMPONENTS } from '../constants'
 
 export function TailwindComponents() {
     const [isOpen, setIsOpen] = useState(false)
-    const [active, setActive] = useState(COMPONENTS[0])
+    const [active, setActive] = useState(TAILWIND_COMPONENTS[0])
 
     const handleOpen = () => setIsOpen(!isOpen)
 
@@ -24,14 +17,14 @@ export function TailwindComponents() {
                         title='Animations'
                         description='Tailwind CSS components with animations.'
                     >
-                        {COMPONENTS.map((component, index) => (
+                        {TAILWIND_COMPONENTS.map((component, index) => (
                             <ComponentPreview
                                 key={index}
                                 title={component.title}
                                 description={component.description}
                                 onClick={handleOpen}
                             >
-                                {component.component}
+                                <component.component />
                             </ComponentPreview>
                         ))}
                     </ComponentsSection>

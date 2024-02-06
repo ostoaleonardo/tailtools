@@ -10,6 +10,10 @@ import {
     GRID_CLASSES
 } from './ui.ts'
 
+import {
+    TAILWIND_COMPONENTS
+} from './tailwind-components.ts'
+
 import { ROUTES } from './routes.ts'
 
 export {
@@ -22,5 +26,6 @@ export {
     VIA_OPTIONS,
     INITIAL_GRADIENT,
     GRID_CLASSES,
+    TAILWIND_COMPONENTS,
     ROUTES
 }
