@@ -3,7 +3,7 @@ import { HeroBackground } from '.'
 
 export function HeroComponents() {
     const handleButtonClick = () => {
-        const element = document.getElementById('animations')
+        const element = document.getElementById('buttons')
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' })
         }

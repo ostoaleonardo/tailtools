@@ -14,7 +14,7 @@ export function ComponentPreview({ title, description, children, handleOpen }: P
             radius='lg'
             shadow='none'
             onPress={handleOpen}
-            className='w-full h-full flex flex-col bg-slate-300 dark:bg-zinc-800 transition-all cursor-pointer select-none p-4'
+            className='w-full h-full min-h-72 flex flex-col bg-slate-300 dark:bg-zinc-800 transition-all cursor-pointer select-none p-4'
         >
             <CardHeader className='flex flex-col items-start'>
                 <h3 className='text-3xl font-bold transition-all'>{title}</h3>
