@@ -21,7 +21,7 @@ export function ComponentPreview({ title, description, children, handleOpen }: P
                 <p className='transition-all'>{description}</p>
             </CardHeader>
             <CardBody>
-                <div className='w-full h-auto flex items-center justify-center bg-slate-200 dark:bg-zinc-900 rounded-xl transition-all py-4'>
+                <div className='w-full h-full flex items-center justify-center bg-slate-200 dark:bg-zinc-900 rounded-xl transition-all py-4'>
                     {children}
                 </div>
             </CardBody>
