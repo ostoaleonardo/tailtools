@@ -1,15 +1,11 @@
 import { Modal, ModalBody, ModalContent, ModalHeader, Snippet, Tab, Tabs } from '@nextui-org/react'
 import { ComponentCode } from '.'
+import { Component } from '../../types'
 
 interface Props {
     isOpen: boolean
     handleOpen: () => void
-    active: {
-        title: string
-        description: string
-        component: () => JSX.Element
-        code: string
-    }
+    active: Component
 }
 
 export function ModalComponent({ isOpen, handleOpen, active }: Props) {

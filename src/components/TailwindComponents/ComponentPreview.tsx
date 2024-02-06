@@ -4,16 +4,16 @@ interface Props {
     title?: string
     description?: string
     children?: React.ReactNode
-    onClick?: () => void
+    handleOpen?: () => void
 }
 
-export function ComponentPreview({ title, description, children, onClick }: Props) {
+export function ComponentPreview({ title, description, children, handleOpen }: Props) {
     return (
         <Card
             isPressable
             radius='lg'
             shadow='none'
-            onPress={onClick}
+            onPress={handleOpen}
             className='w-full h-full flex flex-col bg-slate-300 dark:bg-zinc-800 transition-all cursor-pointer select-none p-4'
         >
             <CardHeader className='flex flex-col items-start'>

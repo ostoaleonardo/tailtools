@@ -7,7 +7,7 @@ import { Icons } from '..'
 import { useColor, usePalette } from '../../hooks'
 import { SHADES } from '../../constants'
 import { getPaletteCode } from '../../utils'
-import { Palette } from '../../types/palette'
+import { Palette } from '../../types'
 
 const BUTTONS = [
     {

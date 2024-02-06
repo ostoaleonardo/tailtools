@@ -1,10 +1,16 @@
 import { useState } from 'react'
 import { ComponentPreview, ComponentsSection, HeroComponents, ModalComponent } from '../components'
+import { Component } from '../types'
 import { TAILWIND_COMPONENTS } from '../constants'
 
 export function TailwindComponents() {
     const [isOpen, setIsOpen] = useState(false)
     const [active, setActive] = useState(TAILWIND_COMPONENTS[0])
+
+    const handleComponent = (component: Component) => () => {
+        setActive(component)
+        handleOpen()
+    }
 
     const handleOpen = () => setIsOpen(!isOpen)
 
@@ -22,7 +28,7 @@ export function TailwindComponents() {
                                 key={index}
                                 title={component.title}
                                 description={component.description}
-                                onClick={handleOpen}
+                                handleOpen={handleComponent(component)}
                             >
                                 <component.component />
                             </ComponentPreview>
