@@ -1,4 +1,4 @@
-import { CicleText } from '../components'
+import { CicleText, GlowingBorderButton } from '../components'
 
 export const TAILWIND_COMPONENTS = [
     {
@@ -21,5 +21,11 @@ export const TAILWIND_COMPONENTS = [
         </textPath>
     </text>
 </svg>`
+    },
+    {
+        title: 'Glowing Border Button',
+        description: 'A button with a glowing border on hover.',
+        component: GlowingBorderButton,
+        code: ''
     }
 ]

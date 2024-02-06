@@ -7,6 +7,7 @@ import { ComponentCode } from './ComponentCode.tsx'
 
 // Examples components
 import { CicleText } from './Components/CicleText.tsx'
+import { GlowingBorderButton } from './Components/GlowingBorderButton.tsx'
 
 export {
     HeroComponents,
@@ -17,5 +18,6 @@ export {
     ComponentCode,
 
     // Examples components
-    CicleText
+    CicleText,
+    GlowingBorderButton
 }
