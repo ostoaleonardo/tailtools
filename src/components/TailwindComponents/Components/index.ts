@@ -1,7 +1,9 @@
-import { CicleText } from './CicleText.tsx'
-import { GlowingBorderButton } from './GlowingBorderButton.tsx'
+import { GlowingBorderButton } from './Buttons/GlowingBorderButton.tsx'
+import { GlowingBorderCard } from './Cards/GlowingBorderCard.tsx'
+import { CicleText } from './Others/CicleText.tsx'
 
 export {
-    CicleText,
-    GlowingBorderButton
+    GlowingBorderButton,
+    GlowingBorderCard,
+    CicleText
 }

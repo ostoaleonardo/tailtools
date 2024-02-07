@@ -73,8 +73,9 @@ import {
     ComponentsSection,
     ModalComponent,
     ComponentCode,
-    CicleText,
-    GlowingBorderButton
+    GlowingBorderButton,
+    GlowingBorderCard,
+    CicleText
 } from './TailwindComponents'
 
 export {
@@ -138,6 +139,7 @@ export {
     ComponentsSection,
     ModalComponent,
     ComponentCode,
-    CicleText,
-    GlowingBorderButton
+    GlowingBorderButton,
+    GlowingBorderCard,
+    CicleText
 }

@@ -1,4 +1,8 @@
-import { CicleText, GlowingBorderButton } from '../components'
+import {
+    GlowingBorderButton,
+    GlowingBorderCard,
+    CicleText
+} from '../components'
 
 export const TAILWIND_COMPONENTS = [
     {
@@ -9,6 +13,18 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Glowing Border Button',
                 description: 'A button with a glowing border on hover.',
                 component: GlowingBorderButton,
+                code: ''
+            }
+        ]
+    },
+    {
+        title: 'Cards',
+        description: 'Tailwind CSS components with cards.',
+        components: [
+            {
+                title: 'Glowing Border Card',
+                description: 'A card with a glowing border on hover.',
+                component: GlowingBorderCard,
                 code: ''
             }
         ]
