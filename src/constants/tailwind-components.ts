@@ -7,7 +7,7 @@ import {
 export const TAILWIND_COMPONENTS = [
     {
         title: 'Buttons',
-        description: 'Tailwind CSS components with animations.',
+        description: 'Beautiful buttons that will make your website look great.',
         components: [
             {
                 title: 'Glowing Border Button',
@@ -19,7 +19,7 @@ export const TAILWIND_COMPONENTS = [
     },
     {
         title: 'Cards',
-        description: 'Tailwind CSS components with cards.',
+        description: 'Show your content in a beautiful way.',
         components: [
             {
                 title: 'Glowing Border Card',
@@ -31,7 +31,7 @@ export const TAILWIND_COMPONENTS = [
     },
     {
         title: 'Texts',
-        description: 'Tailwind CSS components with text.',
+        description: 'Highlight your text with amazing styles.',
         components: [
             {
                 title: 'Cicle Text',
