@@ -1,6 +1,7 @@
 import {
     GlowingBorderButton,
     GlowingBorderCard,
+    GridPattern,
     CicleText
 } from '../components'
 
@@ -25,6 +26,18 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Glowing Border Card',
                 description: 'A card with a glowing border on hover.',
                 component: GlowingBorderCard,
+                code: ''
+            }
+        ]
+    },
+    {
+        title: 'Patterns',
+        description: 'Add some life to your website with these amazing patterns.',
+        components: [
+            {
+                title: 'Grid Pattern',
+                description: 'A grid pattern with skew effect.',
+                component: GridPattern,
                 code: ''
             }
         ]

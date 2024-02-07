@@ -25,7 +25,7 @@ export function ModalComponent({ isOpen, handleOpen, active }: Props) {
                         aria-label='Options'
                     >
                         <Tab key='component' title='Component'>
-                            <div className='w-full min-h-96 flex items-center justify-center bg-slate-50 dark:bg-zinc-950/30 rounded-xl'>
+                            <div className='relative w-full min-h-96 flex items-center justify-center bg-slate-50 dark:bg-zinc-950/30 rounded-xl'>
                                 <active.component />
                             </div>
                         </Tab>

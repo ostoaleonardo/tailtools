@@ -6,9 +6,10 @@ import { ModalComponent } from './ModalComponent.tsx'
 import { ComponentCode } from './ComponentCode.tsx'
 
 // Examples components
-import { GlowingBorderButton } from './Components/Buttons/GlowingBorderButton.tsx'
-import { GlowingBorderCard } from './Components/Cards/GlowingBorderCard.tsx'
-import { CicleText } from './Components/Others/CicleText.tsx'
+import { GlowingBorderButton } from './Components'
+import { GlowingBorderCard } from './Components'
+import { GridPattern } from './Components'
+import { CicleText } from './Components'
 
 export {
     HeroComponents,
@@ -21,5 +22,6 @@ export {
     // Examples components
     GlowingBorderButton,
     GlowingBorderCard,
+    GridPattern,
     CicleText
 }

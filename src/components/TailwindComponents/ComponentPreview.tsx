@@ -19,7 +19,7 @@ export function ComponentPreview({ title, description, children, handleOpen }: P
                 <h3 className='text-3xl font-bold transition-all'>{title}</h3>
                 <p className='transition-all'>{description}</p>
             </CardHeader>
-            <CardBody className='w-full h-full flex items-center justify-center bg-slate-200 dark:bg-zinc-900 rounded-t-3xl transition-all p-4'>
+            <CardBody className='relative w-full h-full flex items-center justify-center bg-slate-200 dark:bg-zinc-900 rounded-t-3xl transition-all p-4'>
                 {children}
             </CardBody>
         </Card>

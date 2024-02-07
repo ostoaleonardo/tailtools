@@ -75,6 +75,7 @@ import {
     ComponentCode,
     GlowingBorderButton,
     GlowingBorderCard,
+    GridPattern,
     CicleText
 } from './TailwindComponents'
 
@@ -141,5 +142,6 @@ export {
     ComponentCode,
     GlowingBorderButton,
     GlowingBorderCard,
+    GridPattern,
     CicleText
 }
