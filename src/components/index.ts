@@ -76,6 +76,8 @@ import {
     GlowingBorderButton,
     GlowingBorderCard,
     GridPattern,
+    DashedGridPattern,
+    SkewGridPattern,
     CicleText
 } from './TailwindComponents'
 
@@ -143,5 +145,7 @@ export {
     GlowingBorderButton,
     GlowingBorderCard,
     GridPattern,
+    DashedGridPattern,
+    SkewGridPattern,
     CicleText
 }

@@ -9,6 +9,8 @@ import { ComponentCode } from './ComponentCode.tsx'
 import { GlowingBorderButton } from './Components'
 import { GlowingBorderCard } from './Components'
 import { GridPattern } from './Components'
+import { DashedGridPattern } from './Components'
+import { SkewGridPattern } from './Components'
 import { CicleText } from './Components'
 
 export {
@@ -23,5 +25,7 @@ export {
     GlowingBorderButton,
     GlowingBorderCard,
     GridPattern,
+    DashedGridPattern,
+    SkewGridPattern,
     CicleText
 }
