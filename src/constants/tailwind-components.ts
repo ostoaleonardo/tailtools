@@ -1,12 +1,12 @@
 import {
     GlowingBorderButton,
+    GlowingRainbowButton,
     GlowingBorderCard,
     GridPattern,
     SkewGridPattern,
     CicleText,
     DashedGridPattern
 } from '../components'
-import { GlowingRainbowButton } from '../components/TailwindComponents/Components/Buttons/GlowingRainbowButton'
 
 export const TAILWIND_COMPONENTS = [
     {

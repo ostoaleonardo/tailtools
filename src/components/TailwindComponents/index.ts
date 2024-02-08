@@ -7,6 +7,7 @@ import { ComponentCode } from './ComponentCode.tsx'
 
 // Examples components
 import { GlowingBorderButton } from './Components'
+import { GlowingRainbowButton } from './Components'
 import { GlowingBorderCard } from './Components'
 import { GridPattern } from './Components'
 import { DashedGridPattern } from './Components'
@@ -23,6 +24,7 @@ export {
 
     // Examples components
     GlowingBorderButton,
+    GlowingRainbowButton,
     GlowingBorderCard,
     GridPattern,
     DashedGridPattern,
