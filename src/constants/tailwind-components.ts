@@ -6,6 +6,7 @@ import {
     CicleText,
     DashedGridPattern
 } from '../components'
+import { GlowingRainbowButton } from '../components/TailwindComponents/Components/Buttons/GlowingRainbowButton'
 
 export const TAILWIND_COMPONENTS = [
     {
@@ -13,9 +14,15 @@ export const TAILWIND_COMPONENTS = [
         description: 'Beautiful buttons that will make your website look great.',
         components: [
             {
-                title: 'Glowing Border Button',
+                title: 'Glowing Border',
                 description: 'A button with a glowing border on hover.',
                 component: GlowingBorderButton,
+                code: ''
+            },
+            {
+                title: 'Glowing Rainbow',
+                description: 'A button with a glowing rainbow border.',
+                component: GlowingRainbowButton,
                 code: ''
             }
         ]
@@ -25,7 +32,7 @@ export const TAILWIND_COMPONENTS = [
         description: 'Show your content in a beautiful way.',
         components: [
             {
-                title: 'Glowing Border Card',
+                title: 'Glowing Border',
                 description: 'A card with a glowing border on hover.',
                 component: GlowingBorderCard,
                 code: ''
@@ -37,19 +44,19 @@ export const TAILWIND_COMPONENTS = [
         description: 'Add some life to your website with these amazing patterns.',
         components: [
             {
-                title: 'Grid Pattern',
-                description: 'A grid pattern with a gradient effect.',
+                title: 'Simple Grid',
+                description: 'A simple grid pattern.',
                 component: GridPattern,
                 code: ''
             },
             {
-                title: 'Dashed Grid Pattern',
-                description: 'A grid pattern with dashed effect.',
+                title: 'Dashed Grid',
+                description: 'A grid pattern with dashed lines.',
                 component: DashedGridPattern,
                 code: ''
             },
             {
-                title: 'Skew Grid Pattern',
+                title: 'Skew Grid',
                 description: 'A grid pattern with skew effect.',
                 component: SkewGridPattern,
                 code: ''
