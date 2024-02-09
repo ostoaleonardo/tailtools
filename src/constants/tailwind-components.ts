@@ -3,9 +3,10 @@ import {
     GlowingRainbowButton,
     GlowingBorderCard,
     GridPattern,
+    DashedGridPattern,
     SkewGridPattern,
-    CicleText,
-    DashedGridPattern
+    DotPattern,
+    CicleText
 } from '../components'
 
 export const TAILWIND_COMPONENTS = [
@@ -24,7 +25,7 @@ export const TAILWIND_COMPONENTS = [
                 description: 'A button with a glowing rainbow border.',
                 component: GlowingRainbowButton,
                 code: ''
-            }
+            },
         ]
     },
     {
@@ -59,6 +60,12 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Skew Grid',
                 description: 'A grid pattern with skew effect.',
                 component: SkewGridPattern,
+                code: ''
+            },
+            {
+                title: 'Dot Pattern',
+                description: 'A pattern with dots.',
+                component: DotPattern,
                 code: ''
             }
         ]

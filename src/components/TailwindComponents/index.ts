@@ -12,6 +12,7 @@ import { GlowingBorderCard } from './Components'
 import { GridPattern } from './Components'
 import { DashedGridPattern } from './Components'
 import { SkewGridPattern } from './Components'
+import { DotPattern } from './Components'
 import { CicleText } from './Components'
 
 export {
@@ -29,5 +30,6 @@ export {
     GridPattern,
     DashedGridPattern,
     SkewGridPattern,
+    DotPattern,
     CicleText
 }
