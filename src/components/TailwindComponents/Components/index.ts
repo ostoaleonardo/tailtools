@@ -5,6 +5,7 @@ import { GridPattern } from './Patterns/GridPattern.tsx'
 import { DashedGridPattern } from './Patterns/DashedGridPattern.tsx'
 import { SkewGridPattern } from './Patterns/SkewGridPattern.tsx'
 import { DotPattern } from './Patterns/DotPattern.tsx'
+import { LinesBackground } from './Background/LinesBackground.tsx'
 import { CicleText } from './Others/CicleText.tsx'
 
 export {
@@ -15,5 +16,6 @@ export {
     DashedGridPattern,
     SkewGridPattern,
     DotPattern,
+    LinesBackground,
     CicleText
 }

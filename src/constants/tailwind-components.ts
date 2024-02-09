@@ -6,6 +6,7 @@ import {
     DashedGridPattern,
     SkewGridPattern,
     DotPattern,
+    LinesBackground,
     CicleText
 } from '../components'
 
@@ -66,6 +67,18 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Dot Pattern',
                 description: 'A pattern with dots.',
                 component: DotPattern,
+                code: ''
+            }
+        ]
+    },
+    {
+        title: 'Backgrounds',
+        description: 'Beautiful backgrounds for your website.',
+        components: [
+            {
+                title: 'Lines Background',
+                description: 'A background with animated lines.',
+                component: LinesBackground,
                 code: ''
             }
         ]

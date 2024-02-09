@@ -80,6 +80,7 @@ import {
     DashedGridPattern,
     SkewGridPattern,
     DotPattern,
+    LinesBackground,
     CicleText
 } from './TailwindComponents'
 
@@ -151,5 +152,6 @@ export {
     DashedGridPattern,
     SkewGridPattern,
     DotPattern,
+    LinesBackground,
     CicleText
 }
