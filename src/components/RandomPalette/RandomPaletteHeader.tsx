@@ -3,7 +3,7 @@ import { Button } from '@nextui-org/react'
 import { ExportModal, ModalButton } from '../Modal'
 import { CodeToExport } from '../UI'
 import { Icons } from '..'
-import { getColorsCode } from '../../utils'
+import { getColorsCode } from '@/utils'
 
 const BUTTONS = [
     {

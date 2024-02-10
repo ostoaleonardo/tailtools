@@ -1,8 +1,8 @@
-import { ShadowGeneratorHeader } from './ShadowGeneratorHeader'
-import { ShadowProperties } from './ShadowProperties'
-import { ShadowLayers } from './ShadowLayers'
-import { ShadowCard } from './ShadowCard'
-import { ShadowCode } from './ShadowCode'
+import { ShadowGeneratorHeader } from './ShadowGeneratorHeader.tsx'
+import { ShadowProperties } from './ShadowProperties.tsx'
+import { ShadowLayers } from './ShadowLayers.tsx'
+import { ShadowCard } from './ShadowCard.tsx'
+import { ShadowCode } from './ShadowCode.tsx'
 
 export {
     ShadowGeneratorHeader,

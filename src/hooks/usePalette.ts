@@ -1,6 +1,6 @@
 import Color from 'color'
-import { SHADES } from '../constants'
-import { Palette } from '../types'
+import { Palette } from '@/types'
+import { SHADES } from '@/constants'
 
 export function usePalette() {
     const getShade = (color: Color, isDark: boolean, opacity: number) => {

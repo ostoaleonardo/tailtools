@@ -1,4 +1,4 @@
-import { SHADES } from '../constants'
+import { SHADES } from '@/constants'
 
 export const getPaletteCode = (tech: string, colorName: string, palette: any[]) => {
     let code = ''

@@ -1,6 +1,6 @@
 import { Modal, ModalBody, ModalContent, ModalHeader, Snippet, Tab, Tabs } from '@nextui-org/react'
 import { ComponentCode } from '.'
-import { Component } from '../../types'
+import { Component } from '@/types'
 
 interface Props {
     isOpen: boolean

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useColor } from '../../hooks'
+import { useColor } from '@/hooks'
 
 export function ColorPicker({ setInput }: { setInput: (value: string) => void }) {
     const { color } = useColor()

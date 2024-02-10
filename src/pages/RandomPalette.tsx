@@ -1,4 +1,4 @@
-import { PaletteGrid } from '../components'
+import { PaletteGrid } from '@/components'
 
 export function RandomPalette() {
     return (

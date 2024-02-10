@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { CodeWindow, GradientPicker, Palette, RandomPaletteButton } from '.'
-import { PALETTES, GRADIENT_CLASSES } from '../../constants'
 import { GradientBackground } from './GradientBackground'
+import { GRADIENT_CLASSES, PALETTES } from '@/constants'
 
 export function HeroSection() {
     const [code, setCode] = useState('')

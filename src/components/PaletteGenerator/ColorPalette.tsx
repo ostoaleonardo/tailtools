@@ -4,10 +4,10 @@ import { ExportModal, ModalButton } from '../Modal'
 import { CodeToExport } from '../UI'
 import { ColorCard } from '.'
 import { Icons } from '..'
-import { useColor, usePalette } from '../../hooks'
-import { SHADES } from '../../constants'
-import { getPaletteCode } from '../../utils'
-import { Palette } from '../../types'
+import { useColor, usePalette } from '@/hooks'
+import { getPaletteCode } from '@/utils'
+import { SHADES } from '@/constants'
+import { Palette } from '@/types'
 
 const BUTTONS = [
     {

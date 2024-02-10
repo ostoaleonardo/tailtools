@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Color, RandomPaletteHeader } from '.'
-import { useFetch } from '../../hooks'
-import { getRandomColor } from '../../utils'
-import { INITIAL_RANDOM_PALETTE } from '../../constants'
+import { useFetch } from '@/hooks'
+import { getRandomColor } from '@/utils'
+import { INITIAL_RANDOM_PALETTE } from '@/constants'
 
 export function PaletteGrid() {
     const { generatePalette } = useFetch()

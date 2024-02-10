@@ -1,5 +1,5 @@
 import { Select, SelectItem } from '@nextui-org/react'
-import { GRADIENT_DIRECTIONS, VIA_OPTIONS } from '../../constants'
+import { GRADIENT_DIRECTIONS, VIA_OPTIONS } from '@/constants'
 
 export function GradientCreatorHeader({ setDirection, setVia }: { setDirection: Function, setVia: Function }) {
     return (

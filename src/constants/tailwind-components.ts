@@ -9,7 +9,7 @@ import {
     LinesBackground,
     TypeWriter,
     CicleText
-} from '../components'
+} from '@/components'
 
 export const TAILWIND_COMPONENTS = [
     {

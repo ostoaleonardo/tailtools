@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { Button, Input } from '@nextui-org/react'
 import { ColorPicker } from '.'
 import { Icons } from '../UI'
-import { useColor, useFetch } from '../../hooks'
-import { PLACEHOLDER } from '../../constants'
-import { getRandomColor } from '../../utils'
+import { useColor, useFetch } from '@/hooks'
+import { getRandomColor } from '@/utils'
+import { PLACEHOLDER } from '@/constants'
 
 export function PaletteGeneratorHeader() {
     const [input, setInput] = useState('')

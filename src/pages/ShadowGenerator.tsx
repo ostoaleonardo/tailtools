@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ShadowCard, ShadowGeneratorHeader, ShadowLayers, ShadowProperties } from '../components'
+import { ShadowCard, ShadowGeneratorHeader, ShadowLayers, ShadowProperties } from '@/components'
 
 export function ShadowGenerator() {
     const [shadow, setShadow] = useState([

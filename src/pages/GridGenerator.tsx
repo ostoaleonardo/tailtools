@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { GridCode, GridGeneratorHeader, GridElementInactive, GridElementActive } from '../components'
-import { GRID_CLASSES } from '../constants'
+import { GridCode, GridGeneratorHeader, GridElementInactive, GridElementActive } from '@/components'
+import { GRID_CLASSES } from '@/constants'
 
 export function GridGenerator() {
     const [columns, setColumns] = useState('5')

@@ -1,5 +1,5 @@
+import { Palette } from '@/types'
 import { HoverCard } from '.'
-import { Palette } from '../../types'
 
 export function ColorCard({ shade, color }: { color: Palette, shade: number }) {
     return (

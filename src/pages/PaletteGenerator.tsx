@@ -1,4 +1,4 @@
-import { ColorPalette, Examples, PaletteGeneratorHeader } from '../components'
+import { ColorPalette, Examples, PaletteGeneratorHeader } from '@/components'
 
 export function PaletteGenerator() {
     return (

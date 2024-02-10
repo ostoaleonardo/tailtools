@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { ColorStopsTabs, GradientCode, GradientCreatorHeader, GradientVisualizer, OtherColorsRow, PaletteRow } from '../components'
-import { INITIAL_GRADIENT, PALETTES, GRADIENT_CLASSES } from '../constants'
 import { ScrollShadow } from '@nextui-org/react'
+import { ColorStopsTabs, GradientCode, GradientCreatorHeader, GradientVisualizer, OtherColorsRow, PaletteRow } from '@/components'
+import { INITIAL_GRADIENT, PALETTES, GRADIENT_CLASSES } from '@/constants'
 
 export function GradientCreator() {
     const [code, setCode] = useState('bg-gradient-to-tr from-slate-600 to-slate-400')

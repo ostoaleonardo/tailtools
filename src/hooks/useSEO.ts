@@ -1,6 +1,6 @@
 import { useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
-import { ROUTES } from '../constants'
+import { ROUTES } from '@/constants'
 
 const DEFAULT_TITLE = 'Tailtools: Tailwind CSS Tools'
 const DEFAULT_DESCRIPTION = 'Design even faster with our collection of interactive tools to generate code for Tailwind CSS, generate color palettes, gradients for backgrounds or texts, grids for your layout, shadows for your components, and more.'

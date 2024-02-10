@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Button } from '@nextui-org/react'
+import { getGridCode } from '@/utils'
 import { Icons } from '..'
-import { getGridCode } from '../../utils'
 
 interface Props {
     code: string

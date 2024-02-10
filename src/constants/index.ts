@@ -10,9 +10,7 @@ import {
     GRID_CLASSES
 } from './ui.ts'
 
-import {
-    TAILWIND_COMPONENTS
-} from './tailwind-components.ts'
+import { TAILWIND_COMPONENTS } from './tailwind-components.ts'
 
 import { ROUTES } from './routes.ts'
 

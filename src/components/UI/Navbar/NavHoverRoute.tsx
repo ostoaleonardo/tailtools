@@ -1,4 +1,4 @@
-import { useSEO } from '../../../hooks'
+import { useSEO } from '@/hooks'
 
 interface Props {
     route: { path: string, name: string, description: string }

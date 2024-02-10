@@ -1,5 +1,5 @@
+import { SHADES } from '@/constants'
 import { ColorItem } from '.'
-import { SHADES } from '../../constants'
 
 interface Palette {
     name: string

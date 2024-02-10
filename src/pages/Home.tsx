@@ -1,4 +1,4 @@
-import { HeroSection } from '../components'
+import { HeroSection } from '@/components'
 
 export function Home() {
     return (

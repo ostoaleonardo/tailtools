@@ -1,7 +1,7 @@
 import { Button } from '@nextui-org/react'
 import { Icons } from '.'
-import { useColor, useSEO, useTheme } from '../../hooks'
-import { ROUTES } from '../../constants'
+import { useColor, useSEO, useTheme } from '@/hooks'
+import { ROUTES } from '@/constants'
 
 export function ThemeButton() {
     const { theme, toggleTheme } = useTheme()

@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react'
-import { ColorContext } from '../context/colorContext.tsx'
+import { ColorContext } from '@/context'
 
 export function useColor() {
     const { color, setColor, contrast, setContrast } = useContext(ColorContext)

@@ -1,7 +1,7 @@
 import { NavbarItem } from '@nextui-org/react'
 import { NavHoverRoute } from '.'
-import { ROUTES } from '../../../constants'
-import { useSEO } from '../../../hooks'
+import { useSEO } from '@/hooks'
+import { ROUTES } from '@/constants'
 
 interface Props {
     name: string

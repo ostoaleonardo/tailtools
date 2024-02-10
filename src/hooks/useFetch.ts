@@ -1,5 +1,6 @@
-import { useColor } from './useColor.ts'
-import { getColorModel } from '../utils/getColorModel.ts'
+import { getColorModel } from '@/utils'
+import { useColor } from '.'
+
 
 const COLOR_API = 'https://www.thecolorapi.com/id?'
 const SCHEME_API = 'https://www.thecolorapi.com/scheme?hex='
