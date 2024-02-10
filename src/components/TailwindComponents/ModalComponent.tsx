@@ -18,8 +18,8 @@ export function ModalComponent({ isOpen, handleOpen, active }: Props) {
         >
             <ModalContent>
                 <ModalHeader className='flex flex-col gap-1'>
-                    <h2 className='text-3xl font-bold'>{active.title}</h2>
-                    <p className='font-light text-foreground/70'>{active.description}</p>
+                    <h2 className='text-3xl font-bold bg-gradient-to-t from-foreground to-slate-400 bg-clip-text text-transparent'>{active.title}</h2>
+                    <p className='font-light text-slate-700 dark:text-slate-200'>{active.description}</p>
                 </ModalHeader>
                 <ModalBody className='flex flex-col'>
                     <Tabs
