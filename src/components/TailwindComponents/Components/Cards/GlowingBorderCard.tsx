@@ -12,7 +12,7 @@ export function GlowingBorderCard() {
                     <p className='text-sm text-slate-700 dark:text-white opacity-80 mb-4'>
                         A card with a glowing border on hover.
                     </p>
-                    <a className='text-xs text-slate-700/50 dark:text-white/50 hover:text-slate-700 hover:dark:text-white bg-slate-700/5 dark:bg-white/5 rounded-md hover:bg-slate-700/20 hover:dark:bg-white/20 transition-all cursor-pointer select-none py-1 px-2'>
+                    <a href='#' className='text-xs text-slate-700/50 dark:text-white/50 hover:text-slate-700 hover:dark:text-white bg-slate-700/5 dark:bg-white/5 rounded-md hover:bg-slate-700/20 hover:dark:bg-white/20 transition-all cursor-pointer select-none py-1 px-2'>
                         Learn More
                     </a>
                 </div>
