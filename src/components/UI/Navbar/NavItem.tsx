@@ -1,7 +1,7 @@
-import { useLocation } from 'react-router-dom'
 import { NavbarItem } from '@nextui-org/react'
 import { NavHoverRoute } from '.'
 import { ROUTES } from '../../../constants'
+import { useSEO } from '../../../hooks'
 
 interface Props {
     name: string
@@ -10,9 +10,9 @@ interface Props {
 }
 
 export function NavItem({ name, routes, activeColor }: Props) {
-    const location = useLocation()
-    const isActive = routes.some(route => route.path === location.pathname)
-    const isPaletteGeneratorPage = location.pathname === ROUTES[0].tools[0].path
+    const { path } = useSEO()
+    const isActive = routes.some(route => route.path === path)
+    const isPaletteGeneratorPage = path === ROUTES[0].tools[0].path
 
     return (
         <NavbarItem className='relative h-full flex items-center justify-center select-none group'>

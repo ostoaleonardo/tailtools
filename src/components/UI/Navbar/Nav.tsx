@@ -1,16 +1,15 @@
 import { useState } from 'react'
-import { useLocation } from 'react-router-dom'
 import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarContent, NavbarItem } from '@nextui-org/react'
 import { ThemeButton, NavItem, NavBrand, NavMenuItem } from '..'
-import { useColor } from '../../../hooks'
+import { useColor, useSEO } from '../../../hooks'
 import { ROUTES } from '../../../constants'
 
 export function Nav() {
-    const location = useLocation()
     const { color, contrast } = useColor()
+    const { path } = useSEO()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const isHomePage = location.pathname === '/'
-    const isPaletteGeneratorPage = location.pathname === ROUTES[0].tools[0].path
+    const isHomePage = path === '/'
+    const isPaletteGeneratorPage = path === ROUTES[0].tools[0].path
     const backgroundActiveColor = isPaletteGeneratorPage && color.hex
     const backgroundMenu = isHomePage ? 'dark:bg-zinc-950' : 'dark:bg-zinc-900'
     const textActiveColor = isPaletteGeneratorPage && contrast

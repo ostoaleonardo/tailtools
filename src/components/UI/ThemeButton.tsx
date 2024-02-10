@@ -1,14 +1,13 @@
-import { useLocation } from 'react-router-dom'
 import { Button } from '@nextui-org/react'
 import { Icons } from '.'
-import { useColor, useTheme } from '../../hooks'
+import { useColor, useSEO, useTheme } from '../../hooks'
 import { ROUTES } from '../../constants'
 
 export function ThemeButton() {
     const { theme, toggleTheme } = useTheme()
     const { contrast } = useColor()
-    const location = useLocation()
-    const iconColor = location.pathname === ROUTES[0].tools[0].path && contrast
+    const { path } = useSEO()
+    const iconColor = path === ROUTES[0].tools[0].path && contrast
 
     return (
         <Button

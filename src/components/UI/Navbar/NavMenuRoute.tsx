@@ -1,12 +1,12 @@
-import { useLocation } from 'react-router-dom'
+import { useSEO } from '../../../hooks'
 
 interface Props {
     route: { path: string, name: string, description: string }
 }
 
 export function NavMenuRoute({ route }: Props) {
-    const location = useLocation()
-    const isActive = location.pathname === route.path
+    const { path } = useSEO()
+    const isActive = path === route.path
 
     return (
         <a
