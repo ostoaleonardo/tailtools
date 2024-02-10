@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ComponentPreview, ComponentsSection, HeroComponents, ModalComponent } from '../components'
-import { Component } from '../types'
 import { TAILWIND_COMPONENTS } from '../constants'
+import { Component } from '../types'
 
 export function TailwindComponents() {
     const [isOpen, setIsOpen] = useState(false)

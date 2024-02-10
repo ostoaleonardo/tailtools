@@ -92,6 +92,7 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Typing Text',
                 description: 'A text that simulates typing.',
                 component: TypeWriter,
+                code: ''
             },
             {
                 title: 'Cicle Text',
