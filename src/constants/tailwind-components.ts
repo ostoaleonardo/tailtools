@@ -7,6 +7,7 @@ import {
     SkewGridPattern,
     DotPattern,
     LinesBackground,
+    TypeWriter,
     CicleText
 } from '../components'
 
@@ -87,6 +88,11 @@ export const TAILWIND_COMPONENTS = [
         title: 'Texts',
         description: 'Highlight your text with amazing styles.',
         components: [
+            {
+                title: 'Typing Text',
+                description: 'A text that simulates typing.',
+                component: TypeWriter,
+            },
             {
                 title: 'Cicle Text',
                 description: 'Text inside a cicle.',

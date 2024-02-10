@@ -6,7 +6,8 @@ import { DashedGridPattern } from './Patterns/DashedGridPattern.tsx'
 import { SkewGridPattern } from './Patterns/SkewGridPattern.tsx'
 import { DotPattern } from './Patterns/DotPattern.tsx'
 import { LinesBackground } from './Background/LinesBackground.tsx'
-import { CicleText } from './Others/CicleText.tsx'
+import { TypeWriter } from './Texts/TypeWriter.tsx'
+import { CicleText } from './Texts/CicleText.tsx'
 
 export {
     GlowingBorderButton,
@@ -17,5 +18,6 @@ export {
     SkewGridPattern,
     DotPattern,
     LinesBackground,
+    TypeWriter,
     CicleText
 }

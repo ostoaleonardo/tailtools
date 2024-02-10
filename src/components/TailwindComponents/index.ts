@@ -14,6 +14,7 @@ import { DashedGridPattern } from './Components'
 import { SkewGridPattern } from './Components'
 import { DotPattern } from './Components'
 import { LinesBackground } from './Components'
+import { TypeWriter } from './Components'
 import { CicleText } from './Components'
 
 export {
@@ -33,5 +34,6 @@ export {
     SkewGridPattern,
     DotPattern,
     LinesBackground,
+    TypeWriter,
     CicleText
 }

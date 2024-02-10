@@ -81,6 +81,7 @@ import {
     SkewGridPattern,
     DotPattern,
     LinesBackground,
+    TypeWriter,
     CicleText
 } from './TailwindComponents'
 
@@ -153,5 +154,6 @@ export {
     SkewGridPattern,
     DotPattern,
     LinesBackground,
+    TypeWriter,
     CicleText
 }
