@@ -11,6 +11,7 @@ export default {
     extend: {
       colors: {
         'titan-white': '#FAFAFF',
+        'titan-black': '#131315',
         primary: {
           DEFAULT: 'var(--color-primary, #915CE4)',
           foreground: 'var(--color-primary-foreground, #FFFFFF)',
