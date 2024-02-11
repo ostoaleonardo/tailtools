@@ -1,3 +1,5 @@
+import { TitlePattern } from '../../TitlePattern'
+
 export function LinesBackground() {
     return (
         <div className='absolute w-[90%] h-[70%] border-2 border-foreground/10 rounded-xl overflow-hidden select-none z-0'>
@@ -15,9 +17,9 @@ export function LinesBackground() {
                     <div className='absolute top-[-50%] w-full h-[20%] bg-[linear-gradient(to_bottom,transparent,black_75%)] dark:bg-[linear-gradient(to_bottom,transparent,white_75%)] animate-[drop-line_7s_2.5s_infinite]' />
                 </div>
             </div>
-            <span className='absolute inset-0 flex items-center justify-center font-medium text-xl bg-gradient-to-t from-foreground to-slate-400 bg-clip-text text-transparent transition-all'>
+            <TitlePattern>
                 Lines Background
-            </span>
+            </TitlePattern>
         </div >
     )
 }

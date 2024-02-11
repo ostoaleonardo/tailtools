@@ -23,9 +23,9 @@ export function ComponentsSection({ title, description, children, setSelected }:
             ref={ref}
             className='w-full min-h-screen flex flex-col justify-center py-28 gap-2'
         >
-            <h2 className='text-5xl font-bold bg-gradient-to-t from-foreground to-slate-400 bg-clip-text text-transparent transition-all'>{title}</h2>
-            <p className='text-lg mb-8 transition-all'>{description}</p>
-            <div className='w-full grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
+            <h2 className='text-4xl sm:text-5xl font-bold bg-gradient-to-t from-foreground to-slate-400 bg-clip-text text-transparent transition-all'>{title}</h2>
+            <p className='text-base sm:text-lg mb-8 transition-all'>{description}</p>
+            <div className='w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
                 {children}
             </div>
         </section>

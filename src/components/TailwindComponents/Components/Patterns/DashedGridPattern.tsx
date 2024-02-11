@@ -1,3 +1,5 @@
+import { TitlePattern } from '../../TitlePattern'
+
 export function DashedGridPattern() {
     return (
         <div className='absolute w-[90%] h-[70%] border-2 border-foreground/10 rounded-xl overflow-hidden select-none z-0'>
@@ -11,9 +13,9 @@ export function DashedGridPattern() {
                 </defs>
                 <rect width='100%' height='100%' stroke-width='0' fill='url(#:r1o:)' />
             </svg>
-            <span className='absolute inset-0 flex items-center justify-center font-medium text-2xl bg-gradient-to-t from-foreground to-slate-400 bg-clip-text text-transparent transition-all'>
+            <TitlePattern>
                 Dashed Grid Pattern
-            </span>
+            </TitlePattern>
         </div>
     )
 }

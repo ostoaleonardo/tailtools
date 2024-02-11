@@ -6,7 +6,7 @@ export function GlowingRainbowButton() {
                     <div className='w-[100cqw] h-[100cqw] bg-gradient-to-r from-yellow-500 via-violet-500 to-pink-500 animate-spin transition-all' />
                 </div>
                 <div className='w-full h-full bg-gradient-to-b from-zinc-900 to-zinc-800 group-hover:to-zinc-700 rounded-full transition-all px-6 py-3 z-10'>
-                    <span className='text-lg text-white/90'>
+                    <span className='text-white/90'>
                         Glowing Rainbow Button
                     </span>
                 </div>

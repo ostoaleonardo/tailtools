@@ -8,7 +8,7 @@ interface Props {
 
 export function SectionTabs({ selected }: Props) {
     return (
-        <section className='sticky top-[10%] z-20 mb-44'>
+        <section className='sticky top-[9%] z-30 mb-44'>
             <Tabs
                 radius='full'
                 color='primary'
