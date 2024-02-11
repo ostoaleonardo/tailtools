@@ -8,10 +8,10 @@ export function DashedGridPattern() {
                 className='absolute w-full h-full inset-0 stroke-black/10 dark:stroke-white/10 [mask-image:linear-gradient(45deg,transparent_10%,white,transparent_90%)]'>
                 <defs>
                     <pattern id=':r1o:' width='45' height='45' patternUnits='userSpaceOnUse' x='-1' y='-1'>
-                        <path d='M.5 45V.5H45' fill='none' stroke-dasharray='4 2' />
+                        <path d='M.5 45V.5H45' fill='none' strokeDasharray='4 2' />
                     </pattern>
                 </defs>
-                <rect width='100%' height='100%' stroke-width='0' fill='url(#:r1o:)' />
+                <rect width='100%' height='100%' strokeWidth='0' fill='url(#:r1o:)' />
             </svg>
             <TitlePattern>
                 Dashed Grid Pattern
