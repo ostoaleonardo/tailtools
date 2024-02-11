@@ -1,5 +1,6 @@
 import { HeroComponents } from './HeroComponents.tsx'
 import { HeroBackground } from './HeroBackground.tsx'
+import { SectionTabs } from './SectionTabs.tsx'
 import { ComponentPreview } from './ComponentPreview.tsx'
 import { ComponentsSection } from './ComponentsSection.tsx'
 import { ModalComponent } from './ModalComponent.tsx'
@@ -22,6 +23,7 @@ import {
 export {
     HeroComponents,
     HeroBackground,
+    SectionTabs,
     ComponentPreview,
     ComponentsSection,
     ModalComponent,

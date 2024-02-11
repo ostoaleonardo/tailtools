@@ -69,6 +69,7 @@ import {
 // Tailwind Components Page
 import {
     HeroComponents,
+    SectionTabs,
     ComponentPreview,
     ComponentsSection,
     ModalComponent,
@@ -142,6 +143,7 @@ export {
 
     // Tailwind Components Page
     HeroComponents,
+    SectionTabs,
     ComponentPreview,
     ComponentsSection,
     ModalComponent,

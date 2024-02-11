@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { ComponentPreview, ComponentsSection, HeroComponents, ModalComponent } from '@/components'
+import { ComponentPreview, SectionTabs, ComponentsSection, HeroComponents, ModalComponent } from '@/components'
 import { TAILWIND_COMPONENTS } from '@/constants'
 import { Component } from '@/types'
 
 export function TailwindComponents() {
     const [isOpen, setIsOpen] = useState(false)
     const [active, setActive] = useState(TAILWIND_COMPONENTS[0].components[0])
+    const [selected, setSelected] = useState('')
 
     const handleComponent = (component: Component) => () => {
         setActive(component)
@@ -17,13 +18,15 @@ export function TailwindComponents() {
     return (
         <>
             <main className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center'>
-                <div className='w-full max-w-[80%]'>
+                <div className='w-full max-w-[80%] flex flex-col items-center justify-center'>
                     <HeroComponents />
+                    <SectionTabs selected={selected} />
                     {TAILWIND_COMPONENTS.map(({ title, description, components }, index) => (
                         <ComponentsSection
                             key={index}
                             title={title}
                             description={description}
+                            setSelected={setSelected}
                         >
                             {components.map((component, index) => (
                                 <ComponentPreview
