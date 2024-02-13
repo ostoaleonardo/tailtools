@@ -16,6 +16,7 @@ import {
     SkewGridPattern,
     DotPattern,
     LinesBackground,
+    AppleBento,
     TypeWriter,
     CicleText
 } from './Components'
@@ -38,6 +39,7 @@ export {
     SkewGridPattern,
     DotPattern,
     LinesBackground,
+    AppleBento,
     TypeWriter,
     CicleText
 }

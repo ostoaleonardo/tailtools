@@ -7,10 +7,10 @@ import {
     SkewGridPattern,
     DotPattern,
     LinesBackground,
+    AppleBento,
     TypeWriter,
     CicleText
 } from '@/components'
-import { AppleBento } from '@/components/TailwindComponents/Components/Bentos/AppleBento'
 
 export const TAILWIND_COMPONENTS = [
     {
