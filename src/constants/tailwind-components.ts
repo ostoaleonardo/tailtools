@@ -10,6 +10,7 @@ import {
     TypeWriter,
     CicleText
 } from '@/components'
+import { AppleBento } from '@/components/TailwindComponents/Components/Bentos/AppleBento'
 
 export const TAILWIND_COMPONENTS = [
     {
@@ -80,6 +81,18 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Lines Background',
                 description: 'A background with animated lines.',
                 component: LinesBackground,
+                code: ''
+            }
+        ]
+    },
+    {
+        title: 'Bentos',
+        description: 'Just some bentos to make your website look better.',
+        components: [
+            {
+                title: 'Bento Apple',
+                description: 'A bento inspired by Apple.',
+                component: AppleBento,
                 code: ''
             }
         ]

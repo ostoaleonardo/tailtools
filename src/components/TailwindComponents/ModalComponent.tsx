@@ -14,6 +14,7 @@ export function ModalComponent({ isOpen, handleOpen, active }: Props) {
             size='4xl'
             isOpen={isOpen}
             onClose={handleOpen}
+            scrollBehavior='outside'
             className='bg-titan-white dark:bg-titan-black'
         >
             <ModalContent>
