@@ -18,8 +18,8 @@ export function TailwindComponents() {
     return (
         <>
             <main className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center'>
-                <div className='w-full max-w-[80%] flex flex-col items-center justify-center'>
-                    <HeroComponents />
+                <HeroComponents />
+                <div className='w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl flex flex-col items-center justify-center'>
                     <SectionTabs selected={selected} />
                     {TAILWIND_COMPONENTS.map(({ title, description, components }, index) => (
                         <ComponentsSection
@@ -35,7 +35,14 @@ export function TailwindComponents() {
                                     description={component.description}
                                     handleOpen={handleComponent(component)}
                                 >
-                                    <component.component />
+                                    {component.preview ? (
+                                        <img
+                                            src={component.preview}
+                                            className='w-full h-full object-cover bg-white'
+                                        />
+                                    ) :
+                                        <component.component />
+                                    }
                                 </ComponentPreview>
                             ))}
                         </ComponentsSection>

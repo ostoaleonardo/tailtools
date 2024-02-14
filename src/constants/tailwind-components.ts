@@ -12,6 +12,10 @@ import {
     CicleText
 } from '@/components'
 
+import {
+    AppleBentoPreview
+} from '@/assets/images'
+
 export const TAILWIND_COMPONENTS = [
     {
         title: 'Buttons',
@@ -21,12 +25,14 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Glowing Border',
                 description: 'A button with a glowing border on hover.',
                 component: GlowingBorderButton,
+                preview: '',
                 code: ''
             },
             {
                 title: 'Glowing Rainbow',
                 description: 'A button with a glowing rainbow border.',
                 component: GlowingRainbowButton,
+                preview: '',
                 code: ''
             },
         ]
@@ -39,6 +45,7 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Glowing Border',
                 description: 'A card with a glowing border on hover.',
                 component: GlowingBorderCard,
+                preview: '',
                 code: ''
             }
         ]
@@ -51,24 +58,28 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Simple Grid',
                 description: 'A simple grid pattern.',
                 component: GridPattern,
+                preview: '',
                 code: ''
             },
             {
                 title: 'Dashed Grid',
                 description: 'A grid pattern with dashed lines.',
                 component: DashedGridPattern,
+                preview: '',
                 code: ''
             },
             {
                 title: 'Skew Grid',
                 description: 'A grid pattern with skew effect.',
                 component: SkewGridPattern,
+                preview: '',
                 code: ''
             },
             {
                 title: 'Dot Pattern',
                 description: 'A pattern with dots.',
                 component: DotPattern,
+                preview: '',
                 code: ''
             }
         ]
@@ -81,6 +92,7 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Lines Background',
                 description: 'A background with animated lines.',
                 component: LinesBackground,
+                preview: '',
                 code: ''
             }
         ]
@@ -93,6 +105,7 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Bento Apple',
                 description: 'A bento inspired by Apple.',
                 component: AppleBento,
+                preview: AppleBentoPreview,
                 code: ''
             }
         ]
@@ -105,12 +118,14 @@ export const TAILWIND_COMPONENTS = [
                 title: 'Typing Text',
                 description: 'A text that simulates typing.',
                 component: TypeWriter,
+                preview: '',
                 code: ''
             },
             {
                 title: 'Cicle Text',
                 description: 'Text inside a cicle.',
                 component: CicleText,
+                preview: '',
                 code: ''
             }
         ]

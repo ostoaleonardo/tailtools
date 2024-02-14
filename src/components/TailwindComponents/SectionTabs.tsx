@@ -1,6 +1,6 @@
 import { Tab, Tabs } from '@nextui-org/react'
 
-const TABS = ['buttons', 'cards', 'patterns', 'backgrounds', 'texts']
+const TABS = ['buttons', 'cards', 'patterns', 'backgrounds', 'bentos', 'texts']
 
 interface Props {
     selected: string
@@ -8,7 +8,7 @@ interface Props {
 
 export function SectionTabs({ selected }: Props) {
     return (
-        <section className='sticky top-[9%] z-30 mb-44'>
+        <section className='hidden sm:flex sticky top-[9%] z-30 mb-44'>
             <Tabs
                 radius='full'
                 color='primary'

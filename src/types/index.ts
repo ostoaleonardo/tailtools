@@ -9,5 +9,6 @@ export interface Component {
     title: string
     description: string
     component: () => JSX.Element
+    preview: string
     code: string
 }
