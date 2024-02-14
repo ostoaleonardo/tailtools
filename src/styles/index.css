@@ -42,7 +42,7 @@
         font-family: 'DM Mono';
         font-style: normal;
         font-weight: 400;
-        src: url('../../public/fonts/DMMono.woff2') format('woff2');
+        src: url('../assets/fonts/DMMono.woff2') format('woff2');
     }
 
     .font-console {
