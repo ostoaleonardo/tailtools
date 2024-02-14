@@ -21,21 +21,21 @@
         font-family: 'DM Sans';
         font-style: normal;
         font-weight: 400;
-        src: url('../../public/fonts/DMSans.woff2') format('woff2');
+        src: url('../assets/fonts/DMSans.woff2') format('woff2');
     }
 
     @font-face {
         font-family: 'DM Sans';
         font-style: normal;
         font-weight: 500;
-        src: url('../../public/fonts/DMSans.woff2') format('woff2');
+        src: url('../assets/fonts/DMSans.woff2') format('woff2');
     }
 
     @font-face {
         font-family: 'DM Sans';
         font-style: normal;
         font-weight: 700;
-        src: url('../../public/fonts/DMSans.woff2') format('woff2');
+        src: url('../assets/fonts/DMSans.woff2') format('woff2');
     }
 
     @font-face {
