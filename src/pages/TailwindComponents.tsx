@@ -38,7 +38,7 @@ export function TailwindComponents() {
                                     {component.preview ? (
                                         <img
                                             src={component.preview}
-                                            className='w-full h-full object-cover bg-white'
+                                            className='w-full h-full object-cover'
                                         />
                                     ) :
                                         <component.component />

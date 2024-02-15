@@ -20,7 +20,7 @@ export function ComponentPreview({ title, description, children, handleOpen }: P
                 <p className='text-start text-slate-700 dark:text-slate-200 transition-all'>{description}</p>
             </CardHeader>
             <CardBody className='relative w-full h-full flex items-center justify-center bg-slate-200 dark:bg-titan-black rounded-t-3xl transition-all p-0'>
-                <div className='absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-titan-black z-10' />
+                <div className='absolute bottom-0 w-full h-full bg-gradient-to-t from-titan-black to-50% z-20' />
                 {children}
             </CardBody>
         </Card>
