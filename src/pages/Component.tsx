@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
-import { TAILWIND_COMPONENTS } from '@/constants'
 import { BreadcrumbItem, Breadcrumbs, Snippet, Tab, Tabs } from '@nextui-org/react'
+import { ComponentCode } from '@/components'
+import { TAILWIND_COMPONENTS } from '@/constants'
 
 function BreadCrumbs({ component }: { component: string }) {
     return (
@@ -26,7 +27,6 @@ function BreadCrumbs({ component }: { component: string }) {
 
 export function Component() {
     const { component } = useParams()
-    console.log(component)
     const data = TAILWIND_COMPONENTS
         .flatMap(({ components }) => components)
         .find(({ path }) => path === component)
@@ -50,7 +50,7 @@ export function Component() {
                         variant='underlined'
                         aria-label='Options'
                         classNames={{
-                            base: 'w-full h-fit',
+                            base: 'w-full',
                             panel: 'w-full',
                         }}
                     >
@@ -63,11 +63,11 @@ export function Component() {
                             <Snippet
                                 hideSymbol
                                 classNames={{
-                                    base: 'relative w-full min-h-96 bg-slate-50 dark:bg-zinc-900 overflow-auto px-8 py-6',
+                                    base: 'relative w-full min-h-96 bg-slate-200 dark:bg-titan-black rounded-2xl overflow-auto px-8 py-6',
                                     copyButton: 'absolute top-4 right-4 text-white',
                                 }}
                             >
-                                {data.code}
+                                <ComponentCode code={data.code} />
                             </Snippet>
                         </Tab>
                     </Tabs>
