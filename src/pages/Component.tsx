@@ -26,6 +26,7 @@ function BreadCrumbs({ component }: { component: string }) {
 
 export function Component() {
     const { component } = useParams()
+    console.log(component)
     const data = TAILWIND_COMPONENTS
         .flatMap(({ components }) => components)
         .find(({ path }) => path === component)

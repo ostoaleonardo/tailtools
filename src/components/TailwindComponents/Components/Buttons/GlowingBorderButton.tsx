@@ -1,6 +1,6 @@
 export function GlowingBorderButton() {
     return (
-        <a href='#' className='flex items-center justify-center rounded-full transition-all hover:scale-110 overflow-hidden group'>
+        <button className='flex items-center justify-center rounded-full transition-all hover:scale-110 overflow-hidden group'>
             <div className='relative flex items-center justify-center p-[0.1rem]'>
                 <div className='absolute inset-0 flex items-center bg-black/5 dark:bg-white/5'>
                     <div className='w-[100cqw] h-[100cqw] bg-[conic-gradient(from_0_at_50%_50%,rgb(51,65,85)_0deg,transparent_60deg,transparent_300deg,rgb(51,65,85)_360deg)] dark:bg-[conic-gradient(from_0_at_50%_50%,rgba(255,255,255,0.5)_0deg,transparent_60deg,transparent_300deg,rgba(255,255,255,0.5)_360deg)] opacity-0 group-hover:opacity-100 animate-spin transition-all' />
@@ -11,6 +11,6 @@ export function GlowingBorderButton() {
                     </span>
                 </div>
             </div>
-        </a>
+        </button>
     )
 }
