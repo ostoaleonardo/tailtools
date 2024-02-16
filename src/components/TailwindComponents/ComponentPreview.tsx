@@ -1,18 +1,19 @@
 import { Card, CardBody, CardHeader } from '@nextui-org/react'
 
 interface Props {
-    title?: string
-    description?: string
+    title: string
+    description: string
+    path: string
     children?: React.ReactNode
-    handleOpen?: () => void
 }
 
-export function ComponentPreview({ title, description, children, handleOpen }: Props) {
+export function ComponentPreview({ title, description, path, children }: Props) {
     return (
         <Card
+            as='a'
             isPressable
             shadow='none'
-            onPress={handleOpen}
+            href={'/components/' + path}
             className='w-full h-full min-h-72 flex flex-col bg-titan-white dark:bg-zinc-900 border-2 border-black/5 dark:border-white/5 rounded-3xl transition-all cursor-pointer select-none'
         >
             <CardHeader className='flex flex-col items-start p-6'>

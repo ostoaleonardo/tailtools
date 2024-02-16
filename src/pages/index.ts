@@ -5,6 +5,7 @@ import { GradientCreator } from './GradientCreator.tsx'
 import { GridGenerator } from './GridGenerator.tsx'
 import { ShadowGenerator } from './ShadowGenerator.tsx'
 import { TailwindComponents } from './TailwindComponents.tsx'
+import { Component } from './Component.tsx'
 
 export {
     Home,
@@ -13,5 +14,6 @@ export {
     GradientCreator,
     GridGenerator,
     ShadowGenerator,
-    TailwindComponents
+    TailwindComponents,
+    Component
 }

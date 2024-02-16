@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
-import { Home, PaletteGenerator, RandomPalette, GradientCreator, GridGenerator, ShadowGenerator, TailwindComponents } from './pages'
+import { Home, PaletteGenerator, RandomPalette, GradientCreator, GridGenerator, ShadowGenerator, TailwindComponents, Component } from './pages'
 import { Nav } from './components'
 
 function App() {
@@ -13,7 +13,8 @@ function App() {
                 <Route path='/gradient-creator' element={<GradientCreator />} />
                 <Route path='/grid-generator' element={<GridGenerator />} />
                 <Route path='/shadow-generator' element={<ShadowGenerator />} />
-                <Route path='/tailwind-components' element={<TailwindComponents />} />
+                <Route path='/components' element={<TailwindComponents />} />
+                <Route path='/components/:component' element={<Component />} />
                 <Route path='*' element={<Home />} />
             </Routes>
         </>

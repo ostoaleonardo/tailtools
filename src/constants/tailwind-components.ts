@@ -23,6 +23,7 @@ export const TAILWIND_COMPONENTS = [
         components: [
             {
                 title: 'Glowing Border',
+                path: 'glowing-border-button',
                 description: 'A button with a glowing border on hover.',
                 component: GlowingBorderButton,
                 preview: '',
@@ -30,6 +31,7 @@ export const TAILWIND_COMPONENTS = [
             },
             {
                 title: 'Glowing Rainbow',
+                path: 'glowing-rainbow-button',
                 description: 'A button with a glowing rainbow border.',
                 component: GlowingRainbowButton,
                 preview: '',
@@ -43,6 +45,7 @@ export const TAILWIND_COMPONENTS = [
         components: [
             {
                 title: 'Glowing Border',
+                path: 'glowing-border-card',
                 description: 'A card with a glowing border on hover.',
                 component: GlowingBorderCard,
                 preview: '',
@@ -56,6 +59,7 @@ export const TAILWIND_COMPONENTS = [
         components: [
             {
                 title: 'Simple Grid',
+                path: 'simple-grid',
                 description: 'A simple grid pattern.',
                 component: GridPattern,
                 preview: '',
@@ -63,6 +67,7 @@ export const TAILWIND_COMPONENTS = [
             },
             {
                 title: 'Dashed Grid',
+                path: 'dashed-grid',
                 description: 'A grid pattern with dashed lines.',
                 component: DashedGridPattern,
                 preview: '',
@@ -70,6 +75,7 @@ export const TAILWIND_COMPONENTS = [
             },
             {
                 title: 'Skew Grid',
+                path: 'skew-grid',
                 description: 'A grid pattern with skew effect.',
                 component: SkewGridPattern,
                 preview: '',
@@ -77,6 +83,7 @@ export const TAILWIND_COMPONENTS = [
             },
             {
                 title: 'Dot Pattern',
+                path: 'dot-pattern',
                 description: 'A pattern with dots.',
                 component: DotPattern,
                 preview: '',
@@ -90,6 +97,7 @@ export const TAILWIND_COMPONENTS = [
         components: [
             {
                 title: 'Lines Background',
+                path: 'lines-background',
                 description: 'A background with animated lines.',
                 component: LinesBackground,
                 preview: '',
@@ -103,6 +111,7 @@ export const TAILWIND_COMPONENTS = [
         components: [
             {
                 title: 'Bento Apple',
+                path: 'bento-apple',
                 description: 'A bento inspired by Apple.',
                 component: AppleBento,
                 preview: AppleBentoPreview,
@@ -116,6 +125,7 @@ export const TAILWIND_COMPONENTS = [
         components: [
             {
                 title: 'Typing Text',
+                path: 'typing-text',
                 description: 'A text that simulates typing.',
                 component: TypeWriter,
                 preview: '',
@@ -123,6 +133,7 @@ export const TAILWIND_COMPONENTS = [
             },
             {
                 title: 'Cicle Text',
+                path: 'cicle-text',
                 description: 'Text inside a cicle.',
                 component: CicleText,
                 preview: '',
