@@ -66,8 +66,11 @@ export function GradientExample({ name, from, via, to }: Props) {
 
 export function GradientExamples() {
     return (
-        <section className='w-full flex flex-col items-center justify-center pt-32 pb-16'>
-            <h2 className='text-4xl font-bold'>Gradient Examples</h2>
+        <section id='gradient-examples' className='w-full flex flex-col items-center justify-center pt-32 pb-16'>
+            <h2 className='text-4xl font-bold'>
+                Gradient <span className='bg-gradient-to-r from-violet-500 via-pink-400 to-yellow-500 bg-[length:100%_4px] bg-no-repeat bg-bottom'>Examples</span>
+            </h2>
+            <p className='text-base lg:text-lg text-center text-foreground/70 text-balance max-w-3xl mt-4'>Here are some examples of gradients you can use in your projects. Click on the copy button to copy the gradient code to your clipboard.</p>
             <div className='w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-16'>
                 {GRADIENTS_EXAMPLES.map((gradient, index) => (
                     <GradientExample

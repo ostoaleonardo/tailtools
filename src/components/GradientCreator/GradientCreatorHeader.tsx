@@ -6,7 +6,17 @@ export function GradientCreatorHeader({ setDirection, setVia }: { setDirection: 
         <div className='w-full flex flex-col lg:flex-row items-center justify-between bg-slate-300 dark:bg-zinc-800 rounded-2xl p-8 gap-8'>
             <div className='w-full flex flex-col gap-1'>
                 <h1 className='text-4xl font-bold'>Gradient Creator</h1>
-                <p className='text-base lg:text-lg'>Choose the colors and direction of your gradient.</p>
+                <div className='w-full flex flex-row items-center gap-4'>
+                    <div className='flex flex-wrap items-center gap-3'>
+                        <p className='text-base lg:text-lg'>Choose the colors and direction of your gradient.</p>
+                        <a
+                            href='#gradient-examples'
+                            className='text-sm text-foreground border-2 border-foreground/20 hover:border-foreground/80 rounded-full transition-all px-2 py-1'
+                        >
+                            See examples
+                        </a>
+                    </div>
+                </div>
             </div>
             <div className='w-full lg:w-1/2 flex items-center justify-end gap-4'>
                 <Select
