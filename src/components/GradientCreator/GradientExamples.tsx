@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Button, Select, SelectItem, Tooltip } from '@nextui-org/react'
+import { Button, Select, SelectItem } from '@nextui-org/react'
 import { GRADIENTS_EXAMPLES, GRADIENT_DIRECTIONS } from '@/constants'
 import { Icons } from '..'
 
@@ -56,19 +56,7 @@ export function GradientExample({ name, from, via, to }: Props) {
                     </Button>
                 </div>
             </div>
-            <div className={`w-full h-full flex items-center justify-center ${code} rounded-3xl group`}>
-                <div className='opacity-0 group-hover:opacity-100 transition-opacity mix-blend-plus-lighter'>
-                    <Tooltip content='Copy color' placement='left' delay={700}>
-                        <Button
-                            isIconOnly
-                            variant='light'
-                            onPress={handleCopy}
-                        >
-                            {isCopied ? <Icons.Check /> : <Icons.Copy />}
-                        </Button>
-                    </Tooltip>
-                </div>
-            </div>
+            <div className={`w-full h-full ${code} rounded-3xl`} />
         </article>
     )
 }
