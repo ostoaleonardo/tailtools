@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ScrollShadow } from '@nextui-org/react'
-import { ColorStopsTabs, GradientCode, GradientCreatorHeader, GradientVisualizer, OtherColorsRow, PaletteRow } from '@/components'
+import { ColorStopsTabs, GradientCode, GradientCreatorHeader, GradientExamples, GradientVisualizer, OtherColorsRow, PaletteRow } from '@/components'
 import { INITIAL_GRADIENT, PALETTES, GRADIENT_CLASSES } from '@/constants'
 
 export function GradientCreator() {
@@ -28,7 +28,7 @@ export function GradientCreator() {
 
     return (
         <main className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center px-8 py-8'>
-            <div className='max-w-7xl w-full h-full flex flex-col items-center justify-center gap-4'>
+            <section className='max-w-7xl w-full h-full flex flex-col items-center justify-center gap-4'>
                 <GradientCreatorHeader
                     setDirection={setDirection}
                     setVia={setVia}
@@ -61,7 +61,8 @@ export function GradientCreator() {
                         <GradientCode code={code} />
                     </div>
                 </div>
-            </div>
+            </section>
+            <GradientExamples />
         </main>
     )
 }

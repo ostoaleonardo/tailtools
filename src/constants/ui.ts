@@ -474,3 +474,23 @@ export const GRID_CLASSES: any = {
         12: 'gap-12',
     }
 }
+
+export const GRADIENTS_EXAMPLES = [
+    {
+        name: 'Sunset',
+        from: 'from-indigo-200',
+        via: 'via-red-200',
+        to: 'to-yellow-100',
+    },
+    {
+        name: 'Rainbow',
+        from: 'from-violet-500',
+        via: 'via-pink-400',
+        to: 'to-yellow-500',
+    },
+    {
+        name: 'Sea',
+        from: 'from-green-200',
+        to: 'to-blue-500',
+    },
+]

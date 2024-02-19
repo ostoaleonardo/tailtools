@@ -46,7 +46,8 @@ import {
     PaletteRow,
     OtherColorsRow,
     ColorItem,
-    GradientCode
+    GradientCode,
+    GradientExamples
 } from './GradientCreator'
 
 // Grid Generator Page
@@ -127,6 +128,7 @@ export {
     OtherColorsRow,
     ColorItem,
     GradientCode,
+    GradientExamples,
 
     // Grid Generator Page
     GridGeneratorHeader,
