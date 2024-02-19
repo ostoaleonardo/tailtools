@@ -13,17 +13,22 @@ interface Props {
 export function GradientExample({ name, from, via, to }: Props) {
     const [direction, setDirection] = useState('bg-gradient-to-r')
     const [isCopied, setIsCopied] = useState(false)
+    const [isGradientText, setIsGradientText] = useState(false)
     const [code, setCode] = useState('')
 
     useEffect(() => {
-        const gradient = `${direction} ${from} ${via ? via : ''} ${to}`
+        const gradient = `${direction} ${from} ${via ? via : ''} ${to} ${isGradientText ? 'bg-clip-text text-transparent' : ''}`
         setCode(gradient.replace(/\s+/g, ' '))
-    }, [direction, from, via, to])
+    }, [direction, isGradientText])
 
     const handleCopy = () => {
         navigator.clipboard.writeText(code)
         setIsCopied(true)
         setTimeout(() => setIsCopied(false), 1000)
+    }
+
+    const handleGradient = () => {
+        setIsGradientText(!isGradientText)
     }
 
     return (
@@ -53,13 +58,32 @@ export function GradientExample({ name, from, via, to }: Props) {
                     <Button
                         isIconOnly
                         variant='light'
+                        onPress={handleGradient}
+                    >
+                        {isGradientText ? <Icons.Background /> : <Icons.Text />}
+                    </Button>
+                    <Button
+                        isIconOnly
+                        variant='light'
                         onPress={handleCopy}
                     >
                         {isCopied ? <Icons.Check /> : <Icons.Copy />}
                     </Button>
                 </div>
             </div>
-            <div className={`w-full h-full ${code} rounded-3xl`} />
+            <div className='w-full h-full flex items-center justify-center rounded-3xl overflow-hidden'>
+                {isGradientText ? (
+                    <span
+                        contentEditable
+                        spellCheck='false'
+                        className={`text-4xl font-bold ${code} truncate px-1 mx-8`}
+                    >
+                        I am editable
+                    </span>
+                ) : (
+                    <div className={`w-full h-full ${code}`} />
+                )}
+            </div>
         </article>
     )
 }
