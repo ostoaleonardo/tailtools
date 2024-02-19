@@ -14,7 +14,6 @@ export function GradientExample({ name, from, via, to }: Props) {
     const [direction, setDirection] = useState('bg-gradient-to-r')
     const [isCopied, setIsCopied] = useState(false)
     const [code, setCode] = useState('')
-    const gradient = `${from} ${via ? via : ''} ${to}`
 
     useEffect(() => {
         const gradient = `${direction} ${from} ${via ? via : ''} ${to}`
