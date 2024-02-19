@@ -31,9 +31,9 @@ export function GradientExample({ name, from, via, to }: Props) {
             <div className='flex flex-col items-start p-6'>
                 <h3 className='text-xl font-medium text-foreground transition-all'>{name}</h3>
                 <div className='inline-flex flex-wrap gap-1'>
-                    <span className='text-xs text-foreground/70 bg-zinc-800 rounded-full transition-all px-2 py-1 mt-1'>{from}</span>
-                    {via && <span className='text-xs text-foreground/70 bg-zinc-800 rounded-full transition-all px-2 py-1 mt-1'>{via}</span>}
-                    <span className='text-xs text-foreground/70 bg-zinc-800 rounded-full transition-all px-2 py-1 mt-1'>{to}</span>
+                    <span className='text-xs text-foreground/70 bg-slate-200 dark:bg-zinc-800 rounded-full transition-all px-2 py-1 mt-1'>{from}</span>
+                    {via && <span className='text-xs text-foreground/70 bg-slate-200 dark:bg-zinc-800 rounded-full transition-all px-2 py-1 mt-1'>{via}</span>}
+                    <span className='text-xs text-foreground/70 bg-slate-200 dark:bg-zinc-800 rounded-full transition-all px-2 py-1 mt-1'>{to}</span>
                 </div>
                 <div className='w-full flex flex-row items-center justify-between mt-3 gap-4'>
                     <Select
@@ -44,6 +44,9 @@ export function GradientExample({ name, from, via, to }: Props) {
                         items={GRADIENT_DIRECTIONS}
                         defaultSelectedKeys={['bg-gradient-to-r']}
                         onChange={(e) => { setDirection(e.target.value) }}
+                        classNames={{
+                            trigger: 'bg-slate-200 dark:bg-zinc-800 data-[hover=true]:bg-slate-300 dark:data-[hover=true]:bg-zinc-700 transition-all',
+                        }}
                     >
                         {(direction) => <SelectItem key={direction.value}>{direction.label}</SelectItem>}
                     </Select>
