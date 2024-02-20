@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ScrollShadow } from '@nextui-org/react'
-import { ColorStopsTabs, GradientCode, GradientCreatorHeader, GradientExamples, GradientVisualizer, OtherColorsRow, PaletteRow } from '@/components'
+import { ColorStopsTabs, GradientCode, GradientCreatorHeader, GradientExamples, GradientVisualizer, OtherColorsRow, PaletteRow, RandomGradientButton } from '@/components'
 import { INITIAL_GRADIENT, PALETTES, GRADIENT_CLASSES } from '@/constants'
 
 export function GradientCreator() {
@@ -19,26 +19,31 @@ export function GradientCreator() {
 
     const setGradientValues = (name: string, shade?: number) => {
         if (shade) {
-            setColors({ ...colors, [colorStop]: (GRADIENT_CLASSES as any)[name][shade][colorStop] })
+            setColors({ ...colors, [colorStop]: GRADIENT_CLASSES[name][shade][colorStop] })
         } else {
             if (colorStop === 'from' && name === 'transparent') return
-            setColors({ ...colors, [colorStop]: (GRADIENT_CLASSES as any)[name][colorStop] })
+            setColors({ ...colors, [colorStop]: GRADIENT_CLASSES[name][colorStop] })
         }
     }
 
     return (
-        <main className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center px-8 py-8'>
-            <section className='max-w-7xl w-full h-full flex flex-col items-center justify-center gap-4'>
+        <main className='w-full min-h-[calc(100vh_-_64px)] flex flex-col items-center justify-center p-8'>
+            <section className='max-w-7xl w-full flex flex-col items-center justify-center gap-4'>
                 <GradientCreatorHeader
                     setDirection={setDirection}
                     setVia={setVia}
                 />
                 <div className='w-full flex flex-col xl:flex-row items-center justify-between gap-4'>
-                    <GradientVisualizer
-                        code={code}
-                        selectedGradient={selectedGradient}
-                        setSelectedGradient={setSelectedGradient}
-                    />
+                    <div className='w-full flex flex-col gap-4'>
+                        <GradientVisualizer
+                            code={code}
+                            selectedGradient={selectedGradient}
+                            setSelectedGradient={setSelectedGradient}
+                        />
+                        <RandomGradientButton
+                            setColors={setColors}
+                        />
+                    </div>
                     <div className='w-full flex flex-col items-center justify-center gap-4'>
                         <ColorStopsTabs
                             via={via}

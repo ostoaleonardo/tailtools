@@ -42,6 +42,7 @@ import {
 import {
     GradientCreatorHeader,
     GradientVisualizer,
+    RandomGradientButton,
     ColorStopsTabs,
     PaletteRow,
     OtherColorsRow,
@@ -123,6 +124,7 @@ export {
     // Gradient Creator Page
     GradientCreatorHeader,
     GradientVisualizer,
+    RandomGradientButton,
     ColorStopsTabs,
     PaletteRow,
     OtherColorsRow,
