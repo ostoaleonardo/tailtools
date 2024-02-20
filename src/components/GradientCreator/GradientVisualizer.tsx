@@ -21,7 +21,7 @@ export function GradientVisualizer({ code, selectedGradient, setSelectedGradient
                 <Tab key='text' title='Text' />
             </Tabs>
 
-            <div className='w-full h-80 flex items-center justify-center border-2 border-black/10 dark:border-white/10 rounded-3xl overflow-hidden'>
+            <div className='w-full h-28 xl:h-80 flex items-center justify-center border-2 border-black/10 dark:border-white/10 rounded-3xl overflow-hidden'>
                 {selectedGradient === 'background' ? <div className={`w-full h-full ${code}`} />
                     : <h1 contentEditable spellCheck={false} className={`text-4xl lg:text-6xl font-bold break-all line-clamp-2 outline-none ${code} ${gradientText}`}>Hello World!</h1>
                 }
