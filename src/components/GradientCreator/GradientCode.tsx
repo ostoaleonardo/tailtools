@@ -3,20 +3,16 @@ import { Icons } from '..'
 
 export function GradientCode({ code }: { code: string }) {
     return (
-        <div className='w-full h-16 border-2 border-black/10 dark:border-white/10 rounded-2xl overflow-hidden'>
-            <Snippet
-                hideSymbol
-                variant='bordered'
-                copyIcon={<Icons.Copy />}
-                className='w-full h-full border-none overflow-x-auto px-6'
-                classNames={{
-                    base: 'relative',
-                    pre: 'max-xl:absolute max-xl:left-16',
-                    copyButton: 'max-xl:absolute max-xl:left-4'
-                }}
-            >
-                {code}
-            </Snippet>
-        </div>
+        <Snippet
+            hideSymbol
+            variant='bordered'
+            copyIcon={<Icons.Copy />}
+            classNames={{
+                base: 'w-full min-h-16 border-2 border-foreground/10',
+                pre: 'w-11/12 text-wrap ml-3',
+            }}
+        >
+            {code}
+        </Snippet>
     )
 }

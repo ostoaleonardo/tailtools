@@ -34,7 +34,7 @@ export function GradientCreator() {
                     setVia={setVia}
                 />
                 <div className='w-full flex flex-col xl:flex-row items-center justify-between gap-4'>
-                    <div className='w-full flex flex-col gap-4'>
+                    <div className='w-full xl:w-3/6 flex flex-col gap-4'>
                         <GradientVisualizer
                             code={code}
                             selectedGradient={selectedGradient}

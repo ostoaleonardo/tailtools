@@ -41,7 +41,7 @@ export function RandomGradientButton({ setColors }: Props) {
         <Button
             radius='lg'
             variant='flat'
-            className='h-16'
+            className='h-16 bg-slate-200 dark:bg-zinc-800'
             onClick={handleRandomGradient}
             startContent={<Icons.Random />}
         >
