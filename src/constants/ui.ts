@@ -493,4 +493,50 @@ export const GRADIENTS_EXAMPLES = [
         from: 'from-green-200',
         to: 'to-blue-500',
     },
+    {
+        name: 'Lime',
+        from: 'from-teal-300',
+        to: 'to-yellow-200',
+    },
+    {
+        name: 'Lavender',
+        from: 'from-indigo-300',
+        to: 'to-pink-200',
+    },
+    {
+        name: 'Sunrise',
+        from: 'from-pink-500',
+        to: 'to-yellow-200',
+    },
+    {
+        name: 'Peach',
+        from: 'from-rose-300',
+        to: 'to-amber-300',
+    },
+    {
+        name: 'Lilac',
+        from: 'from-violet-300',
+        to: 'to-sky-300',
+    },
+    {
+        name: 'Lemon',
+        from: 'from-amber-300',
+        to: 'to-lime-300',
+    },
+    {
+        name: 'Mint',
+        from: 'from-lime-300',
+        to: 'to-emerald-300',
+    },
+    {
+        name: 'Northen Lights',
+        from: 'from-teal-300',
+        via: 'via-indigo-300',
+        to: 'to-pink-300',
+    },
+    {
+        name: 'Cotton Candy',
+        from: 'from-pink-300',
+        to: 'to-sky-300',
+    }
 ]
