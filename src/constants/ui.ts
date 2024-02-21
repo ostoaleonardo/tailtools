@@ -529,7 +529,7 @@ export const GRADIENTS_EXAMPLES = [
         to: 'to-emerald-300',
     },
     {
-        name: 'Northen Lights',
+        name: 'Northern Lights',
         from: 'from-teal-300',
         via: 'via-indigo-300',
         to: 'to-pink-300',
