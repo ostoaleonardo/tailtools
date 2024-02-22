@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
-    "@types/node": "^20.11.17",
     "color": "^4.2.3",
     "framer-motion": "^10.17.9",
     "prism-react-renderer": "^2.3.1",
