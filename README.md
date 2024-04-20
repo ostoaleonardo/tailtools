@@ -1,6 +1,6 @@
 <div align="center">
 <a target="_blank" href="https://tailtools.app/" title="Tailtools Logo">
-<img width="160" alt="Tailtools" src="https://tailtools.app/tailtools.svg" />
+<img width="160" alt="Tailtools" src="public/tailtools.svg" />
 </a>
 <h1>Tailtools</h1>
 </div>
@@ -11,7 +11,7 @@ Design even faster with our collection of interactive tools to generate code for
 <br />
 <div align="center">
 <a target="_blank" href="https://tailtools.app/" title="Tailtools">
-<img width="100%" alt="Tailtools" src="https://tailtools.app/tailtools.webp" />
+<img width="100%" alt="Tailtools" src="public/tailtools.webp" />
 </a>
 </div>
 <br />
