@@ -1,3 +1,1 @@
-import { ExampleButtons } from './ExampleButtons.tsx'
-
-export { ExampleButtons }
+export { ExampleButtons } from './ExampleButtons.tsx'

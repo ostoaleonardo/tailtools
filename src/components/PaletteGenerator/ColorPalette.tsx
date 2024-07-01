@@ -49,9 +49,9 @@ export function ColorPalette() {
             <section className='w-full flex flex-col items-center justify-center transition-all px-8 py-16'>
                 <div className='max-w-5xl w-full flex flex-col'>
                     <div className='w-full flex items-center justify-between mb-4'>
-                        <h1 className='text-2xl sm:text-3xl font-bold'>
+                        <h2 className='text-2xl sm:text-3xl font-bold'>
                             Color Palette
-                        </h1>
+                        </h2>
                         <div className='flex items-center'>
                             <Button
                                 variant='light'

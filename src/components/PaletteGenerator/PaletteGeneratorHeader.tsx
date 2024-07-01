@@ -28,12 +28,12 @@ export function PaletteGeneratorHeader() {
 
     return (
         <header className='w-full h-96 flex items-center justify-center transition-all px-8' style={{ backgroundColor: color.hex }}>
-            <div className='h-full max-w-5xl w-full flex flex-col md:flex-row items-center justify-center gap-8'>
+            <div className='w-full max-w-5xl h-full flex flex-col md:flex-row items-center justify-between gap-8'>
                 <div className='w-full flex flex-col'>
-                    <h1 className='text-4xl md:text-6xl font-bold text-neutral-100' style={{ color: contrast }}>
+                    <h1 className='text-4xl md:text-6xl font-bold' style={{ color: contrast }}>
                         Palette Generator
                     </h1>
-                    <p className='text-base md:text-xl text-neutral-100' style={{ color: contrast }}>
+                    <p className='text-base md:text-xl' style={{ color: contrast }}>
                         Generate a color palette to Tailwind CSS
                     </p>
                     <div className='flex items-end mt-4'>
@@ -73,11 +73,11 @@ export function PaletteGeneratorHeader() {
                         </Button>
                     </div>
                 </div>
-                <div className='flex md:flex-1 md:flex-col items-center md:items-end rounded-2xl transition-all p-6 gap-2' style={{ backgroundColor: `${contrast}0D` }}>
-                    <span className='text-lg md:text-6xl text-end font-bold text-neutral-100' style={{ color: contrast }}>
+                <div className='flex md:flex-1 md:flex-col items-center md:items-end rounded-2xl p-6 gap-2' style={{ backgroundColor: `${contrast}0D` }}>
+                    <h3 className='text-lg md:text-6xl text-end font-bold' style={{ color: contrast }}>
                         {color.name}
-                    </span>
-                    <span className='text-sm md:text-2xl font-bold text-neutral-100 opacity-60' style={{ color: contrast }}>
+                    </h3>
+                    <span className='text-sm md:text-2xl font-bold opacity-60' style={{ color: contrast }}>
                         {color.hex}
                     </span>
                 </div>
