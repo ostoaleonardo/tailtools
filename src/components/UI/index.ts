@@ -5,6 +5,7 @@ import { NavMenuItem } from './Navbar'
 import { NavMenuRoute } from './Navbar'
 import { NavHoverRoute } from './Navbar'
 import { ThemeButton } from './ThemeButton.tsx'
+import { GithubButton } from './GithubButton.tsx'
 import { CodeToExport } from './CodeToExport.tsx'
 import Icons from './Icons.tsx'
 
@@ -16,6 +17,7 @@ export {
     NavMenuRoute,
     NavHoverRoute,
     ThemeButton,
+    GithubButton,
     CodeToExport,
     Icons
 }

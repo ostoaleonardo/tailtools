@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenu, NavbarContent, NavbarItem } from '@nextui-org/react'
-import { ThemeButton, NavItem, NavBrand, NavMenuItem } from '..'
+import { ThemeButton, NavItem, NavBrand, NavMenuItem, GithubButton } from '..'
 import { useColor, useSEO } from '@/hooks'
 import { ROUTES } from '@/constants'
-
 
 export function Nav() {
     const { color, contrast } = useColor()
@@ -58,6 +57,7 @@ export function Nav() {
 
             <NavbarContent justify='end'>
                 <NavbarItem>
+                    <GithubButton />
                     <ThemeButton />
                 </NavbarItem>
             </NavbarContent>
