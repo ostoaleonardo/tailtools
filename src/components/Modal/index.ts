@@ -1,4 +1,2 @@
-import { ExportModal } from './ExportModal.tsx'
-import { ModalButton } from './ModalButton.tsx'
-
-export { ExportModal, ModalButton }
+export { ExportModal } from './ExportModal.tsx'
+export { ModalButton } from './ModalButton.tsx'

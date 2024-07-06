@@ -1,17 +1,16 @@
 // UI
-import {
+export {
     Nav,
     NavBrand,
     NavItem,
     NavMenuItem,
     NavMenuRoute,
     NavHoverRoute,
-    ThemeButton,
-    Icons
+    ThemeButton
 } from './UI'
 
 // Home Page
-import {
+export {
     HeroSection,
     CircleButton,
     CodeWindow,
@@ -21,7 +20,7 @@ import {
 } from './Home'
 
 // Find Color Page
-import {
+export {
     PaletteGeneratorHeader,
     ColorPicker,
     ColorPalette,
@@ -31,7 +30,7 @@ import {
 } from './PaletteGenerator'
 
 // Create Palette Page
-import {
+export {
     RandomPaletteHeader,
     PaletteGrid,
     Color,
@@ -39,7 +38,7 @@ import {
 } from './RandomPalette'
 
 // Gradient Creator Page
-import {
+export {
     GradientCreatorHeader,
     GradientVisualizer,
     RandomGradientButton,
@@ -52,7 +51,7 @@ import {
 } from './GradientCreator'
 
 // Grid Generator Page
-import {
+export {
     GridGeneratorHeader,
     GridElementActive,
     GridElementInactive,
@@ -60,7 +59,7 @@ import {
 } from './GridGenerator'
 
 // Shadow Generator Page
-import {
+export {
     ShadowGeneratorHeader,
     ShadowProperties,
     ShadowLayers,
@@ -69,7 +68,7 @@ import {
 } from './ShadowGenerator'
 
 // Tailwind Components Page
-import {
+export {
     HeroComponents,
     SectionTabs,
     ComponentPreview,
@@ -87,79 +86,3 @@ import {
     TypeWriter,
     CicleText
 } from './TailwindComponents'
-
-export {
-    // UI
-    Nav,
-    NavBrand,
-    NavItem,
-    NavMenuItem,
-    NavMenuRoute,
-    NavHoverRoute,
-    ThemeButton,
-    Icons,
-
-    // Home Page
-    HeroSection,
-    CircleButton,
-    CodeWindow,
-    Palette,
-    GradientPicker,
-    RandomPaletteButton,
-
-    // Find Color Page
-    PaletteGeneratorHeader,
-    ColorPicker,
-    ColorPalette,
-    ColorCard,
-    HoverCard,
-    Examples,
-
-    // Create Palette Page
-    RandomPaletteHeader,
-    PaletteGrid,
-    Color,
-    HoverColor,
-
-    // Gradient Creator Page
-    GradientCreatorHeader,
-    GradientVisualizer,
-    RandomGradientButton,
-    ColorStopsTabs,
-    PaletteRow,
-    OtherColorsRow,
-    ColorItem,
-    GradientCode,
-    GradientExamples,
-
-    // Grid Generator Page
-    GridGeneratorHeader,
-    GridElementActive,
-    GridElementInactive,
-    GridCode,
-
-    // Shadow Generator Page
-    ShadowGeneratorHeader,
-    ShadowProperties,
-    ShadowLayers,
-    ShadowCard,
-    ShadowCode,
-
-    // Tailwind Components Page
-    HeroComponents,
-    SectionTabs,
-    ComponentPreview,
-    ComponentsSection,
-    ComponentCode,
-    GlowingBorderButton,
-    GlowingRainbowButton,
-    GlowingBorderCard,
-    GridPattern,
-    DashedGridPattern,
-    SkewGridPattern,
-    DotPattern,
-    LinesBackground,
-    AppleBento,
-    TypeWriter,
-    CicleText
-}

@@ -1,15 +1,6 @@
-import { Nav } from './Nav.tsx'
-import { NavBrand } from './NavBrand.tsx'
-import { NavItem } from './NavItem.tsx'
-import { NavMenuItem } from './NavMenuItem.tsx'
-import { NavMenuRoute } from './NavMenuRoute.tsx'
-import { NavHoverRoute } from './NavHoverRoute.tsx'
-
-export {
-    Nav,
-    NavBrand,
-    NavItem,
-    NavMenuItem,
-    NavMenuRoute,
-    NavHoverRoute
-}
+export { Nav } from './Nav.tsx'
+export { NavBrand } from './NavBrand.tsx'
+export { NavItem } from './NavItem.tsx'
+export { NavMenuItem } from './NavMenuItem.tsx'
+export { NavMenuRoute } from './NavMenuRoute.tsx'
+export { NavHoverRoute } from './NavHoverRoute.tsx'

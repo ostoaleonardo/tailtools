@@ -1,23 +1,9 @@
-import { Nav } from './Navbar'
-import { NavBrand } from './Navbar'
-import { NavItem } from './Navbar'
-import { NavMenuItem } from './Navbar'
-import { NavMenuRoute } from './Navbar'
-import { NavHoverRoute } from './Navbar'
-import { ThemeButton } from './ThemeButton.tsx'
-import { GithubButton } from './GithubButton.tsx'
-import { CodeToExport } from './CodeToExport.tsx'
-import Icons from './Icons.tsx'
-
-export {
-    Nav,
-    NavBrand,
-    NavItem,
-    NavMenuItem,
-    NavMenuRoute,
-    NavHoverRoute,
-    ThemeButton,
-    GithubButton,
-    CodeToExport,
-    Icons
-}
+export { Nav } from './Navbar'
+export { NavBrand } from './Navbar'
+export { NavItem } from './Navbar'
+export { NavMenuItem } from './Navbar'
+export { NavMenuRoute } from './Navbar'
+export { NavHoverRoute } from './Navbar'
+export { ThemeButton } from './ThemeButton.tsx'
+export { GithubButton } from './GithubButton.tsx'
+export { CodeToExport } from './CodeToExport.tsx'

@@ -1,11 +1,4 @@
-import { PaletteGrid } from './PaletteGrid.tsx'
-import { RandomPaletteHeader } from './RandomPaletteHeader.tsx'
-import { Color } from './Color.tsx'
-import { HoverColor } from './HoverColor.tsx'
-
-export {
-    RandomPaletteHeader,
-    PaletteGrid,
-    Color,
-    HoverColor
-}
+export { PaletteGrid } from './PaletteGrid.tsx'
+export { RandomPaletteHeader } from './RandomPaletteHeader.tsx'
+export { Color } from './Color.tsx'
+export { HoverColor } from './HoverColor.tsx'

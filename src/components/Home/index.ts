@@ -1,15 +1,6 @@
-import { HeroSection } from './HeroSection.tsx'
-import { CircleButton } from './CircleButton.tsx'
-import { CodeWindow } from './CodeWindow.tsx'
-import { Palette } from './Palette.tsx'
-import { GradientPicker } from './GradientPicker.tsx'
-import { RandomPaletteButton } from './RandomPaletteButton.tsx'
-
-export {
-    HeroSection,
-    CircleButton,
-    CodeWindow,
-    Palette,
-    GradientPicker,
-    RandomPaletteButton
-}
+export { HeroSection } from './HeroSection.tsx'
+export { CircleButton } from './CircleButton.tsx'
+export { CodeWindow } from './CodeWindow.tsx'
+export { Palette } from './Palette.tsx'
+export { GradientPicker } from './GradientPicker.tsx'
+export { RandomPaletteButton } from './RandomPaletteButton.tsx'
