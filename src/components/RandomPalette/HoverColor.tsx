@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, Tooltip } from '@nextui-org/react'
-import { Icons } from '..'
+import { Check, Copy } from '@/icons'
 
 interface Color {
     name: string
@@ -26,7 +26,7 @@ export function HoverColor({ color }: { color: Color }) {
                     onPress={handleCopy}
                     style={{ color: color.contrast }}
                 >
-                    {isCopied ? <Icons.Check /> : <Icons.Copy />}
+                    {isCopied ? <Check /> : <Copy />}
                 </Button>
             </Tooltip>
         </div>

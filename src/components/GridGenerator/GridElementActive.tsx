@@ -1,4 +1,4 @@
-import { Icons } from '..'
+import { Close } from '@/icons'
 
 interface Props {
     item: number | string
@@ -12,7 +12,7 @@ export function GridElementActive({ item, onPress }: Props) {
                 onClick={onPress}
                 className='absolute top-0 right-0 hover:bg-black/5 dark:hover:bg-white/5 rounded-bl-lg cursor-pointer p-2'
             >
-                <Icons.Close />
+                <Close />
             </div>
             <div className='w-full h-full flex items-center justify-center'>
                 <p className='text-slate-700 dark:text-slate-100 transition-all'>{item}</p>

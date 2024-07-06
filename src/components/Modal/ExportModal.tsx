@@ -1,5 +1,5 @@
 import { Modal, ModalBody, ModalContent, ModalHeader, Snippet } from '@nextui-org/react'
-import { Icons } from '..'
+import { Copy } from '@/icons'
 
 interface Props {
     isOpen: boolean
@@ -26,7 +26,7 @@ export function ExportModal({ isOpen, onClose, children, options }: Props) {
                     </aside>
                     <Snippet
                         hideSymbol
-                        copyIcon={<Icons.Copy />}
+                        copyIcon={<Copy />}
                         className='w-full max-w-full overflow-auto'
                     >
                         {children}

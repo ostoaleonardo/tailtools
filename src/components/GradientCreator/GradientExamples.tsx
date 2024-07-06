@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Button, Select, SelectItem } from '@nextui-org/react'
+import { AlignLeft, Brush, Check, Copy } from '@/icons'
 import { GRADIENTS_EXAMPLES, GRADIENT_DIRECTIONS } from '@/constants'
-import { Icons } from '..'
 
 interface Props {
     name: string
@@ -60,14 +60,14 @@ export function GradientExample({ name, from, via, to }: Props) {
                         variant='light'
                         onPress={handleGradient}
                     >
-                        {isGradientText ? <Icons.Background /> : <Icons.Text />}
+                        {isGradientText ? <Brush /> : <AlignLeft />}
                     </Button>
                     <Button
                         isIconOnly
                         variant='light'
                         onPress={handleCopy}
                     >
-                        {isCopied ? <Icons.Check /> : <Icons.Copy />}
+                        {isCopied ? <Check /> : <Copy />}
                     </Button>
                 </div>
             </div>

@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { Button } from '@nextui-org/react'
 import { ExportModal, ModalButton } from '../Modal'
 import { CodeToExport } from '../UI'
-import { Icons } from '..'
 import { getColorsCode } from '@/utils'
+import { Export, Loader } from '@/icons'
 
 const BUTTONS = [
     {
@@ -46,7 +46,7 @@ export function RandomPaletteHeader({ palette, getPalette, isLoading }: Props) {
                         <h2 className='text-sm md:text-base font-medium line-clamp-1'>
                             Press the spacebar to generate a new palette
                         </h2>
-                        {isLoading && <Icons.Load className='animate-spin' />}
+                        {isLoading && <Loader className='animate-spin' />}
                     </div>
                     <Button
                         variant='flat'
@@ -60,7 +60,7 @@ export function RandomPaletteHeader({ palette, getPalette, isLoading }: Props) {
                         <Button
                             variant='light'
                             onClick={handleOpen}
-                            startContent={<Icons.Export />}
+                            startContent={<Export />}
                         >
                             Export
                         </Button>

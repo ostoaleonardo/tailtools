@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Button } from '@nextui-org/react'
-import { Icons, ShadowCode } from '..'
+import { ShadowCode } from '..'
 import { ExportModal, ModalButton } from '../Modal'
+import { Export } from '@/icons'
 
 const BUTTONS = [
     { name: 'Tailwind CSS', tech: 'tailwind' },
@@ -31,7 +32,7 @@ export function ShadowGeneratorHeader({ cssCode, tailwindCode }: Props) {
                         variant='faded'
                         onClick={handleOpen}
                         className='max-md:w-full'
-                        startContent={<Icons.Export />}
+                        startContent={<Export />}
                     >
                         Export code
                     </Button>

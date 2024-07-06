@@ -1,5 +1,5 @@
 import { Button } from '@nextui-org/react'
-import { Icons } from '..'
+import { Random } from '@/icons'
 import { GRADIENT_CLASSES, SHADES } from '@/constants'
 
 interface Props {
@@ -43,7 +43,7 @@ export function RandomGradientButton({ setColors }: Props) {
             variant='flat'
             className='h-16 bg-slate-200 dark:bg-zinc-800'
             onClick={handleRandomGradient}
-            startContent={<Icons.Random />}
+            startContent={<Random />}
         >
             Random Gradient
         </Button>

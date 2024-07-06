@@ -1,7 +1,7 @@
 import { Button } from '@nextui-org/react'
-import { Icons } from '.'
 import { useColor, useSEO, useTheme } from '@/hooks'
 import { ROUTES } from '@/constants'
+import { Moon, Sun } from '@/icons'
 
 export function ThemeButton() {
     const { theme, toggleTheme } = useTheme()
@@ -18,8 +18,8 @@ export function ThemeButton() {
             className='group text-xl'
         >
             {theme === 'dark'
-                ? <Icons.Sun className='group-hover:rotate-90 transition-transform' style={{ color: iconColor }} />
-                : <Icons.Moon className='group-hover:-rotate-12 transition-transform' style={{ color: iconColor }} />
+                ? <Sun className='group-hover:rotate-90 transition-transform' style={{ color: iconColor }} />
+                : <Moon className='group-hover:-rotate-12 transition-transform' style={{ color: iconColor }} />
             }
         </Button>
     )

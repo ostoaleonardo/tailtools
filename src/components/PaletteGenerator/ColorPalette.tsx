@@ -3,11 +3,11 @@ import { Button } from '@nextui-org/react'
 import { ExportModal, ModalButton } from '../Modal'
 import { CodeToExport } from '../UI'
 import { ColorCard } from '.'
-import { Icons } from '..'
 import { useColor, usePalette } from '@/hooks'
 import { getPaletteCode } from '@/utils'
-import { SHADES } from '@/constants'
+import { Export } from '@/icons'
 import { Palette } from '@/types'
+import { SHADES } from '@/constants'
 
 const BUTTONS = [
     {
@@ -56,7 +56,7 @@ export function ColorPalette() {
                             <Button
                                 variant='light'
                                 onClick={handleOpen}
-                                startContent={<Icons.Export />}
+                                startContent={<Export />}
                             >
                                 Export code
                             </Button>

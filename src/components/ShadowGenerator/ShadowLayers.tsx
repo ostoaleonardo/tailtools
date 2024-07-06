@@ -1,5 +1,5 @@
 import { Button, ScrollShadow } from '@nextui-org/react'
-import { Icons } from '..'
+import { Add, Close } from '@/icons'
 
 interface Props {
     shadow: any
@@ -42,7 +42,7 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
                 <Button
                     variant='faded'
                     onClick={handleAddLayer}
-                    startContent={<Icons.Add />}
+                    startContent={<Add />}
                 >
                     Add
                 </Button>
@@ -50,7 +50,7 @@ export function ShadowLayers({ shadow, setShadow, currentLayer, setCurrentLayer 
                     variant='faded'
                     isDisabled={shadow.length === 1}
                     onClick={handleRemoveLayer}
-                    startContent={<Icons.Close />}
+                    startContent={<Close />}
                 >
                     Remove
                 </Button>

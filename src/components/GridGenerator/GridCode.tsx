@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Button } from '@nextui-org/react'
 import { getGridCode } from '@/utils'
-import { Icons } from '..'
+import { Check, Copy } from '@/icons'
 
 interface Props {
     code: string
@@ -37,7 +37,7 @@ export function GridCode({ code, busyIndexes }: Props) {
                 className='absolute right-4'
                 onClick={handleCopy}
             >
-                {isCopied ? <Icons.Check /> : <Icons.Copy />}
+                {isCopied ? <Check /> : <Copy />}
             </Button>
         </div>
     )

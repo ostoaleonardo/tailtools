@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Button, Input } from '@nextui-org/react'
 import { ColorPicker } from '.'
-import { Icons } from '../UI'
 import { useColor, useFetch } from '@/hooks'
 import { getRandomColor } from '@/utils'
+import { Random, Search } from '@/icons'
 import { PLACEHOLDER } from '@/constants'
 
 export function PaletteGeneratorHeader() {
@@ -59,7 +59,7 @@ export function PaletteGeneratorHeader() {
                             className='border-white ml-4'
                             style={{ color: contrast, borderColor: contrast }}
                         >
-                            <Icons.Search />
+                            <Search />
                         </Button>
                         <Button
                             isIconOnly
@@ -69,7 +69,7 @@ export function PaletteGeneratorHeader() {
                             className='border-white ml-2'
                             style={{ color: contrast, borderColor: contrast }}
                         >
-                            <Icons.Random />
+                            <Random />
                         </Button>
                     </div>
                 </div>
