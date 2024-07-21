@@ -47,20 +47,18 @@ export function ColorPalette() {
     return (
         <>
             <section className='w-full flex flex-col items-center justify-center transition-all px-8 py-16'>
-                <div className='max-w-5xl w-full flex flex-col'>
+                <div className='max-w-5xl w-full'>
                     <div className='w-full flex items-center justify-between mb-4'>
                         <h2 className='text-2xl sm:text-3xl font-bold'>
                             Color Palette
                         </h2>
-                        <div className='flex items-center'>
-                            <Button
-                                variant='light'
-                                onClick={handleOpen}
-                                startContent={<Export />}
-                            >
-                                Export code
-                            </Button>
-                        </div>
+                        <Button
+                            variant='light'
+                            onClick={handleOpen}
+                            startContent={<Export />}
+                        >
+                            Export code
+                        </Button>
                     </div>
                     <div className='w-full grid grid-cols-11 gap-2'>
                         {palette.map((color, index) => (

@@ -13,7 +13,7 @@ export function HoverCard({ color }: { color: Palette }) {
     }
 
     return (
-        <div className='absolute w-full h-full opacity-0 hover:opacity-100 transition-opacity'>
+        <div className='absolute inset-0 opacity-0 hover:opacity-100 transition-opacity'>
             <div className='h-full lg:h-2/3 flex items-center justify-center'>
                 <Tooltip content='Copy color' placement='left' delay={700}>
                     <Button
@@ -26,6 +26,6 @@ export function HoverCard({ color }: { color: Palette }) {
                     </Button>
                 </Tooltip>
             </div>
-        </div >
+        </div>
     )
 }
