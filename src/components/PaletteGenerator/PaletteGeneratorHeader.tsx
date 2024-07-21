@@ -31,7 +31,7 @@ export function PaletteGeneratorHeader() {
             className='w-full h-96 flex items-center justify-center transition-all px-8'
             style={{ backgroundColor: color.hex }}
         >
-            <div className='w-full max-w-5xl flex flex-col md:flex-row justify-between gap-8'>
+            <div className='w-full max-w-5xl flex flex-col md:flex-row items-center justify-between gap-8'>
                 <div className='w-full flex flex-col'>
                     <h1
                         className='text-4xl md:text-6xl font-bold'
